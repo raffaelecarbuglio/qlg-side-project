@@ -1,0 +1,9 @@
+{
+  "model": "delta4",
+  "gamma": 1.2,
+  "two_j": 2,
+  "shells": [0, 1, 2],
+  "accuracy": "veryhigh",
+  "max_tensor_mb": 128,
+  "memory_mb_per_thread": 256
+}

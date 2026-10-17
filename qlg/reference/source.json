@@ -1,0 +1,10 @@
+{
+  "authors": ["Pietro Dona", "Pietropaolo Frisoni"],
+  "paper": "https://arxiv.org/abs/2202.04360",
+  "repository": "https://github.com/PietropaoloFrisoni/HowToSpinFoamAmplitude",
+  "commit": "4fa7e31ffc6553e56da94a443a53a4059a5d2035",
+  "path": "Delta_4_ampls/Immirzi_1.2/j_1.0/CSV_format/Delta_4_ampls_Dl_max_25.csv",
+  "columns": ["i=0", "i=1", "i=2"],
+  "rows": "Delta l = 0,...,25",
+  "contraction": "VertexContraction.ipynb; normalized vertex tensors, one bulk-face factor 2x+1, no additional intertwiner dimensions"
+}

@@ -1,0 +1,14 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+build/
+dist/
+vendor/
+runs/
+*.so
+*.o
+*.npz
+*.png
+*.pdf
+slurm-*.out
