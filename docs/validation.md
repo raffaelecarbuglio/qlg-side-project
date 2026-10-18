@@ -21,11 +21,14 @@ not install the native scientific libraries.
 `configs/benchmark.json` extends the scan through Delta l=15. Reference failure
 is an error, not an instruction to rescale results until they match.
 
-The native EPRL benchmark has **not** been executed in the initial development
-environment, which lacks its dependencies. Consequently the initial release
-does not claim a reproduced EPRL value. Execute the native test on the target
-installation before a production campaign. This status should be updated with
-the backend build manifest and run results after that execution.
+On 18 October 2026 the pinned native backend was built locally and all ten tests
+passed, including the real Delta4 reference test. Additional full-table versus
+boundary-slice runs at j=1, Delta l=0,2 and i=0,1,2 agreed with the published
+finite-cutoff table within 1.61e-9 relative difference. The j=2 comparison checks
+agreement between two evaluation routes; it has no independent reference table.
+See [the measured comparison](method-comparison.md) for raw results, build hashes
+and limitations. Native calculations have not yet been run on INFN; validate the
+target installation before its production campaign.
 
 Successive-cutoff changes are not certified tail estimates. Reference agreement
 also does not establish refinement convergence, correctness of an unimplemented

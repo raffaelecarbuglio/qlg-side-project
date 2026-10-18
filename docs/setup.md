@@ -38,6 +38,10 @@ library hashes in `build-info.json`. Use `BLAS=mkl` with a configured `MKLROOT`
 if you prefer the upstream MKL build. Compile on a compute-compatible CPU:
 upstream uses `-march=native`.
 
+When WIGXJPF provides a separate `libwigxjpf_quadmath.a`, the script links that
+archive too. This resolves FASTWIGXJ's optional quad-precision references without
+modifying the pinned upstream sources.
+
 Prepare the symbol lookup tables using the commands from the upstream guide:
 
 ```bash

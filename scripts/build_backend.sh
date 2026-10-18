@@ -24,12 +24,20 @@ for header in "$root/ext/wigxjpf/inc/wigxjpf.h" "$root/ext/fastwigxj/inc/fastwig
 done
 # Refuse to silently inherit incompatible conventions or an MPI build.
 make -C "$root" clean
-make -C "$root" lib BLAS="${BLAS:-system}" MPI=0 OMP=1 IO=1 ADD_CFLAGS= -j "${BUILD_JOBS:-2}"
+# FASTWIGXJ can reference WIGXJPF's separately packaged quadmath routines.
+# Add their archive after the normal libraries without editing pinned sources.
+link_config=$(mktemp)
+trap 'rm -f "$link_config"' EXIT
+if [[ -f "$root/ext/wigxjpf/lib/libwigxjpf_quadmath.a" ]]; then
+    printf '%s\n' 'LDLIBS += -lwigxjpf_quadmath -lquadmath' > "$link_config"
+fi
+make -C "$root" -f Makefile -f "$link_config" lib BLAS="${BLAS:-system}" MPI=0 OMP=1 IO=1 ADD_CFLAGS= -j "${BUILD_JOBS:-2}"
 ROOT_PATH="$root" BLAS_VENDOR="${BLAS:-system}" python3 - <<'PY'
 import hashlib, json, os, pathlib, subprocess
 root = pathlib.Path(os.environ['ROOT_PATH'])
 files = [root/'lib/libsl2cfoam.so', root/'ext/wigxjpf/lib/libwigxjpf.a',
-         root/'ext/fastwigxj/lib/libfastwigxj.a']
+         root/'ext/fastwigxj/lib/libfastwigxj.a',
+         root/'ext/wigxjpf/lib/libwigxjpf_quadmath.a']
 info = {
     'repository': 'https://github.com/qg-cpt-marseille/sl2cfoam-next',
     'commit': subprocess.check_output(['git','rev-parse','HEAD'], cwd=root, text=True).strip(),

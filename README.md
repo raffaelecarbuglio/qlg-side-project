@@ -86,6 +86,8 @@ nonzero exit status. Relative changes are cutoff diagnostics, not error bounds.
 See [the amplitude specification](docs/model.md),
 [validation status](docs/validation.md) and
 [the next refinement calculation](docs/refinement.md).
+The [method comparison](docs/method-comparison.md) includes measured native
+timings and a [reproducible benchmark](benchmarks/README.md).
 
 ## References
 

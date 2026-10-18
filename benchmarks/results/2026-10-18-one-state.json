@@ -1,0 +1,459 @@
+{
+  "schema": 1,
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+  "cpu_affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "numpy": "2.3.5",
+  "threads": 1,
+  "blas_threads": 1,
+  "gamma": 1.2,
+  "accuracy": "veryhigh",
+  "two_i": [
+    0
+  ],
+  "backend": {
+    "library_sha256": "898e2c35762f69ed87cd1399bb72bba208afe6c30fb1e3ba3ce8795ae3c10ad0",
+    "build": {
+      "repository": "https://github.com/qg-cpt-marseille/sl2cfoam-next",
+      "commit": "052e4346028870bd76f69a3034e6cae8defb8f7f",
+      "rho_convention": "gamma*(j+1)",
+      "mpi": false,
+      "openmp": true,
+      "io": true,
+      "blas": "system",
+      "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
+      "files_sha256": {
+        "lib/libsl2cfoam.so": "898e2c35762f69ed87cd1399bb72bba208afe6c30fb1e3ba3ce8795ae3c10ad0",
+        "ext/wigxjpf/lib/libwigxjpf.a": "6b7494bd4489af07dec8c94d997350e2315a074e90efce9a5c3f2b8cd87ea3eb",
+        "ext/fastwigxj/lib/libfastwigxj.a": "8c8a82cb551537b026dfc02136024cb12b7413dfd5600c01965f752442cabb68",
+        "ext/wigxjpf/lib/libwigxjpf_quadmath.a": "29e6f67b1fb972dc0a57ea730d03abfaa63448134a2d969bfb3a63937103af10"
+      }
+    }
+  },
+  "script_sha256": "3d1b6a3001edbc6e75290effaac177beb95aa36a56863ec2118b83b6ff0cd972",
+  "tables": {
+    "table_40.6j": "de1a29d0252c3c1ebf51b96d7fdebe7f21587ee65dcbc3864070774c14704b72",
+    "table_50.3j": "73d9170de4f04b776923106c5c6ea1bbb70cf2e62a14d24b83cda31194567e6e"
+  },
+  "results": [
+    {
+      "seconds": 0.16437216999975135,
+      "vertex_seconds": 0.1641660039999806,
+      "contraction_seconds": 0.00017762700053935987,
+      "returned_bytes": 3240,
+      "max_tensor_bytes": 1944,
+      "amplitudes": [
+        7.768396048678627e-39
+      ],
+      "peak_rss_kb": 127464,
+      "published_reference_max_relative_error": 1.6010689440904002e-09,
+      "cache": "cold",
+      "two_j": 2,
+      "dl": 0,
+      "method": "full",
+      "repeat": 0
+    },
+    {
+      "seconds": 0.0006058439998923859,
+      "vertex_seconds": 0.0005085719999442517,
+      "contraction_seconds": 7.930799984023906e-05,
+      "returned_bytes": 3240,
+      "max_tensor_bytes": 1944,
+      "amplitudes": [
+        7.768396048678627e-39
+      ],
+      "peak_rss_kb": 131688,
+      "published_reference_max_relative_error": 1.6010689440904002e-09,
+      "cache": "warm",
+      "two_j": 2,
+      "dl": 0,
+      "method": "full",
+      "repeat": 0
+    },
+    {
+      "seconds": 0.15514719100019647,
+      "vertex_seconds": 0.15497329200115928,
+      "contraction_seconds": 0.00014799899963691132,
+      "returned_bytes": 120,
+      "max_tensor_bytes": 72,
+      "amplitudes": [
+        7.768396048678627e-39
+      ],
+      "peak_rss_kb": 127456,
+      "published_reference_max_relative_error": 1.6010689440904002e-09,
+      "cache": "cold",
+      "two_j": 2,
+      "dl": 0,
+      "method": "slice",
+      "repeat": 0
+    },
+    {
+      "seconds": 0.0005866120000064257,
+      "vertex_seconds": 0.0005007959998692968,
+      "contraction_seconds": 6.962599991311436e-05,
+      "returned_bytes": 120,
+      "max_tensor_bytes": 72,
+      "amplitudes": [
+        7.768396048678627e-39
+      ],
+      "peak_rss_kb": 131808,
+      "published_reference_max_relative_error": 1.6010689440904002e-09,
+      "cache": "warm",
+      "two_j": 2,
+      "dl": 0,
+      "method": "slice",
+      "repeat": 0
+    },
+    {
+      "seconds": 0.15627758199980235,
+      "vertex_seconds": 0.15600686099969607,
+      "contraction_seconds": 0.0002433909994579153,
+      "returned_bytes": 120,
+      "max_tensor_bytes": 72,
+      "amplitudes": [
+        7.768396048678627e-39
+      ],
+      "peak_rss_kb": 127456,
+      "published_reference_max_relative_error": 1.6010689440904002e-09,
+      "cache": "cold",
+      "two_j": 2,
+      "dl": 0,
+      "method": "slice",
+      "repeat": 1
+    },
+    {
+      "seconds": 0.0005624509999506699,
+      "vertex_seconds": 0.0004780620006386016,
+      "contraction_seconds": 6.83110001773457e-05,
+      "returned_bytes": 120,
+      "max_tensor_bytes": 72,
+      "amplitudes": [
+        7.768396048678627e-39
+      ],
+      "peak_rss_kb": 131680,
+      "published_reference_max_relative_error": 1.6010689440904002e-09,
+      "cache": "warm",
+      "two_j": 2,
+      "dl": 0,
+      "method": "slice",
+      "repeat": 1
+    },
+    {
+      "seconds": 0.15544873699991513,
+      "vertex_seconds": 0.1552566499999557,
+      "contraction_seconds": 0.00016385199978685705,
+      "returned_bytes": 3240,
+      "max_tensor_bytes": 1944,
+      "amplitudes": [
+        7.768396048678627e-39
+      ],
+      "peak_rss_kb": 127464,
+      "published_reference_max_relative_error": 1.6010689440904002e-09,
+      "cache": "cold",
+      "two_j": 2,
+      "dl": 0,
+      "method": "full",
+      "repeat": 1
+    },
+    {
+      "seconds": 0.0005943539999861969,
+      "vertex_seconds": 0.0004995140002392873,
+      "contraction_seconds": 7.740199953332194e-05,
+      "returned_bytes": 3240,
+      "max_tensor_bytes": 1944,
+      "amplitudes": [
+        7.768396048678627e-39
+      ],
+      "peak_rss_kb": 131688,
+      "published_reference_max_relative_error": 1.6010689440904002e-09,
+      "cache": "warm",
+      "two_j": 2,
+      "dl": 0,
+      "method": "full",
+      "repeat": 1
+    },
+    {
+      "seconds": 0.1564753490001749,
+      "vertex_seconds": 0.1562571129998105,
+      "contraction_seconds": 0.00019100500003332854,
+      "returned_bytes": 3240,
+      "max_tensor_bytes": 1944,
+      "amplitudes": [
+        7.768396048678627e-39
+      ],
+      "peak_rss_kb": 127464,
+      "published_reference_max_relative_error": 1.6010689440904002e-09,
+      "cache": "cold",
+      "two_j": 2,
+      "dl": 0,
+      "method": "full",
+      "repeat": 2
+    },
+    {
+      "seconds": 0.0006200389998411993,
+      "vertex_seconds": 0.0005217570001150307,
+      "contraction_seconds": 8.076300036918838e-05,
+      "returned_bytes": 3240,
+      "max_tensor_bytes": 1944,
+      "amplitudes": [
+        7.768396048678627e-39
+      ],
+      "peak_rss_kb": 131688,
+      "published_reference_max_relative_error": 1.6010689440904002e-09,
+      "cache": "warm",
+      "two_j": 2,
+      "dl": 0,
+      "method": "full",
+      "repeat": 2
+    },
+    {
+      "seconds": 0.1525203070000316,
+      "vertex_seconds": 0.1523487669996939,
+      "contraction_seconds": 0.00014576199964722036,
+      "returned_bytes": 120,
+      "max_tensor_bytes": 72,
+      "amplitudes": [
+        7.768396048678627e-39
+      ],
+      "peak_rss_kb": 127460,
+      "published_reference_max_relative_error": 1.6010689440904002e-09,
+      "cache": "cold",
+      "two_j": 2,
+      "dl": 0,
+      "method": "slice",
+      "repeat": 2
+    },
+    {
+      "seconds": 0.0005377899997256463,
+      "vertex_seconds": 0.0004544130001704616,
+      "contraction_seconds": 6.791500072722556e-05,
+      "returned_bytes": 120,
+      "max_tensor_bytes": 72,
+      "amplitudes": [
+        7.768396048678627e-39
+      ],
+      "peak_rss_kb": 131684,
+      "published_reference_max_relative_error": 1.6010689440904002e-09,
+      "cache": "warm",
+      "two_j": 2,
+      "dl": 0,
+      "method": "slice",
+      "repeat": 2
+    },
+    {
+      "seconds": 5.757558578000044,
+      "vertex_seconds": 5.757190422000349,
+      "contraction_seconds": 0.0003315899994049687,
+      "returned_bytes": 3240,
+      "max_tensor_bytes": 1944,
+      "amplitudes": [
+        8.537816001744136e-38
+      ],
+      "peak_rss_kb": 127832,
+      "published_reference_max_relative_error": 9.54713419432096e-10,
+      "cache": "cold",
+      "two_j": 2,
+      "dl": 2,
+      "method": "full",
+      "repeat": 0
+    },
+    {
+      "seconds": 0.00823870700014595,
+      "vertex_seconds": 0.008106800999939878,
+      "contraction_seconds": 0.00010959300061585964,
+      "returned_bytes": 3240,
+      "max_tensor_bytes": 1944,
+      "amplitudes": [
+        8.537816001744136e-38
+      ],
+      "peak_rss_kb": 131928,
+      "published_reference_max_relative_error": 9.54713419432096e-10,
+      "cache": "warm",
+      "two_j": 2,
+      "dl": 2,
+      "method": "full",
+      "repeat": 0
+    },
+    {
+      "seconds": 5.890978564999841,
+      "vertex_seconds": 5.890622355000232,
+      "contraction_seconds": 0.00032013899999583373,
+      "returned_bytes": 120,
+      "max_tensor_bytes": 72,
+      "amplitudes": [
+        8.537816001744136e-38
+      ],
+      "peak_rss_kb": 127784,
+      "published_reference_max_relative_error": 9.54713419432096e-10,
+      "cache": "cold",
+      "two_j": 2,
+      "dl": 2,
+      "method": "slice",
+      "repeat": 0
+    },
+    {
+      "seconds": 0.005237349999788421,
+      "vertex_seconds": 0.005036202000155754,
+      "contraction_seconds": 0.00018032500020126463,
+      "returned_bytes": 120,
+      "max_tensor_bytes": 72,
+      "amplitudes": [
+        8.537816001744136e-38
+      ],
+      "peak_rss_kb": 131828,
+      "published_reference_max_relative_error": 9.54713419432096e-10,
+      "cache": "warm",
+      "two_j": 2,
+      "dl": 2,
+      "method": "slice",
+      "repeat": 0
+    },
+    {
+      "seconds": 5.983740271999977,
+      "vertex_seconds": 5.9834847309994075,
+      "contraction_seconds": 0.0002203989993176947,
+      "returned_bytes": 120,
+      "max_tensor_bytes": 72,
+      "amplitudes": [
+        8.537816001744136e-38
+      ],
+      "peak_rss_kb": 127808,
+      "published_reference_max_relative_error": 9.54713419432096e-10,
+      "cache": "cold",
+      "two_j": 2,
+      "dl": 2,
+      "method": "slice",
+      "repeat": 1
+    },
+    {
+      "seconds": 0.005586424000284751,
+      "vertex_seconds": 0.005458138999529183,
+      "contraction_seconds": 0.00010774799966384307,
+      "returned_bytes": 120,
+      "max_tensor_bytes": 72,
+      "amplitudes": [
+        8.537816001744136e-38
+      ],
+      "peak_rss_kb": 131776,
+      "published_reference_max_relative_error": 9.54713419432096e-10,
+      "cache": "warm",
+      "two_j": 2,
+      "dl": 2,
+      "method": "slice",
+      "repeat": 1
+    },
+    {
+      "seconds": 5.637900762999834,
+      "vertex_seconds": 5.6375925710003685,
+      "contraction_seconds": 0.0002673419994607684,
+      "returned_bytes": 3240,
+      "max_tensor_bytes": 1944,
+      "amplitudes": [
+        8.537816001744136e-38
+      ],
+      "peak_rss_kb": 127824,
+      "published_reference_max_relative_error": 9.54713419432096e-10,
+      "cache": "cold",
+      "two_j": 2,
+      "dl": 2,
+      "method": "full",
+      "repeat": 1
+    },
+    {
+      "seconds": 0.008151029000146082,
+      "vertex_seconds": 0.008020624999517167,
+      "contraction_seconds": 0.00010790399983306997,
+      "returned_bytes": 3240,
+      "max_tensor_bytes": 1944,
+      "amplitudes": [
+        8.537816001744136e-38
+      ],
+      "peak_rss_kb": 131920,
+      "published_reference_max_relative_error": 9.54713419432096e-10,
+      "cache": "warm",
+      "two_j": 2,
+      "dl": 2,
+      "method": "full",
+      "repeat": 1
+    },
+    {
+      "seconds": 5.811289914000099,
+      "vertex_seconds": 5.811008773999674,
+      "contraction_seconds": 0.00024251299964817008,
+      "returned_bytes": 3240,
+      "max_tensor_bytes": 1944,
+      "amplitudes": [
+        8.537816001744136e-38
+      ],
+      "peak_rss_kb": 127824,
+      "published_reference_max_relative_error": 9.54713419432096e-10,
+      "cache": "cold",
+      "two_j": 2,
+      "dl": 2,
+      "method": "full",
+      "repeat": 2
+    },
+    {
+      "seconds": 0.008225424000102066,
+      "vertex_seconds": 0.008099974999822734,
+      "contraction_seconds": 0.00010483399955774075,
+      "returned_bytes": 3240,
+      "max_tensor_bytes": 1944,
+      "amplitudes": [
+        8.537816001744136e-38
+      ],
+      "peak_rss_kb": 131920,
+      "published_reference_max_relative_error": 9.54713419432096e-10,
+      "cache": "warm",
+      "two_j": 2,
+      "dl": 2,
+      "method": "full",
+      "repeat": 2
+    },
+    {
+      "seconds": 5.673927278000065,
+      "vertex_seconds": 5.673519208999551,
+      "contraction_seconds": 0.0003349749999870255,
+      "returned_bytes": 120,
+      "max_tensor_bytes": 72,
+      "amplitudes": [
+        8.537816001744136e-38
+      ],
+      "peak_rss_kb": 127800,
+      "published_reference_max_relative_error": 9.54713419432096e-10,
+      "cache": "cold",
+      "two_j": 2,
+      "dl": 2,
+      "method": "slice",
+      "repeat": 2
+    },
+    {
+      "seconds": 0.005101540999930876,
+      "vertex_seconds": 0.0049923870001293835,
+      "contraction_seconds": 8.864999972502119e-05,
+      "returned_bytes": 120,
+      "max_tensor_bytes": 72,
+      "amplitudes": [
+        8.537816001744136e-38
+      ],
+      "peak_rss_kb": 131768,
+      "published_reference_max_relative_error": 9.54713419432096e-10,
+      "cache": "warm",
+      "two_j": 2,
+      "dl": 2,
+      "method": "slice",
+      "repeat": 2
+    }
+  ]
+}
