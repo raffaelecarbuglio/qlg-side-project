@@ -123,30 +123,55 @@ For a coarse amplitude vector C and pulled-back fine vector F, report
 
 Only one scalar c is removed for the entire fixed-spin boundary sector.
 The calculation is not changed, and no separate fit is made for each state.
-The report also retains the signed coefficient vectors and their logarithmic
+The driver also records the signed coefficient vectors and their logarithmic
 scales, normalized overlaps, norm ratios, cutoff changes and comparisons
 between the two maps. A small global residual does not bound the fractional
 error of an individual coefficient close to zero.
 
-## Initial finite-shell measurements
+## Finite-shell measurements and incomplete runtime record
 
-The completed initial snapshot is
+The complete initial shell-zero snapshot is
 [`2026-10-18-matched-boundary-pilot.json`](../benchmarks/results/2026-10-18-matched-boundary-pilot.json).
-It contains all eight BF comparisons and eight EPRL comparisons at auxiliary
-shell cutoff zero. Residuals below refer to the whole coarse intertwiner vector:
+It includes all eight fine BF comparisons and eight EPRL comparisons.
+
+The extended campaign requested 32 EPRL comparisons: two boundary spins, two
+triangulations, two maps, and auxiliary shell cutoffs 0,2,4,8. Its running report
+confirmed 31 completed comparisons before the execution service disconnected.
+Both fresh process creation and access to the existing job sessions then failed.
+The last comparison, j=1 with 16-cell map B at shell 8, has **unverified
+completion**. This is an infrastructure interruption, not a computed failure of
+the amplitude or a physical divergence.
+
+The confirmed shell-8 summaries are recorded in
+[`2026-10-18-matched-boundary-observed-summary.json`](../benchmarks/results/2026-10-18-matched-boundary-observed-summary.json).
+All table entries below are the residual in percent after removing one global
+scalar for the whole coarse boundary sector:
 
 | Boundary spin | Local split A | Local split B | 16-cell map A | 16-cell map B |
 |---|---:|---:|---:|---:|
-| j=1/2 | <1e-13 | <1e-13 | <1e-13 | 97.4376% |
-| j=1 | 2.94751% | 2.94751% | 18.3462% | 84.4313% |
+| j=1/2 | <1e-9% | 0.0896035% | 0.0896035% | 92.9915% |
+| j=1 | 5.58914% | 5.24236% | 22.1756% | completion unverified |
 
-The random-holonomy pullback discrepancies are at most 6.7e-15. The largest
-scale-free BF residual is 2.6e-15; its absolute normalization is checked too.
-Both exact contraction orders agree. These are finite-shell results, not
-infinite-shell estimates. A near-zero residual on one small-spin probe does
-not validate another routing or boundary-spin sector. Higher-shell comparisons
-and the independent homogeneous shell-10/12 scan are separate follow-ups.
+The initial shell-zero residuals for j=1 were 2.94751%, 2.94751%, 18.3462%
+and 84.4313%, respectively. Thus more accurate auxiliary sums do not
+automatically make a bare refinement agree with the coarse amplitude.
 
+For j=1 map A on 16 cells, the normalized fine vector changes by 1.53229%
+from shell 4 to 8, whereas its shell-8 coarse/fine residual is 22.1756%.
+These are finite-cutoff diagnostics, not certified estimates of the remaining
+shell tail. The strong dependence on the embedding choice should not be
+interpreted as a proof against a continuum limit.
+
+Random-holonomy pullback discrepancies are at most 6.7e-15. The largest
+scale-free BF residual is 2.6e-15; absolute normalization is checked too.
+The 11 default and two new automated checks passed, including half-integer
+gluing and finite-spin completeness on the tested complexes.
+
+The planned cache-only replay of the extended campaign and retrieval of its
+final raw report could not be completed. The initial snapshot contains full
+signed coefficient vectors; for the higher-shell extension only the
+console-confirmed summary metrics were recovered. No missing coefficients or
+last-case result have been reconstructed or invented.
 
 ## Homogeneous-boundary shell extension
 
@@ -178,8 +203,10 @@ All 574 ordered vertices at shell 10 were computed in 2523.27 seconds of
 preparation, using one process and four requested OpenMP threads. The three
 amplitudes each agree under two exact contraction orders. This is a local
 timing with another native campaign running concurrently, not an isolated
-hardware benchmark. Shell 12 is a separate case with a 2700-second budget.
-No shell-12 amplitude is inferred from incomplete cached vertices.
+hardware benchmark. Shell 12 was started with a 2700-second budget. The last filesystem check
+found 15 completed vertices. Its completion or time-limit outcome could not
+be verified after the execution-service disconnect, and no shell-12 amplitude
+is claimed.
 
 ## Zero-spin convention control
 

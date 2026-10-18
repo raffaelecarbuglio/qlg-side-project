@@ -108,7 +108,9 @@ sectors. The added boundary nodes are degenerate; this is a diagnostic of a
 kinematical embedding, not a dynamical vacuum or a continuum calculation.
 The same report extends the original complete K=3 shell scan through cutoff
 10: the two ratios change by 0.55% and 1.15% from cutoff 8, with the second
-remaining nonmonotonic over the scan.
+remaining nonmonotonic over the scan. The extended matched-boundary campaign
+is recorded as partial: 31 of 32 comparisons were confirmed before the execution
+service disconnected; shell-12 completion is unverified.
 
 ## References
 

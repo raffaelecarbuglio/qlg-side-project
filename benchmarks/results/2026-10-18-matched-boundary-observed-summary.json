@@ -1,0 +1,119 @@
+{
+  "status": "partial_record_after_execution_service_disconnect",
+  "gamma": 1.2,
+  "accuracy": "veryhigh",
+  "rho_convention": "gamma*(j+1)",
+  "backend_source_revision": "052e4346028870bd76f69a3034e6cae8defb8f7f",
+  "requested_omp_threads": 1,
+  "blas_threads": 1,
+  "planned_eprl_comparisons": 32,
+  "last_confirmed_completed_eprl_comparisons": 31,
+  "completed_bf_comparisons": 8,
+  "passed_existing_automated_checks": 11,
+  "passed_new_automated_checks": 2,
+  "planned_cache_only_replay": "not_completed",
+  "homogeneous_shell12": {
+    "status": "completion_unverified",
+    "preparation_budget_seconds": 2700,
+    "last_observed_complete_vertices": 15,
+    "required_vertices": 574
+  },
+  "interpretation": "The execution service became unreachable. Final completion, the remaining comparison and the final raw report could not be recovered; no physical failure or shell-tail estimate is inferred.",
+  "record_scope": "The seven shell-8 comparison summaries below were read from the running report and confirmed in tool output before the disconnect. These are summary metrics, not the complete signed coefficient vectors.",
+  "implementation_source_note": "The mathematical implementation was published in commit 2321625c9981799d426a57009e48f7e663758d34 while this calculation was running. A replay against the later published CLI was planned but not completed.",
+  "results": [
+    {
+      "two_j": 1,
+      "kind": "split",
+      "reversed_search": false,
+      "dl": 8,
+      "status": "completed_before_disconnect",
+      "comparison": {
+        "log_norm_ratio": -16.341068486359852,
+        "normalized_overlap": 1.0000000000000002,
+        "relative_residual_after_one_global_scale": 3.251292854879964e-14
+      }
+    },
+    {
+      "two_j": 1,
+      "kind": "split",
+      "reversed_search": true,
+      "dl": 8,
+      "status": "completed_before_disconnect",
+      "comparison": {
+        "log_norm_ratio": -16.341068486359852,
+        "normalized_overlap": 0.9999995985601207,
+        "relative_residual_after_one_global_scale": 0.0008960354892151233
+      }
+    },
+    {
+      "two_j": 1,
+      "kind": "edgewise",
+      "reversed_search": false,
+      "dl": 8,
+      "status": "completed_before_disconnect",
+      "comparison": {
+        "log_norm_ratio": -231.9445802718024,
+        "normalized_overlap": 0.9999995985601206,
+        "relative_residual_after_one_global_scale": 0.0008960354892452071
+      }
+    },
+    {
+      "two_j": 1,
+      "kind": "edgewise",
+      "reversed_search": true,
+      "dl": 8,
+      "status": "completed_before_disconnect",
+      "comparison": {
+        "log_norm_ratio": -240.04468359734878,
+        "normalized_overlap": 0.3677752643916811,
+        "relative_residual_after_one_global_scale": 0.9299147030247609
+      }
+    },
+    {
+      "two_j": 2,
+      "kind": "split",
+      "reversed_search": false,
+      "dl": 8,
+      "status": "completed_before_disconnect",
+      "comparison": {
+        "log_norm_ratio": -17.508626960509098,
+        "normalized_overlap": 0.9984368531184246,
+        "relative_residual_after_one_global_scale": 0.05589141557500035
+      }
+    },
+    {
+      "two_j": 2,
+      "kind": "split",
+      "reversed_search": true,
+      "dl": 8,
+      "status": "completed_before_disconnect",
+      "comparison": {
+        "log_norm_ratio": -17.508626960509098,
+        "normalized_overlap": 0.9986249357092792,
+        "relative_residual_after_one_global_scale": 0.05242363760402391
+      }
+    },
+    {
+      "two_j": 2,
+      "kind": "edgewise",
+      "reversed_search": false,
+      "dl": 8,
+      "status": "completed_before_disconnect",
+      "comparison": {
+        "log_norm_ratio": -240.29535813143136,
+        "normalized_overlap": 0.9751020830176242,
+        "relative_residual_after_one_global_scale": 0.22175646032233193
+      }
+    }
+  ],
+  "unverified_comparisons": [
+    {
+      "two_j": 2,
+      "kind": "edgewise",
+      "reversed_search": true,
+      "dl": 8,
+      "status": "completion_unverified"
+    }
+  ]
+}
