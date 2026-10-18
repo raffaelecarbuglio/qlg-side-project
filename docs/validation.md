@@ -59,3 +59,10 @@ test uses a fresh process to avoid repeated native-library initialization.
 The full six-check optional suite passed. The new
 [cutoff and refinement report](cutoff-and-refinement-checks.md) distinguishes
 complete spin sums, finite shell cutoffs and unconverged larger calculations.
+
+The restartable 16-simplex driver is checked by
+`python -m unittest benchmarks.test_block_scan -v`: full required vertex sets,
+real native thread/process agreement, reuse after changing execution layout,
+and SIGTERM interruption followed by recovery of completed atomic tensors.
+The additional [preparation and shell study](preparation-and-shell-tests.md)
+records fixed-input CPU comparisons and a boundary-area audit.

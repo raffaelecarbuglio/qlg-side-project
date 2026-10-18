@@ -123,3 +123,19 @@ Run the new checks with
 `python -m unittest benchmarks.test_refinement benchmarks.test_compression -v`.
 Use the single-thread and JIT settings above. See the
 [report and complete commands](../docs/cutoff-and-refinement-checks.md).
+
+## Restartable preparation and boundary audit
+
+`python -m benchmarks.block_scan --run runs/block-new --output benchmarks/results/block-new.json`
+prepares full ordered vertices with atomic restart, then exactly contracts the
+three uniform boundary intertwiner states. Use `--dl 0 2 4 6`, `--cutoff 3`,
+`--processes P` and `--threads T`; BLAS must be single-threaded. Different
+boundary states and process/thread layouts can reuse the same vertex cache.
+
+`python -m benchmarks.compare_preparation --run-root runs/preparation-new --output benchmarks/results/preparation-new.json`
+compares six fresh-cache CPU layouts twice at K=2, shell cutoff 3, checking
+all tensor entries and all three amplitudes. `benchmarks.test_block_scan`
+checks actual process termination and restart, thread/process agreement and
+complete vertex sets. `benchmarks.check_boundary --output PATH` audits the
+fixed-j boundary area across edgewise levels. See the
+[results and reproduction instructions](../docs/preparation-and-shell-tests.md).
