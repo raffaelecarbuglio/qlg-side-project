@@ -76,3 +76,34 @@ KaHyPar timing-limited searches can find different paths on another run; raw
 paths are saved. Single-thread execution is required for these comparisons.
 
 See [results, normalization conventions and limitations](../docs/refinement-benchmark.md).
+
+## Exact support and approximate compression
+
+```bash
+python -m pip install -r benchmarks/compression-requirements.txt
+export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 NUMBA_NUM_THREADS=1 NUMBA_DISABLE_JIT=1
+python -m benchmarks.compare_support --output benchmarks/results/support-local.json
+python -m unittest benchmarks.test_compression -v
+python -m benchmarks.compare_compression --output benchmarks/results/compression-local.json
+```
+
+The support comparison preserves the full finite-cutoff amplitude. Compression
+calibration uses five full 16-simplex cases plus a fixed-spin sector; the two
+256-simplex cases are **fixed-spin sectors only**, with all internal intertwiners
+included before truncation. `--small-only` omits the larger cases. Labels use
+physical integer spins, as in `compare_refinement`.
+
+`--chi` sets retained dimensions for the small-block calibration; the larger
+scan uses chi=2,3,4,6,8 at local gauge radius 1 and chi=4,6,8 at radius 2.
+`--max-entries` caps the proposed output of a single contraction (default
+32,000,000); it does not cap all tensors or QR/SVD workspace memory. Resource
+limits are recorded as failures, not converted to amplitude estimates.
+
+The decomposition backend's first-use cost is reported separately for small
+cases. Native preparation, support reduction, optimizer searches and compression
+times have separate fields. Compression times include the maintained local
+gauge transformations. Peak RSS is cumulative within each fresh worker process.
+The optional Numba JIT is disabled to avoid a QR compilation incompatibility in
+the tested environment; the native C EPRL backend remains enabled.
+
+See [the measurements and their limits](../docs/compression-experiments.md).

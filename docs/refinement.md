@@ -5,7 +5,9 @@ It implements explicit common-basis transformations, all admissible internal
 intertwiners and small finite internal-spin cutoffs for boundary j=1.
 See [its specification, measurements and limits](refinement-benchmark.md).
 This is not a renormalization map or a matched-boundary continuum calculation.
-The 256-simplex level has symbolic cost estimates only.
+The full spin-summed 256-simplex level has symbolic cost estimates only.
+Additional [compression experiments](compression-experiments.md) evaluate
+fixed-spin sectors there, but do not obtain converged amplitudes.
 
 ## Separate common-boundary 1->5 calculation
 

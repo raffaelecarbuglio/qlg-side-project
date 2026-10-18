@@ -41,3 +41,11 @@ evaluation routes agree across five finite-cutoff cases. These are internal
 checks; there is no independent published reference value for this block.
 The edgewise topology checks bring the project test count to eleven, all
 passing locally with the native backend. See [the refinement report](refinement-benchmark.md).
+
+Three optional compression checks additionally passed with the real backend:
+exact reduction of a hyper-index sum, completeness of the binary spin-parity
+generators at 256 simplices, and agreement of a fixed-spin sector and high-rank
+compression with the exact full small-block calculation. Run them with
+`python -m unittest benchmarks.test_compression -v` after installing the optional
+benchmark dependencies. Large-sector compression is explicitly not converged;
+see [the experiment report](compression-experiments.md).

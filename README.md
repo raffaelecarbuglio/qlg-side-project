@@ -91,6 +91,9 @@ timings and a [reproducible benchmark](benchmarks/README.md).
 An experimental [edgewise-refinement comparison](docs/refinement-benchmark.md)
 evaluates the first 16-simplex block at small internal-spin cutoffs, comparing
 exact contractions, partial spin conditioning and uniform sampling.
+Further [support and compression experiments](docs/compression-experiments.md)
+improve the exact small-block sum and test approximate fixed-spin sectors at
+256 simplices; those larger results have not converged.
 
 ## References
 

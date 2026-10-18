@@ -6,6 +6,8 @@ all five spin sums inside the network for K=1; for K=2, explicitly sum three
 chosen spins and contract the remaining network exactly for each assignment.
 This is an application of standard cutset conditioning, not a new EPRL model.
 No method has been established as optimal for the entire refinement sequence.
+Subsequent [support and compression experiments](compression-experiments.md)
+further improve the exact K=2 calculation by trimming impossible padded slots.
 
 ## Actual problem evaluated
 
@@ -121,7 +123,7 @@ rule out importance sampling, contour methods or Monte Carlo on larger graphs.
 ## What happens at 256 simplices?
 
 Only **symbolic dense contraction plans** were computed at this level; no
-256-simplex EPRL amplitude was evaluated. Tested optimizers were greedy,
+full spin-summed 256-simplex EPRL amplitude was evaluated. Tested optimizers were greedy,
 64-trial random greedy, and KaHyPar hypergraph partitioning with subtree
 reconfiguration (up to 32 trials, about 30 seconds plus the final trial).
 
@@ -141,6 +143,8 @@ contractions with reusable local contractions, followed by an explicitly
 controlled compression of block boundaries if exact methods stop scaling.
 The latter is a renormalization research task, not implemented here. Uniform
 Monte Carlo is not the default suggested by the first-block results.
+The later compression experiments do evaluate approximate fixed-spin sectors
+at 256 simplices; these fail the tested stability checks and are not full sums.
 
 ## Checks and remaining limits
 
