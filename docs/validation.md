@@ -66,3 +66,7 @@ real native thread/process agreement, reuse after changing execution layout,
 and SIGTERM interruption followed by recovery of completed atomic tensors.
 The additional [preparation and shell study](preparation-and-shell-tests.md)
 records fixed-input CPU comparisons and a boundary-area audit.
+
+This campaign also reran the 11 default checks (including the published native
+Delta4 reference) and six existing optional refinement/compression checks.
+All passed, in addition to the three new block-scan checks.

@@ -12,8 +12,7 @@ from pathlib import Path
 
 import numpy as np
 
-from qlg.jobs import atomic_json
-from qlg.backend import digest
+from qlg.jobs import atomic_json, source_version
 from qlg.topology import boundary, edgewise_simplex
 
 
@@ -48,8 +47,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", required=True)
     args = parser.parse_args()
-    report = dict(source_sha256={p: digest(Path(__file__).parents[1] / p) for p in
-                                ("benchmarks/check_boundary.py", "qlg/topology.py")},
+    report = dict(source=source_version(),
                   spectrum_reference="Rovelli, arXiv:1102.3660v5, equations 37-38",
                   area_units="common 8*pi*gamma*l_P^2 factor omitted",
                   interpretation="Additive geometric-area audit, not a complete boundary embedding",

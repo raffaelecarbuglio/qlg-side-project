@@ -98,8 +98,9 @@ New [cutoff and fixed-order checks](docs/cutoff-and-refinement-checks.md)
 complete the first block's spin sum at K=3 and calibrate compression against
 exact full finite-cutoff sums on 20, 25 and 30 simplices.
 [Restartable preparation and shell tests](docs/preparation-and-shell-tests.md)
-check vertex reuse, CPU layouts, higher shell cutoffs and the boundary-area
-mismatch of a naive fixed-j refinement comparison.
+complete K=3 at auxiliary shell cutoffs through 8, compare CPU layouts and
+verify restart on the expensive case. Boundary amplitude ratios stabilize
+faster than raw amplitudes; a naive fixed-j refinement changes boundary area.
 
 ## References
 

@@ -11,7 +11,6 @@ import json
 import math
 import os
 from pathlib import Path
-import platform
 import resource
 import signal
 import subprocess
@@ -25,13 +24,8 @@ from benchmarks.check_cutoffs import exact_value, native_data
 from benchmarks.compression import prune_support
 from benchmarks.refinement import build_block, layout
 from qlg.backend import NativeBackend, backend_identity, digest
-from qlg.jobs import atomic_json, cached_vertex, exclusive_lock, fingerprint
+from qlg.jobs import atomic_json, cached_vertex, exclusive_lock, fingerprint, source_version
 from qlg.spins import vertex_ranges
-
-SOURCES = ("benchmarks/block_scan.py", "benchmarks/refinement.py", "benchmarks/check_cutoffs.py",
-           "benchmarks/compare_refinement.py", "benchmarks/compression.py", "qlg/backend.py",
-           "qlg/jobs.py", "qlg/spins.py", "qlg/topology.py")
-
 
 def required_spins(cutoff):
     graph = layout(2)
@@ -197,12 +191,12 @@ def main():
         if manifest.exists() and json.loads(manifest.read_text()) != spec:
             raise ValueError("Cache belongs to different numerical inputs/backend/tables")
         atomic_json(manifest, spec)
-        root = Path(__file__).parents[1]
-        report = dict(schema=1, cache_spec=spec, source_sha256={p: digest(root / p) for p in SOURCES},
-                      platform=platform.platform(), cpu_model=subprocess.check_output(
-                          ["lscpu"], text=True).strip(), python=sys.version,
-                      cpu_quota=Path("/sys/fs/cgroup/cpu.max").read_text().strip()
-                          if Path("/sys/fs/cgroup/cpu.max").exists() else None,
+        # Binary/table fingerprints stay in the local cache manifest. Export
+        # scientific inputs and public source revisions, without host diagnostics.
+        report = dict(schema=1, gamma=1.2, boundary_j=1, accuracy="veryhigh",
+                      backend_source_revision=spec["backend"]["build"].get("commit"),
+                      rho_convention=spec["backend"]["build"].get("rho_convention"),
+                      numpy=np.__version__, source=source_version(),
                       processes=args.processes, threads=args.threads, blas_threads=1,
                       preparation_timeout_seconds=args.timeout, results=[])
         common = [sys.executable, "-m", "benchmarks.block_scan", "--worker", "--run", str(run),

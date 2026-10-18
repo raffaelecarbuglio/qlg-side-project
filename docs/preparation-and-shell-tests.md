@@ -1,5 +1,10 @@
 # Restartable preparation, shell cutoffs and boundary checks
 
+Threading and checkpoint reuse make higher shell cutoffs feasible on the
+full 16-simplex block. The tested amplitude ratios vary much less than the
+raw amplitudes, while the boundary audit shows that fixed-j refinements
+change the area of an inherited coarse boundary surface.
+
 This campaign tests the full 16-simplex edgewise block with boundary j=1,
 gamma=1.2, unit edge weight, internal face weight 2j+1 and all internal
 intertwiners. K=3 completes the internal spin sum for this block. Shell cutoff
@@ -9,7 +14,8 @@ Delta l is a separate numerical approximation. Native accuracy is very-high.
 then assembles the three homogeneous canonical boundary states i=0,1,2.
 It reuses the atomic NumPy checkpoints already used by the production runner.
 The cache identity includes gamma, native accuracy, backend/build identity,
-lookup-table hashes, the wrapper source hash and NumPy version. The tensor key
+lookup-table hashes, the wrapper source hash and NumPy version in a local
+cache manifest. The tensor key
 also includes the shell cutoff and ordered spin tuple. Changing process/thread
 counts or the tested boundary intertwiner does not invalidate these tensors.
 Changing numerical conventions or backend does. Native booster workspaces are
@@ -24,7 +30,9 @@ against the first serial run, and compares all three fully contracted boundary
 amplitudes. BLAS uses one thread throughout. The timed preparation includes
 worker startup, native initialization, loading lookup tables, vertex computation
 and atomic checkpoint writes. Assembly and exact contractions are separate.
-These timings are local, not INFN results. Requested core-seconds count allocated
+In each state's build statistics, the inherited `native_seconds` field measures
+prepared-backend archive reads. Actual native computation is timed under
+`workers`. These timings are local, not INFN results. Requested core-seconds count allocated
 CPU capacity times preparation wall time; they are not measured CPU consumption.
 
 The shell scan uses K=3. Each boundary amplitude is contracted with two selected
@@ -36,9 +44,14 @@ Changes between consecutive cutoffs do not bound the uncomputed shell tail.
 
 ## CPU results and recovery checks
 
-The local host reported Intel Xeon Platinum 8573C, nine visible virtual CPUs,
-and an eight-core CPU quota. The same pinned native binary and input data
-were used throughout. The two measured preparation times and their median:
+The local benchmark used up to four requested CPU threads. The same pinned
+native binary and input data were used throughout. Public reports retain
+numerical inputs, measurements and source revisions; host diagnostics and
+binary/build fingerprints are kept out of those reports. Metadata was narrowed
+after the numerical runs without changing any numerical value or timing.
+`numeric_source_revision` identifies the public code used for those calculations;
+the current drivers export limited metadata by default. The two measured
+preparation times and their median:
 
 | Processes | Threads/process | Two cold times (s) | Median (s) | Requested core-seconds |
 | ---: | ---: | ---: | ---: | ---: |
@@ -50,7 +63,8 @@ were used throughout. The two measured preparation times and their median:
 | 4 | 1 | 95.09, 107.41 | 101.25 | 405.00 |
 
 One process with four threads was fastest, approximately 2.50 times the
-serial speed. Serial execution consumed the fewest requested core-seconds.
+serial speed. Multi-process assignments used round-robin shards of the
+sorted ordered-spin tuples; other task schedules were not benchmarked. Serial execution consumed the fewest requested core-seconds.
 More processes lost sharing of native booster preparation; their total native
 computation increased. This conclusion applies to this small full finite-K
 block, binary and machine. Two repetitions expose timing variation but do not
@@ -84,6 +98,60 @@ Raw [CPU measurements](../benchmarks/results/2026-10-18-preparation.json)
 and the [boundary audit](../benchmarks/results/2026-10-18-boundary-audit.json)
 include numerical values and provenance.
 
+## Complete spin sums through shell cutoff 8
+
+All six cutoffs 0,2,4,5,6,8 completed, with K=3 and the same 16-simplex
+complex. A0,A1,A2 denote the three homogeneous boundary amplitudes, not
+three refinement levels. There are 18 complete finite-shell amplitudes,
+each checked with two selected exact contraction paths. The largest
+relative disagreement between those paths was 2.11e-15.
+
+| Shell cutoff | ln abs(A1) | A1/A0 | A2/A0 |
+| ---: | ---: | ---: | ---: |
+| 0 | -350.9128369 | -2.744244297e-06 | 1.382879033e-06 |
+| 2 | -341.7932683 | -2.238983096e-06 | 7.479805971e-07 |
+| 4 | -340.3325061 | -2.047372783e-06 | 6.338664893e-07 |
+| 5 | -340.0720603 | -1.998063987e-06 | 6.175899169e-07 |
+| 6 | -339.9081343 | -1.968233529e-06 | 6.135236557e-07 |
+| 8 | -339.7145869 | -1.940431981e-06 | 6.183116132e-07 |
+
+The raw i=1 amplitude grows by 21.355% from shell 6 to 8. The signed
+ratios A1/A0 and A2/A0 change by -1.413% and +0.780%, respectively.
+Removing one common amplitude scale therefore cancels much of the observed
+drift, but there is still state dependence. A2/A0 decreases from shell 4
+to 5 to 6, then increases at 8; a monotonic tail extrapolation is not justified
+by these data. These differences are observations, not shell-tail error bounds
+or continuum measurements. No subpercent truncation error for both ratios has
+been established, and only three boundary states have been probed.
+
+The previously timed-out K=3, shell-6 case completed locally with four threads
+in 387.3 s of preparation. Earlier single-thread timings were obtained on a
+different host; this is a completed calculation, not a measured cross-host
+speedup factor. Shell-scan timings are individual descriptive measurements;
+short regression checks overlapped the beginning of this scan.
+
+Shell 8 reached the imposed 900 s preparation limit after saving 551 vertices.
+The incomplete attempt has no amplitude estimate. A second invocation reused
+all 551 archives and computed exactly the missing 23, then contracted all three
+states. Its preparation took 476.5 s; both attempts together took 1376.6 s.
+The restart preserves completed vertices, but rebuilds auxiliary booster data
+for the missing ones. This additional work makes the remaining vertex count
+a poor predictor of restart runtime. Preserving completed auxiliary data is
+a potential future optimization, not part of the current checkpoint mechanism.
+The 900 s limit was an experimental budget, not a hardware impossibility.
+
+The raw [initial scan](../benchmarks/results/2026-10-18-shell-states.json)
+and [successful shell-8 recovery](../benchmarks/results/2026-10-18-shell8-resume.json)
+retain both outcomes, worker counters, timings, signs, logarithmic scales,
+normalization diagnostics, exact contraction paths and public source revisions.
+
+The completed physical spin sum also matters for the choice of boundary
+probe. At shell cutoff 0, the i=2 amplitude is negative at K=1 in the
+[earlier data](../benchmarks/results/2026-10-18-fixed-order.json), with
+ln(abs(A2))=-352.9256373. At K=3 it is positive, with
+ln(abs(A2))=-351.5981751. All new shell comparisons use the exact K=3
+spin endpoint, rather than assuming one small-K result controls every state.
+
 ## Boundary audit
 
 The same original boundary triangle has 1,4,16,64 subtriangles at edgewise
@@ -98,7 +166,8 @@ sqrt(2), while four nonzero fine-spin area eigenvalues sum to at least
 4*sqrt(3)/2 > sqrt(2). Consequently one cannot represent its subdivision by
 four equal, nonzero, definite fine spins at the same physical scale. This is
 not an obstruction to a continuum limit: it diagnoses this particular boundary
-ansatz. States involving j=0, superpositions, a larger-area semiclassical
+ansatz at fixed physical area. A limit involving growing physical boundaries
+would need its own scaling prescription and observables. States involving j=0, superpositions, a larger-area semiclassical
 boundary, and an appropriate map between boundary Hilbert spaces require their
 own construction. Matching areas alone would still leave shapes and
 correlations unspecified. The area spectrum is from Rovelli,
@@ -119,6 +188,17 @@ python -m benchmarks.compare_preparation --run-root runs/preparation-new \
   --output benchmarks/results/preparation-new.json
 python -m benchmarks.check_boundary \
   --output benchmarks/results/boundary-audit-new.json
+python -m benchmarks.block_scan --run runs/shell-states-new --cutoff 3 \
+  --dl 0 2 4 5 6 8 --processes 1 --threads 4 --timeout 900 \
+  --output benchmarks/results/shell-states-new.json
+```
+
+If shell 8 reaches the budget, keep its first report and resume explicitly:
+
+```bash
+python -m benchmarks.block_scan --run runs/shell-states-new --cutoff 3 \
+  --dl 8 --processes 1 --threads 4 --timeout 900 \
+  --output benchmarks/results/shell8-resumed-new.json
 ```
 
 Use an unused directory for a cold CPU benchmark. `compare_preparation --resume`

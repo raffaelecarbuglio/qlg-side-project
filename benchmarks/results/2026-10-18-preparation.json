@@ -1,48 +1,13 @@
 {
-  "driver_sha256": "87efd5a6373f08d6ac23fc1aaed61370caed9a29a942ffd83aa221c5e557f4f4",
   "results": [
     {
       "blas_threads": 1,
-      "cache_spec": {
-        "accuracy": 2,
-        "backend": {
-          "build": {
-            "blas": "system",
-            "commit": "052e4346028870bd76f69a3034e6cae8defb8f7f",
-            "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
-            "files_sha256": {
-              "ext/fastwigxj/lib/libfastwigxj.a": "8c8a82cb551537b026dfc02136024cb12b7413dfd5600c01965f752442cabb68",
-              "ext/wigxjpf/lib/libwigxjpf.a": "6b7494bd4489af07dec8c94d997350e2315a074e90efce9a5c3f2b8cd87ea3eb",
-              "ext/wigxjpf/lib/libwigxjpf_quadmath.a": "29e6f67b1fb972dc0a57ea730d03abfaa63448134a2d969bfb3a63937103af10",
-              "lib/libsl2cfoam.so": "898e2c35762f69ed87cd1399bb72bba208afe6c30fb1e3ba3ce8795ae3c10ad0"
-            },
-            "io": true,
-            "mpi": false,
-            "openmp": true,
-            "repository": "https://github.com/qg-cpt-marseille/sl2cfoam-next",
-            "rho_convention": "gamma*(j+1)"
-          },
-          "library_sha256": "898e2c35762f69ed87cd1399bb72bba208afe6c30fb1e3ba3ce8795ae3c10ad0"
-        },
-        "gamma": 1.2,
-        "numpy": "2.3.5",
-        "schema": 1,
-        "tables": {
-          "table_40.6j": "de1a29d0252c3c1ebf51b96d7fdebe7f21587ee65dcbc3864070774c14704b72",
-          "table_50.3j": "73d9170de4f04b776923106c5c6ea1bbb70cf2e62a14d24b83cda31194567e6e"
-        },
-        "wrapper_sha256": "5fffc96d60bfa0d16f6d7a3f26d8850999d45d1e5f30409513a1057d66c824f6"
-      },
-      "cpu_model": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           46 bits physical, 57 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  9\nOn-line CPU(s) list:                     0-8\nVendor ID:                               GenuineIntel\nModel name:                              INTEL(R) XEON(R) PLATINUM 8573C\nBIOS Model name:                           CPU @ 0.0GHz\nBIOS CPU family:                         0\nCPU family:                              6\nModel:                                   207\nThread(s) per core:                      1\nCore(s) per socket:                      9\nSocket(s):                               1\nStepping:                                2\nBogoMIPS:                                4599.99\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 arat avx512vbmi umip waitpkg avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid cldemote movdiri movdir64b fsrm serialize tsxldtrk avx512_fp16 arch_capabilities\nHypervisor vendor:                       KVM\nVirtualization type:                     full\nL1d cache:                               240 KiB (5 instances)\nL1i cache:                               160 KiB (5 instances)\nL2 cache:                                10 MiB (5 instances)\nL3 cache:                                260 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-8\nVulnerability Gather data sampling:      Not affected\nVulnerability Ghostwrite:                Not affected\nVulnerability Indirect target selection: Vulnerable\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Old microcode:             Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Vulnerable\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Vulnerable\nVulnerability Spectre v1:                Vulnerable: __user pointer sanitization and usercopy barriers only; no swapgs barriers\nVulnerability Spectre v2:                Vulnerable; STIBP: disabled; PBRSB-eIBRS: Not affected; BHI: Vulnerable\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Not affected",
-      "cpu_quota": "800000 100000",
       "driver_wall_seconds": null,
       "loaded_existing_cold_report": true,
       "max_amplitude_relative_difference": 0.0,
       "max_vertex_relative_maxnorm_difference": 0.0,
-      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
       "preparation_timeout_seconds": 600.0,
       "processes": 1,
-      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
       "repeat": 0,
       "results": [
         {
@@ -690,61 +655,23 @@
         }
       ],
       "schema": 1,
-      "source_sha256": {
-        "benchmarks/block_scan.py": "daad68f20183c90b2032dcf0044fc3d93da607b0814b373864ce705a5b0ea27b",
-        "benchmarks/check_cutoffs.py": "37269b166a6effaa64a462823def72833544d5e50d774200b2afd8db07838383",
-        "benchmarks/compare_refinement.py": "e77ea583b7ff234ea4a582dbeb49c511f501b75ebf8e31131e5cde90c4bee3f8",
-        "benchmarks/compression.py": "eebedf4c648a4bb8651f33d13f88c2c07a63dafb3e2f2d051c7dd43bba396ad7",
-        "benchmarks/refinement.py": "70331db18b7088033f57be3ff21aeb29c6ccc73f438600e271e150cfc3ef4ab9",
-        "qlg/backend.py": "5fffc96d60bfa0d16f6d7a3f26d8850999d45d1e5f30409513a1057d66c824f6",
-        "qlg/jobs.py": "e8f50999b8f35c5b305f7763c8be4abf94fe648c5bc519d736c2e8344df72ff4",
-        "qlg/spins.py": "0a70f40c3d05dcae1fef24dccc5fd1d8392ca5dcb95cedcaf8274ffe421f37c4",
-        "qlg/topology.py": "cfa16b9ecc5541b8de52fedc53f582d26faf3a0c6e1499eb3d988bb91133c6a2"
-      },
-      "threads": 1
+      "threads": 1,
+      "numeric_source_revision": "5f2347c771ee2037dbe42e5d57b323da2629e1b0",
+      "backend_source_revision": "052e4346028870bd76f69a3034e6cae8defb8f7f",
+      "gamma": 1.2,
+      "boundary_j": 1,
+      "accuracy": "veryhigh",
+      "rho_convention": "gamma*(j+1)",
+      "numpy": "2.3.5"
     },
     {
       "blas_threads": 1,
-      "cache_spec": {
-        "accuracy": 2,
-        "backend": {
-          "build": {
-            "blas": "system",
-            "commit": "052e4346028870bd76f69a3034e6cae8defb8f7f",
-            "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
-            "files_sha256": {
-              "ext/fastwigxj/lib/libfastwigxj.a": "8c8a82cb551537b026dfc02136024cb12b7413dfd5600c01965f752442cabb68",
-              "ext/wigxjpf/lib/libwigxjpf.a": "6b7494bd4489af07dec8c94d997350e2315a074e90efce9a5c3f2b8cd87ea3eb",
-              "ext/wigxjpf/lib/libwigxjpf_quadmath.a": "29e6f67b1fb972dc0a57ea730d03abfaa63448134a2d969bfb3a63937103af10",
-              "lib/libsl2cfoam.so": "898e2c35762f69ed87cd1399bb72bba208afe6c30fb1e3ba3ce8795ae3c10ad0"
-            },
-            "io": true,
-            "mpi": false,
-            "openmp": true,
-            "repository": "https://github.com/qg-cpt-marseille/sl2cfoam-next",
-            "rho_convention": "gamma*(j+1)"
-          },
-          "library_sha256": "898e2c35762f69ed87cd1399bb72bba208afe6c30fb1e3ba3ce8795ae3c10ad0"
-        },
-        "gamma": 1.2,
-        "numpy": "2.3.5",
-        "schema": 1,
-        "tables": {
-          "table_40.6j": "de1a29d0252c3c1ebf51b96d7fdebe7f21587ee65dcbc3864070774c14704b72",
-          "table_50.3j": "73d9170de4f04b776923106c5c6ea1bbb70cf2e62a14d24b83cda31194567e6e"
-        },
-        "wrapper_sha256": "5fffc96d60bfa0d16f6d7a3f26d8850999d45d1e5f30409513a1057d66c824f6"
-      },
-      "cpu_model": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           46 bits physical, 57 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  9\nOn-line CPU(s) list:                     0-8\nVendor ID:                               GenuineIntel\nModel name:                              INTEL(R) XEON(R) PLATINUM 8573C\nBIOS Model name:                           CPU @ 0.0GHz\nBIOS CPU family:                         0\nCPU family:                              6\nModel:                                   207\nThread(s) per core:                      1\nCore(s) per socket:                      9\nSocket(s):                               1\nStepping:                                2\nBogoMIPS:                                4599.99\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 arat avx512vbmi umip waitpkg avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid cldemote movdiri movdir64b fsrm serialize tsxldtrk avx512_fp16 arch_capabilities\nHypervisor vendor:                       KVM\nVirtualization type:                     full\nL1d cache:                               240 KiB (5 instances)\nL1i cache:                               160 KiB (5 instances)\nL2 cache:                                10 MiB (5 instances)\nL3 cache:                                260 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-8\nVulnerability Gather data sampling:      Not affected\nVulnerability Ghostwrite:                Not affected\nVulnerability Indirect target selection: Vulnerable\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Old microcode:             Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Vulnerable\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Vulnerable\nVulnerability Spectre v1:                Vulnerable: __user pointer sanitization and usercopy barriers only; no swapgs barriers\nVulnerability Spectre v2:                Vulnerable; STIBP: disabled; PBRSB-eIBRS: Not affected; BHI: Vulnerable\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Not affected",
-      "cpu_quota": "800000 100000",
       "driver_wall_seconds": null,
       "loaded_existing_cold_report": true,
       "max_amplitude_relative_difference": 0.0,
       "max_vertex_relative_maxnorm_difference": 9.062469072263988e-15,
-      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
       "preparation_timeout_seconds": 600.0,
       "processes": 1,
-      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
       "repeat": 0,
       "results": [
         {
@@ -1392,61 +1319,23 @@
         }
       ],
       "schema": 1,
-      "source_sha256": {
-        "benchmarks/block_scan.py": "daad68f20183c90b2032dcf0044fc3d93da607b0814b373864ce705a5b0ea27b",
-        "benchmarks/check_cutoffs.py": "37269b166a6effaa64a462823def72833544d5e50d774200b2afd8db07838383",
-        "benchmarks/compare_refinement.py": "e77ea583b7ff234ea4a582dbeb49c511f501b75ebf8e31131e5cde90c4bee3f8",
-        "benchmarks/compression.py": "eebedf4c648a4bb8651f33d13f88c2c07a63dafb3e2f2d051c7dd43bba396ad7",
-        "benchmarks/refinement.py": "70331db18b7088033f57be3ff21aeb29c6ccc73f438600e271e150cfc3ef4ab9",
-        "qlg/backend.py": "5fffc96d60bfa0d16f6d7a3f26d8850999d45d1e5f30409513a1057d66c824f6",
-        "qlg/jobs.py": "e8f50999b8f35c5b305f7763c8be4abf94fe648c5bc519d736c2e8344df72ff4",
-        "qlg/spins.py": "0a70f40c3d05dcae1fef24dccc5fd1d8392ca5dcb95cedcaf8274ffe421f37c4",
-        "qlg/topology.py": "cfa16b9ecc5541b8de52fedc53f582d26faf3a0c6e1499eb3d988bb91133c6a2"
-      },
-      "threads": 2
+      "threads": 2,
+      "numeric_source_revision": "5f2347c771ee2037dbe42e5d57b323da2629e1b0",
+      "backend_source_revision": "052e4346028870bd76f69a3034e6cae8defb8f7f",
+      "gamma": 1.2,
+      "boundary_j": 1,
+      "accuracy": "veryhigh",
+      "rho_convention": "gamma*(j+1)",
+      "numpy": "2.3.5"
     },
     {
       "blas_threads": 1,
-      "cache_spec": {
-        "accuracy": 2,
-        "backend": {
-          "build": {
-            "blas": "system",
-            "commit": "052e4346028870bd76f69a3034e6cae8defb8f7f",
-            "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
-            "files_sha256": {
-              "ext/fastwigxj/lib/libfastwigxj.a": "8c8a82cb551537b026dfc02136024cb12b7413dfd5600c01965f752442cabb68",
-              "ext/wigxjpf/lib/libwigxjpf.a": "6b7494bd4489af07dec8c94d997350e2315a074e90efce9a5c3f2b8cd87ea3eb",
-              "ext/wigxjpf/lib/libwigxjpf_quadmath.a": "29e6f67b1fb972dc0a57ea730d03abfaa63448134a2d969bfb3a63937103af10",
-              "lib/libsl2cfoam.so": "898e2c35762f69ed87cd1399bb72bba208afe6c30fb1e3ba3ce8795ae3c10ad0"
-            },
-            "io": true,
-            "mpi": false,
-            "openmp": true,
-            "repository": "https://github.com/qg-cpt-marseille/sl2cfoam-next",
-            "rho_convention": "gamma*(j+1)"
-          },
-          "library_sha256": "898e2c35762f69ed87cd1399bb72bba208afe6c30fb1e3ba3ce8795ae3c10ad0"
-        },
-        "gamma": 1.2,
-        "numpy": "2.3.5",
-        "schema": 1,
-        "tables": {
-          "table_40.6j": "de1a29d0252c3c1ebf51b96d7fdebe7f21587ee65dcbc3864070774c14704b72",
-          "table_50.3j": "73d9170de4f04b776923106c5c6ea1bbb70cf2e62a14d24b83cda31194567e6e"
-        },
-        "wrapper_sha256": "5fffc96d60bfa0d16f6d7a3f26d8850999d45d1e5f30409513a1057d66c824f6"
-      },
-      "cpu_model": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           46 bits physical, 57 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  9\nOn-line CPU(s) list:                     0-8\nVendor ID:                               GenuineIntel\nModel name:                              INTEL(R) XEON(R) PLATINUM 8573C\nBIOS Model name:                           CPU @ 0.0GHz\nBIOS CPU family:                         0\nCPU family:                              6\nModel:                                   207\nThread(s) per core:                      1\nCore(s) per socket:                      9\nSocket(s):                               1\nStepping:                                2\nBogoMIPS:                                4599.99\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 arat avx512vbmi umip waitpkg avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid cldemote movdiri movdir64b fsrm serialize tsxldtrk avx512_fp16 arch_capabilities\nHypervisor vendor:                       KVM\nVirtualization type:                     full\nL1d cache:                               240 KiB (5 instances)\nL1i cache:                               160 KiB (5 instances)\nL2 cache:                                10 MiB (5 instances)\nL3 cache:                                260 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-8\nVulnerability Gather data sampling:      Not affected\nVulnerability Ghostwrite:                Not affected\nVulnerability Indirect target selection: Vulnerable\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Old microcode:             Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Vulnerable\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Vulnerable\nVulnerability Spectre v1:                Vulnerable: __user pointer sanitization and usercopy barriers only; no swapgs barriers\nVulnerability Spectre v2:                Vulnerable; STIBP: disabled; PBRSB-eIBRS: Not affected; BHI: Vulnerable\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Not affected",
-      "cpu_quota": "800000 100000",
       "driver_wall_seconds": null,
       "loaded_existing_cold_report": true,
       "max_amplitude_relative_difference": 5.68434188608064e-14,
       "max_vertex_relative_maxnorm_difference": 7.952778981782684e-15,
-      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
       "preparation_timeout_seconds": 600.0,
       "processes": 1,
-      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
       "repeat": 0,
       "results": [
         {
@@ -2094,61 +1983,23 @@
         }
       ],
       "schema": 1,
-      "source_sha256": {
-        "benchmarks/block_scan.py": "daad68f20183c90b2032dcf0044fc3d93da607b0814b373864ce705a5b0ea27b",
-        "benchmarks/check_cutoffs.py": "37269b166a6effaa64a462823def72833544d5e50d774200b2afd8db07838383",
-        "benchmarks/compare_refinement.py": "e77ea583b7ff234ea4a582dbeb49c511f501b75ebf8e31131e5cde90c4bee3f8",
-        "benchmarks/compression.py": "eebedf4c648a4bb8651f33d13f88c2c07a63dafb3e2f2d051c7dd43bba396ad7",
-        "benchmarks/refinement.py": "70331db18b7088033f57be3ff21aeb29c6ccc73f438600e271e150cfc3ef4ab9",
-        "qlg/backend.py": "5fffc96d60bfa0d16f6d7a3f26d8850999d45d1e5f30409513a1057d66c824f6",
-        "qlg/jobs.py": "e8f50999b8f35c5b305f7763c8be4abf94fe648c5bc519d736c2e8344df72ff4",
-        "qlg/spins.py": "0a70f40c3d05dcae1fef24dccc5fd1d8392ca5dcb95cedcaf8274ffe421f37c4",
-        "qlg/topology.py": "cfa16b9ecc5541b8de52fedc53f582d26faf3a0c6e1499eb3d988bb91133c6a2"
-      },
-      "threads": 4
+      "threads": 4,
+      "numeric_source_revision": "5f2347c771ee2037dbe42e5d57b323da2629e1b0",
+      "backend_source_revision": "052e4346028870bd76f69a3034e6cae8defb8f7f",
+      "gamma": 1.2,
+      "boundary_j": 1,
+      "accuracy": "veryhigh",
+      "rho_convention": "gamma*(j+1)",
+      "numpy": "2.3.5"
     },
     {
       "blas_threads": 1,
-      "cache_spec": {
-        "accuracy": 2,
-        "backend": {
-          "build": {
-            "blas": "system",
-            "commit": "052e4346028870bd76f69a3034e6cae8defb8f7f",
-            "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
-            "files_sha256": {
-              "ext/fastwigxj/lib/libfastwigxj.a": "8c8a82cb551537b026dfc02136024cb12b7413dfd5600c01965f752442cabb68",
-              "ext/wigxjpf/lib/libwigxjpf.a": "6b7494bd4489af07dec8c94d997350e2315a074e90efce9a5c3f2b8cd87ea3eb",
-              "ext/wigxjpf/lib/libwigxjpf_quadmath.a": "29e6f67b1fb972dc0a57ea730d03abfaa63448134a2d969bfb3a63937103af10",
-              "lib/libsl2cfoam.so": "898e2c35762f69ed87cd1399bb72bba208afe6c30fb1e3ba3ce8795ae3c10ad0"
-            },
-            "io": true,
-            "mpi": false,
-            "openmp": true,
-            "repository": "https://github.com/qg-cpt-marseille/sl2cfoam-next",
-            "rho_convention": "gamma*(j+1)"
-          },
-          "library_sha256": "898e2c35762f69ed87cd1399bb72bba208afe6c30fb1e3ba3ce8795ae3c10ad0"
-        },
-        "gamma": 1.2,
-        "numpy": "2.3.5",
-        "schema": 1,
-        "tables": {
-          "table_40.6j": "de1a29d0252c3c1ebf51b96d7fdebe7f21587ee65dcbc3864070774c14704b72",
-          "table_50.3j": "73d9170de4f04b776923106c5c6ea1bbb70cf2e62a14d24b83cda31194567e6e"
-        },
-        "wrapper_sha256": "5fffc96d60bfa0d16f6d7a3f26d8850999d45d1e5f30409513a1057d66c824f6"
-      },
-      "cpu_model": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           46 bits physical, 57 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  9\nOn-line CPU(s) list:                     0-8\nVendor ID:                               GenuineIntel\nModel name:                              INTEL(R) XEON(R) PLATINUM 8573C\nBIOS Model name:                           CPU @ 0.0GHz\nBIOS CPU family:                         0\nCPU family:                              6\nModel:                                   207\nThread(s) per core:                      1\nCore(s) per socket:                      9\nSocket(s):                               1\nStepping:                                2\nBogoMIPS:                                4599.99\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 arat avx512vbmi umip waitpkg avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid cldemote movdiri movdir64b fsrm serialize tsxldtrk avx512_fp16 arch_capabilities\nHypervisor vendor:                       KVM\nVirtualization type:                     full\nL1d cache:                               240 KiB (5 instances)\nL1i cache:                               160 KiB (5 instances)\nL2 cache:                                10 MiB (5 instances)\nL3 cache:                                260 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-8\nVulnerability Gather data sampling:      Not affected\nVulnerability Ghostwrite:                Not affected\nVulnerability Indirect target selection: Vulnerable\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Old microcode:             Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Vulnerable\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Vulnerable\nVulnerability Spectre v1:                Vulnerable: __user pointer sanitization and usercopy barriers only; no swapgs barriers\nVulnerability Spectre v2:                Vulnerable; STIBP: disabled; PBRSB-eIBRS: Not affected; BHI: Vulnerable\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Not affected",
-      "cpu_quota": "800000 100000",
       "driver_wall_seconds": null,
       "loaded_existing_cold_report": true,
       "max_amplitude_relative_difference": 0.0,
       "max_vertex_relative_maxnorm_difference": 0.0,
-      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
       "preparation_timeout_seconds": 600.0,
       "processes": 2,
-      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
       "repeat": 0,
       "results": [
         {
@@ -2805,61 +2656,23 @@
         }
       ],
       "schema": 1,
-      "source_sha256": {
-        "benchmarks/block_scan.py": "daad68f20183c90b2032dcf0044fc3d93da607b0814b373864ce705a5b0ea27b",
-        "benchmarks/check_cutoffs.py": "37269b166a6effaa64a462823def72833544d5e50d774200b2afd8db07838383",
-        "benchmarks/compare_refinement.py": "e77ea583b7ff234ea4a582dbeb49c511f501b75ebf8e31131e5cde90c4bee3f8",
-        "benchmarks/compression.py": "eebedf4c648a4bb8651f33d13f88c2c07a63dafb3e2f2d051c7dd43bba396ad7",
-        "benchmarks/refinement.py": "70331db18b7088033f57be3ff21aeb29c6ccc73f438600e271e150cfc3ef4ab9",
-        "qlg/backend.py": "5fffc96d60bfa0d16f6d7a3f26d8850999d45d1e5f30409513a1057d66c824f6",
-        "qlg/jobs.py": "e8f50999b8f35c5b305f7763c8be4abf94fe648c5bc519d736c2e8344df72ff4",
-        "qlg/spins.py": "0a70f40c3d05dcae1fef24dccc5fd1d8392ca5dcb95cedcaf8274ffe421f37c4",
-        "qlg/topology.py": "cfa16b9ecc5541b8de52fedc53f582d26faf3a0c6e1499eb3d988bb91133c6a2"
-      },
-      "threads": 1
+      "threads": 1,
+      "numeric_source_revision": "5f2347c771ee2037dbe42e5d57b323da2629e1b0",
+      "backend_source_revision": "052e4346028870bd76f69a3034e6cae8defb8f7f",
+      "gamma": 1.2,
+      "boundary_j": 1,
+      "accuracy": "veryhigh",
+      "rho_convention": "gamma*(j+1)",
+      "numpy": "2.3.5"
     },
     {
       "blas_threads": 1,
-      "cache_spec": {
-        "accuracy": 2,
-        "backend": {
-          "build": {
-            "blas": "system",
-            "commit": "052e4346028870bd76f69a3034e6cae8defb8f7f",
-            "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
-            "files_sha256": {
-              "ext/fastwigxj/lib/libfastwigxj.a": "8c8a82cb551537b026dfc02136024cb12b7413dfd5600c01965f752442cabb68",
-              "ext/wigxjpf/lib/libwigxjpf.a": "6b7494bd4489af07dec8c94d997350e2315a074e90efce9a5c3f2b8cd87ea3eb",
-              "ext/wigxjpf/lib/libwigxjpf_quadmath.a": "29e6f67b1fb972dc0a57ea730d03abfaa63448134a2d969bfb3a63937103af10",
-              "lib/libsl2cfoam.so": "898e2c35762f69ed87cd1399bb72bba208afe6c30fb1e3ba3ce8795ae3c10ad0"
-            },
-            "io": true,
-            "mpi": false,
-            "openmp": true,
-            "repository": "https://github.com/qg-cpt-marseille/sl2cfoam-next",
-            "rho_convention": "gamma*(j+1)"
-          },
-          "library_sha256": "898e2c35762f69ed87cd1399bb72bba208afe6c30fb1e3ba3ce8795ae3c10ad0"
-        },
-        "gamma": 1.2,
-        "numpy": "2.3.5",
-        "schema": 1,
-        "tables": {
-          "table_40.6j": "de1a29d0252c3c1ebf51b96d7fdebe7f21587ee65dcbc3864070774c14704b72",
-          "table_50.3j": "73d9170de4f04b776923106c5c6ea1bbb70cf2e62a14d24b83cda31194567e6e"
-        },
-        "wrapper_sha256": "5fffc96d60bfa0d16f6d7a3f26d8850999d45d1e5f30409513a1057d66c824f6"
-      },
-      "cpu_model": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           46 bits physical, 57 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  9\nOn-line CPU(s) list:                     0-8\nVendor ID:                               GenuineIntel\nModel name:                              INTEL(R) XEON(R) PLATINUM 8573C\nBIOS Model name:                           CPU @ 0.0GHz\nBIOS CPU family:                         0\nCPU family:                              6\nModel:                                   207\nThread(s) per core:                      1\nCore(s) per socket:                      9\nSocket(s):                               1\nStepping:                                2\nBogoMIPS:                                4599.99\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 arat avx512vbmi umip waitpkg avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid cldemote movdiri movdir64b fsrm serialize tsxldtrk avx512_fp16 arch_capabilities\nHypervisor vendor:                       KVM\nVirtualization type:                     full\nL1d cache:                               240 KiB (5 instances)\nL1i cache:                               160 KiB (5 instances)\nL2 cache:                                10 MiB (5 instances)\nL3 cache:                                260 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-8\nVulnerability Gather data sampling:      Not affected\nVulnerability Ghostwrite:                Not affected\nVulnerability Indirect target selection: Vulnerable\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Old microcode:             Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Vulnerable\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Vulnerable\nVulnerability Spectre v1:                Vulnerable: __user pointer sanitization and usercopy barriers only; no swapgs barriers\nVulnerability Spectre v2:                Vulnerable; STIBP: disabled; PBRSB-eIBRS: Not affected; BHI: Vulnerable\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Not affected",
-      "cpu_quota": "800000 100000",
       "driver_wall_seconds": null,
       "loaded_existing_cold_report": true,
       "max_amplitude_relative_difference": 5.684341886080963e-14,
       "max_vertex_relative_maxnorm_difference": 9.24741742067754e-15,
-      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
       "preparation_timeout_seconds": 600.0,
       "processes": 2,
-      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
       "repeat": 0,
       "results": [
         {
@@ -3516,61 +3329,23 @@
         }
       ],
       "schema": 1,
-      "source_sha256": {
-        "benchmarks/block_scan.py": "daad68f20183c90b2032dcf0044fc3d93da607b0814b373864ce705a5b0ea27b",
-        "benchmarks/check_cutoffs.py": "37269b166a6effaa64a462823def72833544d5e50d774200b2afd8db07838383",
-        "benchmarks/compare_refinement.py": "e77ea583b7ff234ea4a582dbeb49c511f501b75ebf8e31131e5cde90c4bee3f8",
-        "benchmarks/compression.py": "eebedf4c648a4bb8651f33d13f88c2c07a63dafb3e2f2d051c7dd43bba396ad7",
-        "benchmarks/refinement.py": "70331db18b7088033f57be3ff21aeb29c6ccc73f438600e271e150cfc3ef4ab9",
-        "qlg/backend.py": "5fffc96d60bfa0d16f6d7a3f26d8850999d45d1e5f30409513a1057d66c824f6",
-        "qlg/jobs.py": "e8f50999b8f35c5b305f7763c8be4abf94fe648c5bc519d736c2e8344df72ff4",
-        "qlg/spins.py": "0a70f40c3d05dcae1fef24dccc5fd1d8392ca5dcb95cedcaf8274ffe421f37c4",
-        "qlg/topology.py": "cfa16b9ecc5541b8de52fedc53f582d26faf3a0c6e1499eb3d988bb91133c6a2"
-      },
-      "threads": 2
+      "threads": 2,
+      "numeric_source_revision": "5f2347c771ee2037dbe42e5d57b323da2629e1b0",
+      "backend_source_revision": "052e4346028870bd76f69a3034e6cae8defb8f7f",
+      "gamma": 1.2,
+      "boundary_j": 1,
+      "accuracy": "veryhigh",
+      "rho_convention": "gamma*(j+1)",
+      "numpy": "2.3.5"
     },
     {
       "blas_threads": 1,
-      "cache_spec": {
-        "accuracy": 2,
-        "backend": {
-          "build": {
-            "blas": "system",
-            "commit": "052e4346028870bd76f69a3034e6cae8defb8f7f",
-            "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
-            "files_sha256": {
-              "ext/fastwigxj/lib/libfastwigxj.a": "8c8a82cb551537b026dfc02136024cb12b7413dfd5600c01965f752442cabb68",
-              "ext/wigxjpf/lib/libwigxjpf.a": "6b7494bd4489af07dec8c94d997350e2315a074e90efce9a5c3f2b8cd87ea3eb",
-              "ext/wigxjpf/lib/libwigxjpf_quadmath.a": "29e6f67b1fb972dc0a57ea730d03abfaa63448134a2d969bfb3a63937103af10",
-              "lib/libsl2cfoam.so": "898e2c35762f69ed87cd1399bb72bba208afe6c30fb1e3ba3ce8795ae3c10ad0"
-            },
-            "io": true,
-            "mpi": false,
-            "openmp": true,
-            "repository": "https://github.com/qg-cpt-marseille/sl2cfoam-next",
-            "rho_convention": "gamma*(j+1)"
-          },
-          "library_sha256": "898e2c35762f69ed87cd1399bb72bba208afe6c30fb1e3ba3ce8795ae3c10ad0"
-        },
-        "gamma": 1.2,
-        "numpy": "2.3.5",
-        "schema": 1,
-        "tables": {
-          "table_40.6j": "de1a29d0252c3c1ebf51b96d7fdebe7f21587ee65dcbc3864070774c14704b72",
-          "table_50.3j": "73d9170de4f04b776923106c5c6ea1bbb70cf2e62a14d24b83cda31194567e6e"
-        },
-        "wrapper_sha256": "5fffc96d60bfa0d16f6d7a3f26d8850999d45d1e5f30409513a1057d66c824f6"
-      },
-      "cpu_model": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           46 bits physical, 57 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  9\nOn-line CPU(s) list:                     0-8\nVendor ID:                               GenuineIntel\nModel name:                              INTEL(R) XEON(R) PLATINUM 8573C\nBIOS Model name:                           CPU @ 0.0GHz\nBIOS CPU family:                         0\nCPU family:                              6\nModel:                                   207\nThread(s) per core:                      1\nCore(s) per socket:                      9\nSocket(s):                               1\nStepping:                                2\nBogoMIPS:                                4599.99\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 arat avx512vbmi umip waitpkg avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid cldemote movdiri movdir64b fsrm serialize tsxldtrk avx512_fp16 arch_capabilities\nHypervisor vendor:                       KVM\nVirtualization type:                     full\nL1d cache:                               240 KiB (5 instances)\nL1i cache:                               160 KiB (5 instances)\nL2 cache:                                10 MiB (5 instances)\nL3 cache:                                260 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-8\nVulnerability Gather data sampling:      Not affected\nVulnerability Ghostwrite:                Not affected\nVulnerability Indirect target selection: Vulnerable\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Old microcode:             Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Vulnerable\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Vulnerable\nVulnerability Spectre v1:                Vulnerable: __user pointer sanitization and usercopy barriers only; no swapgs barriers\nVulnerability Spectre v2:                Vulnerable; STIBP: disabled; PBRSB-eIBRS: Not affected; BHI: Vulnerable\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Not affected",
-      "cpu_quota": "800000 100000",
       "driver_wall_seconds": null,
       "loaded_existing_cold_report": true,
       "max_amplitude_relative_difference": 0.0,
       "max_vertex_relative_maxnorm_difference": 0.0,
-      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
       "preparation_timeout_seconds": 600.0,
       "processes": 4,
-      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
       "repeat": 0,
       "results": [
         {
@@ -4245,61 +4020,23 @@
         }
       ],
       "schema": 1,
-      "source_sha256": {
-        "benchmarks/block_scan.py": "daad68f20183c90b2032dcf0044fc3d93da607b0814b373864ce705a5b0ea27b",
-        "benchmarks/check_cutoffs.py": "37269b166a6effaa64a462823def72833544d5e50d774200b2afd8db07838383",
-        "benchmarks/compare_refinement.py": "e77ea583b7ff234ea4a582dbeb49c511f501b75ebf8e31131e5cde90c4bee3f8",
-        "benchmarks/compression.py": "eebedf4c648a4bb8651f33d13f88c2c07a63dafb3e2f2d051c7dd43bba396ad7",
-        "benchmarks/refinement.py": "70331db18b7088033f57be3ff21aeb29c6ccc73f438600e271e150cfc3ef4ab9",
-        "qlg/backend.py": "5fffc96d60bfa0d16f6d7a3f26d8850999d45d1e5f30409513a1057d66c824f6",
-        "qlg/jobs.py": "e8f50999b8f35c5b305f7763c8be4abf94fe648c5bc519d736c2e8344df72ff4",
-        "qlg/spins.py": "0a70f40c3d05dcae1fef24dccc5fd1d8392ca5dcb95cedcaf8274ffe421f37c4",
-        "qlg/topology.py": "cfa16b9ecc5541b8de52fedc53f582d26faf3a0c6e1499eb3d988bb91133c6a2"
-      },
-      "threads": 1
+      "threads": 1,
+      "numeric_source_revision": "5f2347c771ee2037dbe42e5d57b323da2629e1b0",
+      "backend_source_revision": "052e4346028870bd76f69a3034e6cae8defb8f7f",
+      "gamma": 1.2,
+      "boundary_j": 1,
+      "accuracy": "veryhigh",
+      "rho_convention": "gamma*(j+1)",
+      "numpy": "2.3.5"
     },
     {
       "blas_threads": 1,
-      "cache_spec": {
-        "accuracy": 2,
-        "backend": {
-          "build": {
-            "blas": "system",
-            "commit": "052e4346028870bd76f69a3034e6cae8defb8f7f",
-            "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
-            "files_sha256": {
-              "ext/fastwigxj/lib/libfastwigxj.a": "8c8a82cb551537b026dfc02136024cb12b7413dfd5600c01965f752442cabb68",
-              "ext/wigxjpf/lib/libwigxjpf.a": "6b7494bd4489af07dec8c94d997350e2315a074e90efce9a5c3f2b8cd87ea3eb",
-              "ext/wigxjpf/lib/libwigxjpf_quadmath.a": "29e6f67b1fb972dc0a57ea730d03abfaa63448134a2d969bfb3a63937103af10",
-              "lib/libsl2cfoam.so": "898e2c35762f69ed87cd1399bb72bba208afe6c30fb1e3ba3ce8795ae3c10ad0"
-            },
-            "io": true,
-            "mpi": false,
-            "openmp": true,
-            "repository": "https://github.com/qg-cpt-marseille/sl2cfoam-next",
-            "rho_convention": "gamma*(j+1)"
-          },
-          "library_sha256": "898e2c35762f69ed87cd1399bb72bba208afe6c30fb1e3ba3ce8795ae3c10ad0"
-        },
-        "gamma": 1.2,
-        "numpy": "2.3.5",
-        "schema": 1,
-        "tables": {
-          "table_40.6j": "de1a29d0252c3c1ebf51b96d7fdebe7f21587ee65dcbc3864070774c14704b72",
-          "table_50.3j": "73d9170de4f04b776923106c5c6ea1bbb70cf2e62a14d24b83cda31194567e6e"
-        },
-        "wrapper_sha256": "5fffc96d60bfa0d16f6d7a3f26d8850999d45d1e5f30409513a1057d66c824f6"
-      },
-      "cpu_model": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           46 bits physical, 57 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  9\nOn-line CPU(s) list:                     0-8\nVendor ID:                               GenuineIntel\nModel name:                              INTEL(R) XEON(R) PLATINUM 8573C\nBIOS Model name:                           CPU @ 0.0GHz\nBIOS CPU family:                         0\nCPU family:                              6\nModel:                                   207\nThread(s) per core:                      1\nCore(s) per socket:                      9\nSocket(s):                               1\nStepping:                                2\nBogoMIPS:                                4599.99\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 arat avx512vbmi umip waitpkg avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid cldemote movdiri movdir64b fsrm serialize tsxldtrk avx512_fp16 arch_capabilities\nHypervisor vendor:                       KVM\nVirtualization type:                     full\nL1d cache:                               240 KiB (5 instances)\nL1i cache:                               160 KiB (5 instances)\nL2 cache:                                10 MiB (5 instances)\nL3 cache:                                260 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-8\nVulnerability Gather data sampling:      Not affected\nVulnerability Ghostwrite:                Not affected\nVulnerability Indirect target selection: Vulnerable\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Old microcode:             Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Vulnerable\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Vulnerable\nVulnerability Spectre v1:                Vulnerable: __user pointer sanitization and usercopy barriers only; no swapgs barriers\nVulnerability Spectre v2:                Vulnerable; STIBP: disabled; PBRSB-eIBRS: Not affected; BHI: Vulnerable\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Not affected",
-      "cpu_quota": "800000 100000",
       "driver_wall_seconds": null,
       "loaded_existing_cold_report": true,
       "max_amplitude_relative_difference": 0.0,
       "max_vertex_relative_maxnorm_difference": 0.0,
-      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
       "preparation_timeout_seconds": 600.0,
       "processes": 4,
-      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
       "repeat": 1,
       "results": [
         {
@@ -4974,61 +4711,23 @@
         }
       ],
       "schema": 1,
-      "source_sha256": {
-        "benchmarks/block_scan.py": "daad68f20183c90b2032dcf0044fc3d93da607b0814b373864ce705a5b0ea27b",
-        "benchmarks/check_cutoffs.py": "37269b166a6effaa64a462823def72833544d5e50d774200b2afd8db07838383",
-        "benchmarks/compare_refinement.py": "e77ea583b7ff234ea4a582dbeb49c511f501b75ebf8e31131e5cde90c4bee3f8",
-        "benchmarks/compression.py": "eebedf4c648a4bb8651f33d13f88c2c07a63dafb3e2f2d051c7dd43bba396ad7",
-        "benchmarks/refinement.py": "70331db18b7088033f57be3ff21aeb29c6ccc73f438600e271e150cfc3ef4ab9",
-        "qlg/backend.py": "5fffc96d60bfa0d16f6d7a3f26d8850999d45d1e5f30409513a1057d66c824f6",
-        "qlg/jobs.py": "e8f50999b8f35c5b305f7763c8be4abf94fe648c5bc519d736c2e8344df72ff4",
-        "qlg/spins.py": "0a70f40c3d05dcae1fef24dccc5fd1d8392ca5dcb95cedcaf8274ffe421f37c4",
-        "qlg/topology.py": "cfa16b9ecc5541b8de52fedc53f582d26faf3a0c6e1499eb3d988bb91133c6a2"
-      },
-      "threads": 1
+      "threads": 1,
+      "numeric_source_revision": "5f2347c771ee2037dbe42e5d57b323da2629e1b0",
+      "backend_source_revision": "052e4346028870bd76f69a3034e6cae8defb8f7f",
+      "gamma": 1.2,
+      "boundary_j": 1,
+      "accuracy": "veryhigh",
+      "rho_convention": "gamma*(j+1)",
+      "numpy": "2.3.5"
     },
     {
       "blas_threads": 1,
-      "cache_spec": {
-        "accuracy": 2,
-        "backend": {
-          "build": {
-            "blas": "system",
-            "commit": "052e4346028870bd76f69a3034e6cae8defb8f7f",
-            "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
-            "files_sha256": {
-              "ext/fastwigxj/lib/libfastwigxj.a": "8c8a82cb551537b026dfc02136024cb12b7413dfd5600c01965f752442cabb68",
-              "ext/wigxjpf/lib/libwigxjpf.a": "6b7494bd4489af07dec8c94d997350e2315a074e90efce9a5c3f2b8cd87ea3eb",
-              "ext/wigxjpf/lib/libwigxjpf_quadmath.a": "29e6f67b1fb972dc0a57ea730d03abfaa63448134a2d969bfb3a63937103af10",
-              "lib/libsl2cfoam.so": "898e2c35762f69ed87cd1399bb72bba208afe6c30fb1e3ba3ce8795ae3c10ad0"
-            },
-            "io": true,
-            "mpi": false,
-            "openmp": true,
-            "repository": "https://github.com/qg-cpt-marseille/sl2cfoam-next",
-            "rho_convention": "gamma*(j+1)"
-          },
-          "library_sha256": "898e2c35762f69ed87cd1399bb72bba208afe6c30fb1e3ba3ce8795ae3c10ad0"
-        },
-        "gamma": 1.2,
-        "numpy": "2.3.5",
-        "schema": 1,
-        "tables": {
-          "table_40.6j": "de1a29d0252c3c1ebf51b96d7fdebe7f21587ee65dcbc3864070774c14704b72",
-          "table_50.3j": "73d9170de4f04b776923106c5c6ea1bbb70cf2e62a14d24b83cda31194567e6e"
-        },
-        "wrapper_sha256": "5fffc96d60bfa0d16f6d7a3f26d8850999d45d1e5f30409513a1057d66c824f6"
-      },
-      "cpu_model": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           46 bits physical, 57 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  9\nOn-line CPU(s) list:                     0-8\nVendor ID:                               GenuineIntel\nModel name:                              INTEL(R) XEON(R) PLATINUM 8573C\nBIOS Model name:                           CPU @ 0.0GHz\nBIOS CPU family:                         0\nCPU family:                              6\nModel:                                   207\nThread(s) per core:                      1\nCore(s) per socket:                      9\nSocket(s):                               1\nStepping:                                2\nBogoMIPS:                                4599.99\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 arat avx512vbmi umip waitpkg avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid cldemote movdiri movdir64b fsrm serialize tsxldtrk avx512_fp16 arch_capabilities\nHypervisor vendor:                       KVM\nVirtualization type:                     full\nL1d cache:                               240 KiB (5 instances)\nL1i cache:                               160 KiB (5 instances)\nL2 cache:                                10 MiB (5 instances)\nL3 cache:                                260 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-8\nVulnerability Gather data sampling:      Not affected\nVulnerability Ghostwrite:                Not affected\nVulnerability Indirect target selection: Vulnerable\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Old microcode:             Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Vulnerable\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Vulnerable\nVulnerability Spectre v1:                Vulnerable: __user pointer sanitization and usercopy barriers only; no swapgs barriers\nVulnerability Spectre v2:                Vulnerable; STIBP: disabled; PBRSB-eIBRS: Not affected; BHI: Vulnerable\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Not affected",
-      "cpu_quota": "800000 100000",
       "driver_wall_seconds": null,
       "loaded_existing_cold_report": true,
       "max_amplitude_relative_difference": 5.684341886080963e-14,
       "max_vertex_relative_maxnorm_difference": 6.811941983336092e-15,
-      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
       "preparation_timeout_seconds": 600.0,
       "processes": 2,
-      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
       "repeat": 1,
       "results": [
         {
@@ -5685,61 +5384,23 @@
         }
       ],
       "schema": 1,
-      "source_sha256": {
-        "benchmarks/block_scan.py": "daad68f20183c90b2032dcf0044fc3d93da607b0814b373864ce705a5b0ea27b",
-        "benchmarks/check_cutoffs.py": "37269b166a6effaa64a462823def72833544d5e50d774200b2afd8db07838383",
-        "benchmarks/compare_refinement.py": "e77ea583b7ff234ea4a582dbeb49c511f501b75ebf8e31131e5cde90c4bee3f8",
-        "benchmarks/compression.py": "eebedf4c648a4bb8651f33d13f88c2c07a63dafb3e2f2d051c7dd43bba396ad7",
-        "benchmarks/refinement.py": "70331db18b7088033f57be3ff21aeb29c6ccc73f438600e271e150cfc3ef4ab9",
-        "qlg/backend.py": "5fffc96d60bfa0d16f6d7a3f26d8850999d45d1e5f30409513a1057d66c824f6",
-        "qlg/jobs.py": "e8f50999b8f35c5b305f7763c8be4abf94fe648c5bc519d736c2e8344df72ff4",
-        "qlg/spins.py": "0a70f40c3d05dcae1fef24dccc5fd1d8392ca5dcb95cedcaf8274ffe421f37c4",
-        "qlg/topology.py": "cfa16b9ecc5541b8de52fedc53f582d26faf3a0c6e1499eb3d988bb91133c6a2"
-      },
-      "threads": 2
+      "threads": 2,
+      "numeric_source_revision": "5f2347c771ee2037dbe42e5d57b323da2629e1b0",
+      "backend_source_revision": "052e4346028870bd76f69a3034e6cae8defb8f7f",
+      "gamma": 1.2,
+      "boundary_j": 1,
+      "accuracy": "veryhigh",
+      "rho_convention": "gamma*(j+1)",
+      "numpy": "2.3.5"
     },
     {
       "blas_threads": 1,
-      "cache_spec": {
-        "accuracy": 2,
-        "backend": {
-          "build": {
-            "blas": "system",
-            "commit": "052e4346028870bd76f69a3034e6cae8defb8f7f",
-            "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
-            "files_sha256": {
-              "ext/fastwigxj/lib/libfastwigxj.a": "8c8a82cb551537b026dfc02136024cb12b7413dfd5600c01965f752442cabb68",
-              "ext/wigxjpf/lib/libwigxjpf.a": "6b7494bd4489af07dec8c94d997350e2315a074e90efce9a5c3f2b8cd87ea3eb",
-              "ext/wigxjpf/lib/libwigxjpf_quadmath.a": "29e6f67b1fb972dc0a57ea730d03abfaa63448134a2d969bfb3a63937103af10",
-              "lib/libsl2cfoam.so": "898e2c35762f69ed87cd1399bb72bba208afe6c30fb1e3ba3ce8795ae3c10ad0"
-            },
-            "io": true,
-            "mpi": false,
-            "openmp": true,
-            "repository": "https://github.com/qg-cpt-marseille/sl2cfoam-next",
-            "rho_convention": "gamma*(j+1)"
-          },
-          "library_sha256": "898e2c35762f69ed87cd1399bb72bba208afe6c30fb1e3ba3ce8795ae3c10ad0"
-        },
-        "gamma": 1.2,
-        "numpy": "2.3.5",
-        "schema": 1,
-        "tables": {
-          "table_40.6j": "de1a29d0252c3c1ebf51b96d7fdebe7f21587ee65dcbc3864070774c14704b72",
-          "table_50.3j": "73d9170de4f04b776923106c5c6ea1bbb70cf2e62a14d24b83cda31194567e6e"
-        },
-        "wrapper_sha256": "5fffc96d60bfa0d16f6d7a3f26d8850999d45d1e5f30409513a1057d66c824f6"
-      },
-      "cpu_model": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           46 bits physical, 57 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  9\nOn-line CPU(s) list:                     0-8\nVendor ID:                               GenuineIntel\nModel name:                              INTEL(R) XEON(R) PLATINUM 8573C\nBIOS Model name:                           CPU @ 0.0GHz\nBIOS CPU family:                         0\nCPU family:                              6\nModel:                                   207\nThread(s) per core:                      1\nCore(s) per socket:                      9\nSocket(s):                               1\nStepping:                                2\nBogoMIPS:                                4599.99\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 arat avx512vbmi umip waitpkg avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid cldemote movdiri movdir64b fsrm serialize tsxldtrk avx512_fp16 arch_capabilities\nHypervisor vendor:                       KVM\nVirtualization type:                     full\nL1d cache:                               240 KiB (5 instances)\nL1i cache:                               160 KiB (5 instances)\nL2 cache:                                10 MiB (5 instances)\nL3 cache:                                260 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-8\nVulnerability Gather data sampling:      Not affected\nVulnerability Ghostwrite:                Not affected\nVulnerability Indirect target selection: Vulnerable\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Old microcode:             Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Vulnerable\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Vulnerable\nVulnerability Spectre v1:                Vulnerable: __user pointer sanitization and usercopy barriers only; no swapgs barriers\nVulnerability Spectre v2:                Vulnerable; STIBP: disabled; PBRSB-eIBRS: Not affected; BHI: Vulnerable\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Not affected",
-      "cpu_quota": "800000 100000",
       "driver_wall_seconds": null,
       "loaded_existing_cold_report": true,
       "max_amplitude_relative_difference": 0.0,
       "max_vertex_relative_maxnorm_difference": 0.0,
-      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
       "preparation_timeout_seconds": 600.0,
       "processes": 2,
-      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
       "repeat": 1,
       "results": [
         {
@@ -6396,61 +6057,23 @@
         }
       ],
       "schema": 1,
-      "source_sha256": {
-        "benchmarks/block_scan.py": "daad68f20183c90b2032dcf0044fc3d93da607b0814b373864ce705a5b0ea27b",
-        "benchmarks/check_cutoffs.py": "37269b166a6effaa64a462823def72833544d5e50d774200b2afd8db07838383",
-        "benchmarks/compare_refinement.py": "e77ea583b7ff234ea4a582dbeb49c511f501b75ebf8e31131e5cde90c4bee3f8",
-        "benchmarks/compression.py": "eebedf4c648a4bb8651f33d13f88c2c07a63dafb3e2f2d051c7dd43bba396ad7",
-        "benchmarks/refinement.py": "70331db18b7088033f57be3ff21aeb29c6ccc73f438600e271e150cfc3ef4ab9",
-        "qlg/backend.py": "5fffc96d60bfa0d16f6d7a3f26d8850999d45d1e5f30409513a1057d66c824f6",
-        "qlg/jobs.py": "e8f50999b8f35c5b305f7763c8be4abf94fe648c5bc519d736c2e8344df72ff4",
-        "qlg/spins.py": "0a70f40c3d05dcae1fef24dccc5fd1d8392ca5dcb95cedcaf8274ffe421f37c4",
-        "qlg/topology.py": "cfa16b9ecc5541b8de52fedc53f582d26faf3a0c6e1499eb3d988bb91133c6a2"
-      },
-      "threads": 1
+      "threads": 1,
+      "numeric_source_revision": "5f2347c771ee2037dbe42e5d57b323da2629e1b0",
+      "backend_source_revision": "052e4346028870bd76f69a3034e6cae8defb8f7f",
+      "gamma": 1.2,
+      "boundary_j": 1,
+      "accuracy": "veryhigh",
+      "rho_convention": "gamma*(j+1)",
+      "numpy": "2.3.5"
     },
     {
       "blas_threads": 1,
-      "cache_spec": {
-        "accuracy": 2,
-        "backend": {
-          "build": {
-            "blas": "system",
-            "commit": "052e4346028870bd76f69a3034e6cae8defb8f7f",
-            "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
-            "files_sha256": {
-              "ext/fastwigxj/lib/libfastwigxj.a": "8c8a82cb551537b026dfc02136024cb12b7413dfd5600c01965f752442cabb68",
-              "ext/wigxjpf/lib/libwigxjpf.a": "6b7494bd4489af07dec8c94d997350e2315a074e90efce9a5c3f2b8cd87ea3eb",
-              "ext/wigxjpf/lib/libwigxjpf_quadmath.a": "29e6f67b1fb972dc0a57ea730d03abfaa63448134a2d969bfb3a63937103af10",
-              "lib/libsl2cfoam.so": "898e2c35762f69ed87cd1399bb72bba208afe6c30fb1e3ba3ce8795ae3c10ad0"
-            },
-            "io": true,
-            "mpi": false,
-            "openmp": true,
-            "repository": "https://github.com/qg-cpt-marseille/sl2cfoam-next",
-            "rho_convention": "gamma*(j+1)"
-          },
-          "library_sha256": "898e2c35762f69ed87cd1399bb72bba208afe6c30fb1e3ba3ce8795ae3c10ad0"
-        },
-        "gamma": 1.2,
-        "numpy": "2.3.5",
-        "schema": 1,
-        "tables": {
-          "table_40.6j": "de1a29d0252c3c1ebf51b96d7fdebe7f21587ee65dcbc3864070774c14704b72",
-          "table_50.3j": "73d9170de4f04b776923106c5c6ea1bbb70cf2e62a14d24b83cda31194567e6e"
-        },
-        "wrapper_sha256": "5fffc96d60bfa0d16f6d7a3f26d8850999d45d1e5f30409513a1057d66c824f6"
-      },
-      "cpu_model": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           46 bits physical, 57 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  9\nOn-line CPU(s) list:                     0-8\nVendor ID:                               GenuineIntel\nModel name:                              INTEL(R) XEON(R) PLATINUM 8573C\nBIOS Model name:                           CPU @ 0.0GHz\nBIOS CPU family:                         0\nCPU family:                              6\nModel:                                   207\nThread(s) per core:                      1\nCore(s) per socket:                      9\nSocket(s):                               1\nStepping:                                2\nBogoMIPS:                                4599.99\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 arat avx512vbmi umip waitpkg avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid cldemote movdiri movdir64b fsrm serialize tsxldtrk avx512_fp16 arch_capabilities\nHypervisor vendor:                       KVM\nVirtualization type:                     full\nL1d cache:                               240 KiB (5 instances)\nL1i cache:                               160 KiB (5 instances)\nL2 cache:                                10 MiB (5 instances)\nL3 cache:                                260 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-8\nVulnerability Gather data sampling:      Not affected\nVulnerability Ghostwrite:                Not affected\nVulnerability Indirect target selection: Vulnerable\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Old microcode:             Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Vulnerable\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Vulnerable\nVulnerability Spectre v1:                Vulnerable: __user pointer sanitization and usercopy barriers only; no swapgs barriers\nVulnerability Spectre v2:                Vulnerable; STIBP: disabled; PBRSB-eIBRS: Not affected; BHI: Vulnerable\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Not affected",
-      "cpu_quota": "800000 100000",
       "driver_wall_seconds": null,
       "loaded_existing_cold_report": true,
       "max_amplitude_relative_difference": 5.68434188608064e-14,
       "max_vertex_relative_maxnorm_difference": 1.0172159162745293e-14,
-      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
       "preparation_timeout_seconds": 600.0,
       "processes": 1,
-      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
       "repeat": 1,
       "results": [
         {
@@ -7098,61 +6721,23 @@
         }
       ],
       "schema": 1,
-      "source_sha256": {
-        "benchmarks/block_scan.py": "daad68f20183c90b2032dcf0044fc3d93da607b0814b373864ce705a5b0ea27b",
-        "benchmarks/check_cutoffs.py": "37269b166a6effaa64a462823def72833544d5e50d774200b2afd8db07838383",
-        "benchmarks/compare_refinement.py": "e77ea583b7ff234ea4a582dbeb49c511f501b75ebf8e31131e5cde90c4bee3f8",
-        "benchmarks/compression.py": "eebedf4c648a4bb8651f33d13f88c2c07a63dafb3e2f2d051c7dd43bba396ad7",
-        "benchmarks/refinement.py": "70331db18b7088033f57be3ff21aeb29c6ccc73f438600e271e150cfc3ef4ab9",
-        "qlg/backend.py": "5fffc96d60bfa0d16f6d7a3f26d8850999d45d1e5f30409513a1057d66c824f6",
-        "qlg/jobs.py": "e8f50999b8f35c5b305f7763c8be4abf94fe648c5bc519d736c2e8344df72ff4",
-        "qlg/spins.py": "0a70f40c3d05dcae1fef24dccc5fd1d8392ca5dcb95cedcaf8274ffe421f37c4",
-        "qlg/topology.py": "cfa16b9ecc5541b8de52fedc53f582d26faf3a0c6e1499eb3d988bb91133c6a2"
-      },
-      "threads": 4
+      "threads": 4,
+      "numeric_source_revision": "5f2347c771ee2037dbe42e5d57b323da2629e1b0",
+      "backend_source_revision": "052e4346028870bd76f69a3034e6cae8defb8f7f",
+      "gamma": 1.2,
+      "boundary_j": 1,
+      "accuracy": "veryhigh",
+      "rho_convention": "gamma*(j+1)",
+      "numpy": "2.3.5"
     },
     {
       "blas_threads": 1,
-      "cache_spec": {
-        "accuracy": 2,
-        "backend": {
-          "build": {
-            "blas": "system",
-            "commit": "052e4346028870bd76f69a3034e6cae8defb8f7f",
-            "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
-            "files_sha256": {
-              "ext/fastwigxj/lib/libfastwigxj.a": "8c8a82cb551537b026dfc02136024cb12b7413dfd5600c01965f752442cabb68",
-              "ext/wigxjpf/lib/libwigxjpf.a": "6b7494bd4489af07dec8c94d997350e2315a074e90efce9a5c3f2b8cd87ea3eb",
-              "ext/wigxjpf/lib/libwigxjpf_quadmath.a": "29e6f67b1fb972dc0a57ea730d03abfaa63448134a2d969bfb3a63937103af10",
-              "lib/libsl2cfoam.so": "898e2c35762f69ed87cd1399bb72bba208afe6c30fb1e3ba3ce8795ae3c10ad0"
-            },
-            "io": true,
-            "mpi": false,
-            "openmp": true,
-            "repository": "https://github.com/qg-cpt-marseille/sl2cfoam-next",
-            "rho_convention": "gamma*(j+1)"
-          },
-          "library_sha256": "898e2c35762f69ed87cd1399bb72bba208afe6c30fb1e3ba3ce8795ae3c10ad0"
-        },
-        "gamma": 1.2,
-        "numpy": "2.3.5",
-        "schema": 1,
-        "tables": {
-          "table_40.6j": "de1a29d0252c3c1ebf51b96d7fdebe7f21587ee65dcbc3864070774c14704b72",
-          "table_50.3j": "73d9170de4f04b776923106c5c6ea1bbb70cf2e62a14d24b83cda31194567e6e"
-        },
-        "wrapper_sha256": "5fffc96d60bfa0d16f6d7a3f26d8850999d45d1e5f30409513a1057d66c824f6"
-      },
-      "cpu_model": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           46 bits physical, 57 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  9\nOn-line CPU(s) list:                     0-8\nVendor ID:                               GenuineIntel\nModel name:                              INTEL(R) XEON(R) PLATINUM 8573C\nBIOS Model name:                           CPU @ 0.0GHz\nBIOS CPU family:                         0\nCPU family:                              6\nModel:                                   207\nThread(s) per core:                      1\nCore(s) per socket:                      9\nSocket(s):                               1\nStepping:                                2\nBogoMIPS:                                4599.99\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 arat avx512vbmi umip waitpkg avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid cldemote movdiri movdir64b fsrm serialize tsxldtrk avx512_fp16 arch_capabilities\nHypervisor vendor:                       KVM\nVirtualization type:                     full\nL1d cache:                               240 KiB (5 instances)\nL1i cache:                               160 KiB (5 instances)\nL2 cache:                                10 MiB (5 instances)\nL3 cache:                                260 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-8\nVulnerability Gather data sampling:      Not affected\nVulnerability Ghostwrite:                Not affected\nVulnerability Indirect target selection: Vulnerable\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Old microcode:             Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Vulnerable\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Vulnerable\nVulnerability Spectre v1:                Vulnerable: __user pointer sanitization and usercopy barriers only; no swapgs barriers\nVulnerability Spectre v2:                Vulnerable; STIBP: disabled; PBRSB-eIBRS: Not affected; BHI: Vulnerable\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Not affected",
-      "cpu_quota": "800000 100000",
       "driver_wall_seconds": null,
       "loaded_existing_cold_report": true,
       "max_amplitude_relative_difference": 5.68434188608064e-14,
       "max_vertex_relative_maxnorm_difference": 1.0357107511158844e-14,
-      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
       "preparation_timeout_seconds": 600.0,
       "processes": 1,
-      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
       "repeat": 1,
       "results": [
         {
@@ -7800,61 +7385,23 @@
         }
       ],
       "schema": 1,
-      "source_sha256": {
-        "benchmarks/block_scan.py": "daad68f20183c90b2032dcf0044fc3d93da607b0814b373864ce705a5b0ea27b",
-        "benchmarks/check_cutoffs.py": "37269b166a6effaa64a462823def72833544d5e50d774200b2afd8db07838383",
-        "benchmarks/compare_refinement.py": "e77ea583b7ff234ea4a582dbeb49c511f501b75ebf8e31131e5cde90c4bee3f8",
-        "benchmarks/compression.py": "eebedf4c648a4bb8651f33d13f88c2c07a63dafb3e2f2d051c7dd43bba396ad7",
-        "benchmarks/refinement.py": "70331db18b7088033f57be3ff21aeb29c6ccc73f438600e271e150cfc3ef4ab9",
-        "qlg/backend.py": "5fffc96d60bfa0d16f6d7a3f26d8850999d45d1e5f30409513a1057d66c824f6",
-        "qlg/jobs.py": "e8f50999b8f35c5b305f7763c8be4abf94fe648c5bc519d736c2e8344df72ff4",
-        "qlg/spins.py": "0a70f40c3d05dcae1fef24dccc5fd1d8392ca5dcb95cedcaf8274ffe421f37c4",
-        "qlg/topology.py": "cfa16b9ecc5541b8de52fedc53f582d26faf3a0c6e1499eb3d988bb91133c6a2"
-      },
-      "threads": 2
+      "threads": 2,
+      "numeric_source_revision": "5f2347c771ee2037dbe42e5d57b323da2629e1b0",
+      "backend_source_revision": "052e4346028870bd76f69a3034e6cae8defb8f7f",
+      "gamma": 1.2,
+      "boundary_j": 1,
+      "accuracy": "veryhigh",
+      "rho_convention": "gamma*(j+1)",
+      "numpy": "2.3.5"
     },
     {
       "blas_threads": 1,
-      "cache_spec": {
-        "accuracy": 2,
-        "backend": {
-          "build": {
-            "blas": "system",
-            "commit": "052e4346028870bd76f69a3034e6cae8defb8f7f",
-            "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
-            "files_sha256": {
-              "ext/fastwigxj/lib/libfastwigxj.a": "8c8a82cb551537b026dfc02136024cb12b7413dfd5600c01965f752442cabb68",
-              "ext/wigxjpf/lib/libwigxjpf.a": "6b7494bd4489af07dec8c94d997350e2315a074e90efce9a5c3f2b8cd87ea3eb",
-              "ext/wigxjpf/lib/libwigxjpf_quadmath.a": "29e6f67b1fb972dc0a57ea730d03abfaa63448134a2d969bfb3a63937103af10",
-              "lib/libsl2cfoam.so": "898e2c35762f69ed87cd1399bb72bba208afe6c30fb1e3ba3ce8795ae3c10ad0"
-            },
-            "io": true,
-            "mpi": false,
-            "openmp": true,
-            "repository": "https://github.com/qg-cpt-marseille/sl2cfoam-next",
-            "rho_convention": "gamma*(j+1)"
-          },
-          "library_sha256": "898e2c35762f69ed87cd1399bb72bba208afe6c30fb1e3ba3ce8795ae3c10ad0"
-        },
-        "gamma": 1.2,
-        "numpy": "2.3.5",
-        "schema": 1,
-        "tables": {
-          "table_40.6j": "de1a29d0252c3c1ebf51b96d7fdebe7f21587ee65dcbc3864070774c14704b72",
-          "table_50.3j": "73d9170de4f04b776923106c5c6ea1bbb70cf2e62a14d24b83cda31194567e6e"
-        },
-        "wrapper_sha256": "5fffc96d60bfa0d16f6d7a3f26d8850999d45d1e5f30409513a1057d66c824f6"
-      },
-      "cpu_model": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           46 bits physical, 57 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  9\nOn-line CPU(s) list:                     0-8\nVendor ID:                               GenuineIntel\nModel name:                              INTEL(R) XEON(R) PLATINUM 8573C\nBIOS Model name:                           CPU @ 0.0GHz\nBIOS CPU family:                         0\nCPU family:                              6\nModel:                                   207\nThread(s) per core:                      1\nCore(s) per socket:                      9\nSocket(s):                               1\nStepping:                                2\nBogoMIPS:                                4599.99\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 arat avx512vbmi umip waitpkg avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid cldemote movdiri movdir64b fsrm serialize tsxldtrk avx512_fp16 arch_capabilities\nHypervisor vendor:                       KVM\nVirtualization type:                     full\nL1d cache:                               240 KiB (5 instances)\nL1i cache:                               160 KiB (5 instances)\nL2 cache:                                10 MiB (5 instances)\nL3 cache:                                260 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-8\nVulnerability Gather data sampling:      Not affected\nVulnerability Ghostwrite:                Not affected\nVulnerability Indirect target selection: Vulnerable\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Old microcode:             Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Vulnerable\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Vulnerable\nVulnerability Spectre v1:                Vulnerable: __user pointer sanitization and usercopy barriers only; no swapgs barriers\nVulnerability Spectre v2:                Vulnerable; STIBP: disabled; PBRSB-eIBRS: Not affected; BHI: Vulnerable\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Not affected",
-      "cpu_quota": "800000 100000",
       "driver_wall_seconds": 66.90577497200002,
       "loaded_existing_cold_report": false,
       "max_amplitude_relative_difference": 0.0,
       "max_vertex_relative_maxnorm_difference": 0.0,
-      "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
       "preparation_timeout_seconds": 600.0,
       "processes": 1,
-      "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
       "repeat": 1,
       "results": [
         {
@@ -8502,59 +8049,21 @@
         }
       ],
       "schema": 1,
-      "source_sha256": {
-        "benchmarks/block_scan.py": "daad68f20183c90b2032dcf0044fc3d93da607b0814b373864ce705a5b0ea27b",
-        "benchmarks/check_cutoffs.py": "37269b166a6effaa64a462823def72833544d5e50d774200b2afd8db07838383",
-        "benchmarks/compare_refinement.py": "e77ea583b7ff234ea4a582dbeb49c511f501b75ebf8e31131e5cde90c4bee3f8",
-        "benchmarks/compression.py": "eebedf4c648a4bb8651f33d13f88c2c07a63dafb3e2f2d051c7dd43bba396ad7",
-        "benchmarks/refinement.py": "70331db18b7088033f57be3ff21aeb29c6ccc73f438600e271e150cfc3ef4ab9",
-        "qlg/backend.py": "5fffc96d60bfa0d16f6d7a3f26d8850999d45d1e5f30409513a1057d66c824f6",
-        "qlg/jobs.py": "e8f50999b8f35c5b305f7763c8be4abf94fe648c5bc519d736c2e8344df72ff4",
-        "qlg/spins.py": "0a70f40c3d05dcae1fef24dccc5fd1d8392ca5dcb95cedcaf8274ffe421f37c4",
-        "qlg/topology.py": "cfa16b9ecc5541b8de52fedc53f582d26faf3a0c6e1499eb3d988bb91133c6a2"
-      },
-      "threads": 1
+      "threads": 1,
+      "numeric_source_revision": "5f2347c771ee2037dbe42e5d57b323da2629e1b0",
+      "backend_source_revision": "052e4346028870bd76f69a3034e6cae8defb8f7f",
+      "gamma": 1.2,
+      "boundary_j": 1,
+      "accuracy": "veryhigh",
+      "rho_convention": "gamma*(j+1)",
+      "numpy": "2.3.5"
     }
   ],
   "schema": 1,
   "warm_reuse": {
     "blas_threads": 1,
-    "cache_spec": {
-      "accuracy": 2,
-      "backend": {
-        "build": {
-          "blas": "system",
-          "commit": "052e4346028870bd76f69a3034e6cae8defb8f7f",
-          "compiler": "gcc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
-          "files_sha256": {
-            "ext/fastwigxj/lib/libfastwigxj.a": "8c8a82cb551537b026dfc02136024cb12b7413dfd5600c01965f752442cabb68",
-            "ext/wigxjpf/lib/libwigxjpf.a": "6b7494bd4489af07dec8c94d997350e2315a074e90efce9a5c3f2b8cd87ea3eb",
-            "ext/wigxjpf/lib/libwigxjpf_quadmath.a": "29e6f67b1fb972dc0a57ea730d03abfaa63448134a2d969bfb3a63937103af10",
-            "lib/libsl2cfoam.so": "898e2c35762f69ed87cd1399bb72bba208afe6c30fb1e3ba3ce8795ae3c10ad0"
-          },
-          "io": true,
-          "mpi": false,
-          "openmp": true,
-          "repository": "https://github.com/qg-cpt-marseille/sl2cfoam-next",
-          "rho_convention": "gamma*(j+1)"
-        },
-        "library_sha256": "898e2c35762f69ed87cd1399bb72bba208afe6c30fb1e3ba3ce8795ae3c10ad0"
-      },
-      "gamma": 1.2,
-      "numpy": "2.3.5",
-      "schema": 1,
-      "tables": {
-        "table_40.6j": "de1a29d0252c3c1ebf51b96d7fdebe7f21587ee65dcbc3864070774c14704b72",
-        "table_50.3j": "73d9170de4f04b776923106c5c6ea1bbb70cf2e62a14d24b83cda31194567e6e"
-      },
-      "wrapper_sha256": "5fffc96d60bfa0d16f6d7a3f26d8850999d45d1e5f30409513a1057d66c824f6"
-    },
-    "cpu_model": "Architecture:                            x86_64\nCPU op-mode(s):                          32-bit, 64-bit\nAddress sizes:                           46 bits physical, 57 bits virtual\nByte Order:                              Little Endian\nCPU(s):                                  9\nOn-line CPU(s) list:                     0-8\nVendor ID:                               GenuineIntel\nModel name:                              INTEL(R) XEON(R) PLATINUM 8573C\nBIOS Model name:                           CPU @ 0.0GHz\nBIOS CPU family:                         0\nCPU family:                              6\nModel:                                   207\nThread(s) per core:                      1\nCore(s) per socket:                      9\nSocket(s):                               1\nStepping:                                2\nBogoMIPS:                                4599.99\nFlags:                                   fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc cpuid tsc_known_freq pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm avx512f avx512dq rdseed adx smap avx512ifma clflushopt clwb avx512cd sha_ni avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves avx_vnni avx512_bf16 arat avx512vbmi umip waitpkg avx512_vbmi2 gfni vaes vpclmulqdq avx512_vnni avx512_bitalg avx512_vpopcntdq rdpid cldemote movdiri movdir64b fsrm serialize tsxldtrk avx512_fp16 arch_capabilities\nHypervisor vendor:                       KVM\nVirtualization type:                     full\nL1d cache:                               240 KiB (5 instances)\nL1i cache:                               160 KiB (5 instances)\nL2 cache:                                10 MiB (5 instances)\nL3 cache:                                260 MiB (1 instance)\nNUMA node(s):                            1\nNUMA node0 CPU(s):                       0-8\nVulnerability Gather data sampling:      Not affected\nVulnerability Ghostwrite:                Not affected\nVulnerability Indirect target selection: Vulnerable\nVulnerability Itlb multihit:             Not affected\nVulnerability L1tf:                      Not affected\nVulnerability Mds:                       Not affected\nVulnerability Meltdown:                  Not affected\nVulnerability Mmio stale data:           Not affected\nVulnerability Old microcode:             Not affected\nVulnerability Reg file data sampling:    Not affected\nVulnerability Retbleed:                  Vulnerable\nVulnerability Spec rstack overflow:      Not affected\nVulnerability Spec store bypass:         Vulnerable\nVulnerability Spectre v1:                Vulnerable: __user pointer sanitization and usercopy barriers only; no swapgs barriers\nVulnerability Spectre v2:                Vulnerable; STIBP: disabled; PBRSB-eIBRS: Not affected; BHI: Vulnerable\nVulnerability Srbds:                     Not affected\nVulnerability Tsa:                       Not affected\nVulnerability Tsx async abort:           Not affected\nVulnerability Vmscape:                   Not affected",
-    "cpu_quota": "800000 100000",
-    "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
     "preparation_timeout_seconds": 600.0,
     "processes": 2,
-    "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
     "results": [
       {
         "K": 2,
@@ -9210,17 +8719,14 @@
       }
     ],
     "schema": 1,
-    "source_sha256": {
-      "benchmarks/block_scan.py": "daad68f20183c90b2032dcf0044fc3d93da607b0814b373864ce705a5b0ea27b",
-      "benchmarks/check_cutoffs.py": "37269b166a6effaa64a462823def72833544d5e50d774200b2afd8db07838383",
-      "benchmarks/compare_refinement.py": "e77ea583b7ff234ea4a582dbeb49c511f501b75ebf8e31131e5cde90c4bee3f8",
-      "benchmarks/compression.py": "eebedf4c648a4bb8651f33d13f88c2c07a63dafb3e2f2d051c7dd43bba396ad7",
-      "benchmarks/refinement.py": "70331db18b7088033f57be3ff21aeb29c6ccc73f438600e271e150cfc3ef4ab9",
-      "qlg/backend.py": "5fffc96d60bfa0d16f6d7a3f26d8850999d45d1e5f30409513a1057d66c824f6",
-      "qlg/jobs.py": "e8f50999b8f35c5b305f7763c8be4abf94fe648c5bc519d736c2e8344df72ff4",
-      "qlg/spins.py": "0a70f40c3d05dcae1fef24dccc5fd1d8392ca5dcb95cedcaf8274ffe421f37c4",
-      "qlg/topology.py": "cfa16b9ecc5541b8de52fedc53f582d26faf3a0c6e1499eb3d988bb91133c6a2"
-    },
-    "threads": 2
-  }
+    "threads": 2,
+    "numeric_source_revision": "5f2347c771ee2037dbe42e5d57b323da2629e1b0",
+    "backend_source_revision": "052e4346028870bd76f69a3034e6cae8defb8f7f",
+    "gamma": 1.2,
+    "boundary_j": 1,
+    "accuracy": "veryhigh",
+    "rho_convention": "gamma*(j+1)",
+    "numpy": "2.3.5"
+  },
+  "validation_source_revision": "5f2347c771ee2037dbe42e5d57b323da2629e1b0"
 }

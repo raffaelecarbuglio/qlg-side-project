@@ -15,8 +15,7 @@ import time
 
 import numpy as np
 
-from qlg.backend import digest
-from qlg.jobs import atomic_json
+from qlg.jobs import atomic_json, source_version
 
 
 def main():
@@ -34,7 +33,7 @@ def main():
     root = Path(args.run_root).resolve()
     root.mkdir(parents=True, exist_ok=True)
     reference = None
-    report = dict(schema=1, driver_sha256=digest(__file__), results=[])
+    report = dict(schema=1, source=source_version(), results=[])
     command = [sys.executable, "-m", "benchmarks.block_scan", "--cutoff", str(args.cutoff),
                "--dl", str(args.dl), "--timeout", "600"]
     for repeat in range(args.repeats):
@@ -52,7 +51,13 @@ def main():
                                           "--processes", str(processes), "--threads", str(threads)],
                                check=True)
                 elapsed = time.perf_counter() - before
-            row = json.loads(output.read_text())
+            recorded = json.loads(output.read_text())
+            # Older local reports may contain host/build diagnostics. Resume
+            # their measurements without copying those diagnostics to exports.
+            public_fields = ("schema", "gamma", "boundary_j", "accuracy", "backend_source_revision",
+                             "rho_convention", "numpy", "source", "numeric_source_revision",
+                             "processes", "threads", "blas_threads", "preparation_timeout_seconds", "results")
+            row = {k: recorded[k] for k in public_fields if k in recorded}
             row.update(repeat=repeat, driver_wall_seconds=elapsed, loaded_existing_cold_report=existing)
             case = row["results"][0]
             if (case["K"], case["dl"], row["processes"], row["threads"]) != (args.cutoff, args.dl, processes, threads):

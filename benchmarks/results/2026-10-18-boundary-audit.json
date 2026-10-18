@@ -415,9 +415,6 @@
       "target_equal_piece_area_for_coarse_j1": 0.02209708691207961
     }
   ],
-  "source_sha256": {
-    "benchmarks/check_boundary.py": "33f726a57c14f78640560d038717474a5d31153dca564b1bd12a098ec06b8db5",
-    "qlg/topology.py": "cfa16b9ecc5541b8de52fedc53f582d26faf3a0c6e1499eb3d988bb91133c6a2"
-  },
-  "spectrum_reference": "Rovelli, arXiv:1102.3660v5, equations 37-38"
+  "spectrum_reference": "Rovelli, arXiv:1102.3660v5, equations 37-38",
+  "numeric_source_revision": "5f2347c771ee2037dbe42e5d57b323da2629e1b0"
 }
