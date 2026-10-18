@@ -1,4 +1,4 @@
-from itertools import product
+from itertools import combinations, product
 import json
 from pathlib import Path
 import tempfile
@@ -12,7 +12,7 @@ from qlg.jobs import (atomic_json, cached_vertex, exclusive_lock, fingerprint,
                       load_config, prepare)
 from qlg.spins import (delta4_bulk_spins, delta4_spins, intertwiner_range,
                        vertex_shape)
-from qlg.topology import boundary, refinement_plan
+from qlg.topology import boundary, edgewise_simplex, facets, refinement_plan
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -119,6 +119,33 @@ class CoreTests(unittest.TestCase):
         for level in levels:
             self.assertEqual(boundary(level["simplices"]), boundary(levels[0]["simplices"]))
         self.assertFalse(plan["amplitudes_implemented"])
+
+    def test_edgewise_refinement_is_a_uniform_four_ball(self):
+        for divisions in (1, 2, 4):
+            vertices, cells = edgewise_simplex(divisions)
+            outside = boundary(cells)
+            self.assertEqual(len(cells), divisions**4)
+            self.assertEqual(len(outside), 5 * divisions**3)
+            counts = [len(facets(cells, n)) for n in range(1, 6)]
+            self.assertEqual(sum((-1)**i * n for i, n in enumerate(counts)), 1)
+            coordinates = np.asarray(vertices, dtype=float)[:, 1:] / divisions
+            for cell in cells:
+                simplex = coordinates[list(cell)]
+                self.assertAlmostEqual(abs(np.linalg.det(simplex[1:] - simplex[0])), divisions**-4)
+            for face in outside:
+                self.assertTrue(np.any(np.all(np.asarray(vertices)[list(face)] == 0, axis=0)))
+            if divisions == 2:
+                boundary_faces = {f for t in outside for f in combinations(t, 3)}
+                internal_faces = set(facets(cells, 3)) - boundary_faces
+                self.assertEqual(len(internal_faces), 5)
+                # Every internal spin is forced to integer parity by a tetrahedron
+                # whose other three faces carry the integer boundary spin.
+                forced = set()
+                for tetrahedron in facets(cells, 4):
+                    inner = set(combinations(tetrahedron, 3)) & internal_faces
+                    if len(inner) == 1:
+                        forced.update(inner)
+                self.assertEqual(forced, internal_faces)
 
 
 if __name__ == "__main__":

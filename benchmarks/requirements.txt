@@ -1,0 +1,4 @@
+opt_einsum==3.4.0
+cotengra==0.8.0
+autoray==0.8.0
+kahypar==1.3.5

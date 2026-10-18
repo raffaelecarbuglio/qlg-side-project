@@ -88,6 +88,9 @@ See [the amplitude specification](docs/model.md),
 [the next refinement calculation](docs/refinement.md).
 The [method comparison](docs/method-comparison.md) includes measured native
 timings and a [reproducible benchmark](benchmarks/README.md).
+An experimental [edgewise-refinement comparison](docs/refinement-benchmark.md)
+evaluates the first 16-simplex block at small internal-spin cutoffs, comparing
+exact contractions, partial spin conditioning and uniform sampling.
 
 ## References
 

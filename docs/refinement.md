@@ -1,6 +1,15 @@
-# Next physical calculation: a common-boundary refinement
+# Refinement calculations
 
-The intended next comparison starts from a single four-simplex and inserts one
+An experimental edgewise 1->16 calculation now exists in `benchmarks/`.
+It implements explicit common-basis transformations, all admissible internal
+intertwiners and small finite internal-spin cutoffs for boundary j=1.
+See [its specification, measurements and limits](refinement-benchmark.md).
+This is not a renormalization map or a matched-boundary continuum calculation.
+The 256-simplex level has symbolic cost estimates only.
+
+## Separate common-boundary 1->5 calculation
+
+A complementary comparison starts from a single four-simplex and inserts one
 interior vertex. This produces five four-simplices with the same five external
 tetrahedra. There are ten internal triangles and ten internal tetrahedra.
 
@@ -40,7 +49,8 @@ Only after several refinement levels can be computed should one ask whether
 boundary amplitudes stabilize as both numerical controls and the retained
 boundary information improve. A plateau at fixed truncation is insufficient.
 
-This specification is an explicit research boundary of version 0.1: general
-EPRL gluing and the renormalization map are not replaced with guessed formulas.
+General-complex amplitudes and the renormalization map remain research tasks.
+The experimental edgewise benchmark derives its basis transformations explicitly;
+it does not turn this combinatorial 1->5 command into an amplitude evaluator.
 Reference: Asante, Dittrich & Steinhaus,
 [Spin foams, refinement limit and renormalization](https://arxiv.org/abs/2211.09578).

@@ -33,3 +33,11 @@ target installation before its production campaign.
 Successive-cutoff changes are not certified tail estimates. Reference agreement
 also does not establish refinement convergence, correctness of an unimplemented
 general gluing map, or a continuum limit.
+
+The experimental edgewise benchmark additionally validates its local basis
+conventions against direct magnetic-index BF contractions and checks that
+internal basis rotations leave its real EPRL block invariant. Nine exact
+evaluation routes agree across five finite-cutoff cases. These are internal
+checks; there is no independent published reference value for this block.
+The edgewise topology checks bring the project test count to eleven, all
+passing locally with the native backend. See [the refinement report](refinement-benchmark.md).

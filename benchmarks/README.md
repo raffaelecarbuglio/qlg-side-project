@@ -37,3 +37,42 @@ earlier peak. These are local measurements, not INFN benchmarks or continuum
 convergence tests.
 
 See [the comparison and recommendation](../docs/method-comparison.md).
+
+## Edgewise-refinement comparison
+
+This separate experiment evaluates the full admissible finite-cutoff sum on a
+16-simplex block, with boundary j=1 and canonical i=0,1,2. It does not require
+or implement a continuum limit. Install its optional dependencies and run:
+
+```bash
+python -m pip install -r benchmarks/requirements.txt
+export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1
+python -m benchmarks.compare_refinement --repeats 15 \
+  --output benchmarks/results/edgewise-i1.json
+python -m benchmarks.compare_refinement --case 1 0 --boundary-i 0 --repeats 15 \
+  --skip-larger-plans --output benchmarks/results/edgewise-i0.json
+python -m benchmarks.compare_refinement --case 1 0 --boundary-i 2 --repeats 15 \
+  --skip-larger-plans --output benchmarks/results/edgewise-i2.json
+```
+
+Unlike `compare_vertices`, `--case K DL` and `--boundary-i` use physical integer
+labels, not doubled labels. Cases default to (K,DL)=(1,0),(1,2),(2,0).
+The first block's parity constraints exclude half-integer internal spins;
+later-level cost plans include half-integer labels where appropriate.
+
+Each case runs in a fresh subprocess with a fresh native booster directory.
+One native instance is initialized per process. Preparation includes native
+vertices, basis maps and factor assembly; native initialization and convention
+checks precede that timer. Path search/compilation and repeated contractions
+are reported separately. The sampling timer includes random-index lookup,
+factor selection and exact contractions, but excludes generating draws.
+All repeated routes share the same precomputed physical factors. No synthetic
+tensor amplitudes enter the measured contraction comparison.
+
+The larger 256-simplex level is analyzed using **shapes only**. Reported
+operation counts and intermediate sizes there are planner estimates. Slicing
+those trees is also symbolic; their many individual tasks are not executed.
+KaHyPar timing-limited searches can find different paths on another run; raw
+paths are saved. Single-thread execution is required for these comparisons.
+
+See [results, normalization conventions and limitations](../docs/refinement-benchmark.md).
