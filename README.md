@@ -94,6 +94,9 @@ exact contractions, partial spin conditioning and uniform sampling.
 Further [support and compression experiments](docs/compression-experiments.md)
 improve the exact small-block sum and test approximate fixed-spin sectors at
 256 simplices; those larger results have not converged.
+New [cutoff and fixed-order checks](docs/cutoff-and-refinement-checks.md)
+complete the first block's spin sum at K=3 and calibrate compression against
+exact full finite-cutoff sums on 20, 25 and 30 simplices.
 
 ## References
 

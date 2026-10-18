@@ -109,25 +109,35 @@ def local_contract(arrays, inputs, max_entries=10000):
                                largest_generated_entries=largest_generated)
 
 
+def compression_network(arrays, inputs):
+    """Construct equality trees once so a rank scan can reuse identical input."""
+    import quimb.tensor as qtn
+    network = qtn.TensorNetwork([qtn.Tensor(a.copy(), inds=tuple(f"i{i}" for i in inds))
+                                 for a, inds in zip(arrays, inputs)])
+    if any(len(tids) > 2 for tids in network.ind_map.values()):
+        network = network.hyperinds_resolve(mode="tree", sorter="clustering")
+    return network
+
+
+def compression_path(network, chi, seed=37):
+    import cotengra as ctg
+    optimizer = ctg.HyperCompressedOptimizer(
+        chi=chi, methods=["greedy-compressed", "greedy-span"], optlib="random",
+        optlib_opts={"seed": seed}, max_repeats=16, max_time=5, parallel=False)
+    return network.contraction_tree(optimizer, output_inds=()).get_path()
+
+
 def compressed_contract(arrays, inputs, chi, seed=37, gauges=1,
-                        max_entries=32_000_000, max_seconds=90, mode="basic"):
+                        max_entries=32_000_000, max_seconds=90, mode="basic",
+                        network=None, path=None):
     """SVD-truncated contraction with a measured cap on each intermediate.
 
     Returned logarithms refer to the supplied factors. No physical input scale
     is included. Increasing chi is a diagnostic, not an error certificate.
     """
-    import cotengra as ctg
-    import quimb.tensor as qtn
-
     start = time.perf_counter()
-    network = qtn.TensorNetwork([qtn.Tensor(a.copy(), inds=tuple(f"i{i}" for i in inds))
-                                 for a, inds in zip(arrays, inputs)])
-    if any(len(tids) > 2 for tids in network.ind_map.values()):
-        network = network.hyperinds_resolve(mode="tree", sorter="clustering")
-    optimizer = ctg.HyperCompressedOptimizer(
-        chi=chi, methods=["greedy-compressed", "greedy-span"], optlib="random",
-        optlib_opts={"seed": seed}, max_repeats=16, max_time=5, parallel=False)
-    tree = network.contraction_tree(optimizer, output_inds=())
+    network = compression_network(arrays, inputs) if network is None else network
+    path = compression_path(network, chi, seed) if path is None else path
     planning = time.perf_counter() - start
     stats = dict(peak_factor_entries=max(t.size for t in network), compressions=0)
 
@@ -150,7 +160,7 @@ def compressed_contract(arrays, inputs, chi, seed=37, gauges=1,
 
     before = time.perf_counter()
     mantissa, exponent = network.contract_compressed(
-        tree, max_bond=chi, cutoff=0.0, tree_gauge_distance=gauges,
+        path, output_inds=(), max_bond=chi, cutoff=0.0, tree_gauge_distance=gauges,
         compress_mode=mode,
         strip_exponent=True, equalize_norms=True,
         callback_pre_contract=pre_contract, callback_post_contract=post_contract,
@@ -164,7 +174,7 @@ def compressed_contract(arrays, inputs, chi, seed=37, gauges=1,
                 sign=float(np.sign(mantissa)),
                 log_absolute_value=(float(math.log(abs(mantissa)) + exponent * math.log(10))
                                     if mantissa else None),
-                path=[[int(i) for i in p] for p in tree.get_path()],
+                path=[[int(i) for i in p] for p in path],
                 **{k: int(v) for k, v in stats.items()})
 
 

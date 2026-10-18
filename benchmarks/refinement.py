@@ -23,6 +23,11 @@ PAIRS = tuple(combinations(range(5), 2))
 
 def layout(divisions):
     vertices, cells = edgewise_simplex(divisions)
+    return complex_layout(vertices, cells)
+
+
+def complex_layout(vertices, cells):
+    """Label a specified simplicial four-ball; callers validate its geometry."""
     tetrahedra = facets(cells, 4)
     outside = boundary(cells)
     boundary_faces = {f for t in outside for f in combinations(t, 3)}
@@ -123,7 +128,7 @@ def verify_native_basis(backend, maps):
     return errors
 
 
-def build_block(backend, cutoff=1, dl=0, boundary_i=1):
+def build_block(backend, cutoff=1, dl=0, boundary_i=1, graph=None):
     """All internal spins through K, all intertwiners, fixed boundary j=1.
 
     Use common sorted-face orthonormal bases on each tetrahedron. The integer
@@ -131,7 +136,20 @@ def build_block(backend, cutoff=1, dl=0, boundary_i=1):
     by their full ordered spin tuple; no symmetry of gauge-fixed shell cutoffs
     is assumed. Returned factors have independent spin and intertwiner indices.
     """
-    graph = layout(2)
+    graph = layout(2) if graph is None else graph
+    # The integer loop is complete only when tetrahedron parity forces it.
+    fi = graph["face_indices"]
+    pivots = {}
+    for tetrahedron in graph["tetrahedron_indices"]:
+        row = sum(1 << fi[f] for f in combinations(tetrahedron, 3) if f in fi)
+        while row:
+            pivot = row.bit_length() - 1
+            if pivot not in pivots:
+                pivots[pivot] = row
+                break
+            row ^= pivots[pivot]
+    if len(pivots) != len(fi):
+        raise ValueError("This complex admits half-integer sectors; the integer builder is insufficient")
     maps = BasisMaps(backend)
     basis_errors = verify_native_basis(backend, maps)
     nf = len(graph["face_indices"])

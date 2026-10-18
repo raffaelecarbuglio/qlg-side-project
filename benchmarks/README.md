@@ -107,3 +107,19 @@ The optional Numba JIT is disabled to avoid a QR compilation incompatibility in
 the tested environment; the native C EPRL backend remains enabled.
 
 See [the measurements and their limits](../docs/compression-experiments.md).
+
+## Cutoffs and fixed contraction orders
+
+`python -m benchmarks.check_cutoffs` scans shell cutoffs and spin cutoffs
+K=1,2,3 on the full 16-cell block. K=3 is the exact admissibility endpoint
+for its boundary j=1; the auxiliary shell sum remains separate.
+
+`python -m benchmarks.check_refinement` reuses each saved compression order
+at six retained ranks, comparing with exact full spin sums on 16,20,25,30
+cells. These are conforming local subdivisions for algorithm calibration,
+with changed boundary graphs and no boundary-state embedding.
+
+Run the new checks with
+`python -m unittest benchmarks.test_refinement benchmarks.test_compression -v`.
+Use the single-thread and JIT settings above. See the
+[report and complete commands](../docs/cutoff-and-refinement-checks.md).

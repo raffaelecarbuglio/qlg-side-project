@@ -49,3 +49,13 @@ compression with the exact full small-block calculation. Run them with
 `python -m unittest benchmarks.test_compression -v` after installing the optional
 benchmark dependencies. Large-sector compression is explicitly not converged;
 see [the experiment report](compression-experiments.md).
+
+Three more optional refinement checks passed: independent geometric
+containment/volume partition for the 20,25,30-cell subdivisions; rejection of
+an integer-only builder on a complex with half-integer sectors; and explicit
+20-cell spin-sector enumeration versus joint contraction, followed by
+fixed-order compression agreement and input-immutability checks. The native
+test uses a fresh process to avoid repeated native-library initialization.
+The full six-check optional suite passed. The new
+[cutoff and refinement report](cutoff-and-refinement-checks.md) distinguishes
+complete spin sums, finite shell cutoffs and unconverged larger calculations.

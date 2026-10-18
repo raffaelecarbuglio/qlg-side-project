@@ -8,6 +8,10 @@ This is not a renormalization map or a matched-boundary continuum calculation.
 The full spin-summed 256-simplex level has symbolic cost estimates only.
 Additional [compression experiments](compression-experiments.md) evaluate
 fixed-spin sectors there, but do not obtain converged amplitudes.
+The [follow-up cutoff checks](cutoff-and-refinement-checks.md) reach the exact
+K=3 endpoint of the first block's spin sum and test full finite-cutoff sums on
+20,25,30-cell local subdivisions. Their changed boundary graphs serve as
+algorithm tests; they do not define a boundary-state matching map.
 
 ## Separate common-boundary 1->5 calculation
 

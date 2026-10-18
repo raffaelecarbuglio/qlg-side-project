@@ -149,7 +149,9 @@ The exact trimming plus conditioning is the current measured default for the
 small block. A small compressed dimension that works there is not justified at
 the next level. The full 256-simplex spin sum, controlled open-boundary block
 compression, boundary-state matching and an RG prescription remain unimplemented.
-The auxiliary and physical spin cutoffs also remain unconverged.
+These original scans did not establish either cutoff's endpoint. The
+[follow-up checks](cutoff-and-refinement-checks.md) complete the first block's
+spin sum at K=3, extend the shell scan, and hold compression orders fixed.
 
 The compression method follows
 [Gray & Chan, PRX 14, 011009](https://arxiv.org/abs/2206.07044); software details
