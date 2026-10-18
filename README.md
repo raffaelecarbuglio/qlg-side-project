@@ -112,6 +112,12 @@ remaining nonmonotonic over the scan. The extended matched-boundary campaign
 is recorded as partial: 31 of 32 comparisons were confirmed before the execution
 service disconnected; shell-12 completion is unverified.
 
+[Boundary-map composition and gluing tests](docs/distributional-pilot.md)
+add a nested 1,2,4,6-cell family, check 15 commuting subdivision pairs, and
+compare unrescaled EPRL boundary functionals at shell cutoffs 0,2,4,8.
+These test ingredients of a distributional-convergence calculation; no
+continuum limit or globally consistent boundary-map family is established.
+
 ## References
 
 - Donà & Frisoni, [How-to compute EPRL spin foam amplitudes](https://arxiv.org/abs/2202.04360).

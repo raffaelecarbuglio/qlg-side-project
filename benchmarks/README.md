@@ -172,3 +172,19 @@ python -m benchmarks.plot_shell_ratios \
 
 Only completed K=3 cases are plotted. The default view starts at shell 4;
 `--minimum-dl 0` includes the earlier cutoffs.
+
+## Composable subdivisions and unrescaled boundary pairings
+
+```bash
+export OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
+python -m benchmarks.check_subdivision --run runs/subdivision-new \
+  --output benchmarks/results/subdivision-new.json --dl 0 2 4 8
+```
+
+This checks specified boundary-map compositions, 15 pairs of commuting
+disjoint bisections, sector inner products, and independently normalized
+two-cell gluing with a missing-factor negative control. It evaluates all
+32 or 243 coarse intertwiner coefficients on a nested 1,2,4,6-cell family,
+with all admissible physical internal labels and no fitted rescaling.
+Native tensors are restartable. See [the report](../docs/distributional-pilot.md)
+for the distinction between these finite tests and a distributional limit.
