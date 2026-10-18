@@ -188,3 +188,23 @@ two-cell gluing with a missing-factor negative control. It evaluates all
 with all admissible physical internal labels and no fitted rescaling.
 Native tensors are restartable. See [the report](../docs/distributional-pilot.md)
 for the distinction between these finite tests and a distributional limit.
+
+## Common-boundary 3<->3 comparison
+
+```bash
+export OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
+python -m benchmarks.check_pachner --run runs/pachner-new \
+  --output benchmarks/results/pachner-new.json --two-j 1 --dl 0 2 4 8 12
+```
+
+The two three-cell triangulations have exactly the same nine-tetrahedron
+boundary. The default j=1/2 sector keeps all 512 boundary intertwiner
+coefficients and sums both internal spins j=1/2,3/2. `--two-j 2` instead
+selects boundary j=1, with 19,683 coefficients and internal spins 0,1,2,3.
+Every internal intertwiner is included. Two local vertex orderings diagnose
+finite-shell sensitivity. BF equality and an omitted-sector negative control
+must pass before EPRL results are interpreted. `--bf-only` runs these checks.
+Absolute signed coefficients and individual internal-spin contributions are
+saved after every evaluation; native vertices use atomic restart checkpoints.
+This is a discretization diagnostic, not a refinement sequence or a test
+requiring exact finite-complex EPRL Pachner invariance.
