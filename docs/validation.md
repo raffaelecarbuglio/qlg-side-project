@@ -70,3 +70,19 @@ records fixed-input CPU comparisons and a boundary-area audit.
 This campaign also reran the 11 default checks (including the published native
 Delta4 reference) and six existing optional refinement/compression checks.
 All passed, in addition to the three new block-scan checks.
+
+The matched-boundary campaign adds two optional checks, run with
+`python -m unittest benchmarks.test_matched_boundary -v`. They reject an
+unproved finite spin bound on 1->5 and validate the exact holonomy pullbacks,
+inherited areas, full BF functionals and half-integer spin domains on both
+the local 2-cell split and the actual 16-cell block. The BF comparisons retain
+all 32 or 243 coarse intertwiner coefficients, including normalization and
+signs. All eight fine BF functionals agree with their coarse counterparts.
+The 11 default checks were also rerun and passed. See
+[the matched-boundary report](matched-boundary-tests.md) for EPRL measurements
+and the limitations of the j=0 kinematical vacuum.
+
+A separate two-build convention control completes three native vertex cases
+and records one unsupported case: rho=gamma*j with zero spins is refused by
+the pinned upstream dsmall implementation. This is a backend limitation,
+not a successful amplitude or a physical divergence.

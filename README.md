@@ -101,6 +101,11 @@ exact full finite-cutoff sums on 20, 25 and 30 simplices.
 complete K=3 at auxiliary shell cutoffs through 8, compare CPU layouts and
 verify restart on the expensive case. Boundary amplitude ratios stabilize
 faster than raw amplitudes; a naive fixed-j refinement changes boundary area.
+[Matched-boundary tests](docs/matched-boundary-tests.md) now implement exact
+SU(2) graph-subdivision embeddings, validate half-integer gluing against BF,
+and compare every coarse intertwiner coefficient in fixed j=1/2 and j=1
+sectors. The added boundary nodes are degenerate; this is a diagnostic of a
+kinematical embedding, not a dynamical vacuum or a continuum calculation.
 
 ## References
 

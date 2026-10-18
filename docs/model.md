@@ -7,6 +7,12 @@ with the default compiled Y-map convention `rho = gamma*(j+1)`. The build script
 does not set `RHO_GJ`. Different conventions require separate reference data and
 a new run directory.
 
+Zero-spin refinement probes need particular care with this convention. The
+[matched-boundary tests](matched-boundary-tests.md) include a separate
+rho=gamma*j build control: positive-spin vertices work, but its rho=0 routine
+is unimplemented in the pinned upstream source. No alternative-convention
+matched-refinement amplitude has therefore been obtained.
+
 Input spin order:
 
 ```text

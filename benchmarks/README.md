@@ -139,3 +139,24 @@ checks actual process termination and restart, thread/process agreement and
 complete vertex sets. `benchmarks.check_boundary --output PATH` audits the
 fixed-j boundary area across edgewise levels. See the
 [results and reproduction instructions](../docs/preparation-and-shell-tests.md).
+
+## Matched coarse and fine boundary states
+
+```bash
+export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
+python -m unittest benchmarks.test_matched_boundary -v
+python -m benchmarks.matched_boundary --run runs/matched-new \
+  --output benchmarks/results/matched-new.json --dl 0 2 4 8
+```
+
+This computes complete coarse intertwiner functionals at fixed boundary
+j=1/2 and j=1 (32 and 243 coefficients), using two exact graph-subdivision
+embeddings on a local 2-cell split and the actual 16-cell block. It includes
+all admissible bounded internal spins, including half-integers, and every
+internal intertwiner. BF amplitudes independently check the full gluing and
+normalization before EPRL interpretation. `--two-j` uses doubled spin labels;
+`--kinds split` selects the smallest case. Native tensors are restartable.
+
+Unused boundary links carry j=0 and inserted nodes have zero volume. The maps
+preserve the original spin-network state as a holonomy pullback, but are not
+derived from the dynamics. See the [measurements and limitations](../docs/matched-boundary-tests.md).

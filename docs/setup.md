@@ -42,6 +42,13 @@ When WIGXJPF provides a separate `libwigxjpf_quadmath.a`, the script links that
 archive too. This resolves FASTWIGXJ's optional quad-precision references without
 modifying the pinned upstream sources.
 
+For an explicit convention comparison, build a **separate** pinned upstream
+checkout with `RHO_CONVENTION=gj bash scripts/build_backend.sh /path/to/other-checkout`.
+This sets rho=gamma*j instead of the default rho=gamma*(j+1). Select its library
+explicitly and use a separate run directory. The build manifest and benchmark
+reports record the convention; the existing Delta4 reference table belongs
+to the default convention and must not validate the alternative build.
+
 Prepare the symbol lookup tables using the commands from the upstream guide:
 
 ```bash

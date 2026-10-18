@@ -13,6 +13,14 @@ K=3 endpoint of the first block's spin sum and test full finite-cutoff sums on
 20,25,30-cell local subdivisions. Their changed boundary graphs serve as
 algorithm tests; they do not define a boundary-state matching map.
 
+The new [matched-boundary calculation](matched-boundary-tests.md) supplies
+explicit kinematical embeddings for a local 1->2 split and the 1->16 block,
+including half-integer gluing checks and full coarse intertwiner functionals.
+Unused boundary links carry j=0; the inserted nodes have zero volume. This
+is a controlled first comparison, not a dynamically chosen fine vacuum.
+The experimental evaluator proves finite spin bounds for these complexes and
+refuses the unbounded 1->5 case below.
+
 ## Separate common-boundary 1->5 calculation
 
 A complementary comparison starts from a single four-simplex and inserts one

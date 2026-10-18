@@ -22,7 +22,13 @@ for header in "$root/ext/wigxjpf/inc/wigxjpf.h" "$root/ext/fastwigxj/inc/fastwig
         exit 1
     fi
 done
-# Refuse to silently inherit incompatible conventions or an MPI build.
+# Select the convention explicitly; the published reference uses gj1.
+case "${RHO_CONVENTION:-gj1}" in
+    gj1) rho_flags=; rho_label='gamma*(j+1)' ;;
+    gj) rho_flags=-DRHO_GJ; rho_label='gamma*j' ;;
+    *) echo 'RHO_CONVENTION must be gj1 (default) or gj' >&2; exit 1 ;;
+esac
+# Refuse to silently inherit other flags or an MPI build.
 make -C "$root" clean
 # FASTWIGXJ can reference WIGXJPF's separately packaged quadmath routines.
 # Add their archive after the normal libraries without editing pinned sources.
@@ -31,8 +37,8 @@ trap 'rm -f "$link_config"' EXIT
 if [[ -f "$root/ext/wigxjpf/lib/libwigxjpf_quadmath.a" ]]; then
     printf '%s\n' 'LDLIBS += -lwigxjpf_quadmath -lquadmath' > "$link_config"
 fi
-make -C "$root" -f Makefile -f "$link_config" lib BLAS="${BLAS:-system}" MPI=0 OMP=1 IO=1 ADD_CFLAGS= -j "${BUILD_JOBS:-2}"
-ROOT_PATH="$root" BLAS_VENDOR="${BLAS:-system}" python3 - <<'PY'
+make -C "$root" -f Makefile -f "$link_config" lib BLAS="${BLAS:-system}" MPI=0 OMP=1 IO=1 ADD_CFLAGS="$rho_flags" -j "${BUILD_JOBS:-2}"
+ROOT_PATH="$root" BLAS_VENDOR="${BLAS:-system}" RHO_LABEL="$rho_label" python3 - <<'PY'
 import hashlib, json, os, pathlib, subprocess
 root = pathlib.Path(os.environ['ROOT_PATH'])
 files = [root/'lib/libsl2cfoam.so', root/'ext/wigxjpf/lib/libwigxjpf.a',
@@ -41,7 +47,7 @@ files = [root/'lib/libsl2cfoam.so', root/'ext/wigxjpf/lib/libwigxjpf.a',
 info = {
     'repository': 'https://github.com/qg-cpt-marseille/sl2cfoam-next',
     'commit': subprocess.check_output(['git','rev-parse','HEAD'], cwd=root, text=True).strip(),
-    'rho_convention': 'gamma*(j+1)', 'mpi': False, 'openmp': True, 'io': True,
+    'rho_convention': os.environ['RHO_LABEL'], 'mpi': False, 'openmp': True, 'io': True,
     'blas': os.environ['BLAS_VENDOR'],
     'compiler': subprocess.check_output(['gcc','--version'], text=True).splitlines()[0],
     'files_sha256': {str(p.relative_to(root)): hashlib.file_digest(p.open('rb'),'sha256').hexdigest()

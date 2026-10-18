@@ -1,0 +1,60 @@
+{
+  "accuracy": "veryhigh",
+  "dl": 0,
+  "gamma": 1.2,
+  "results": [
+    {
+      "backend_source_revision": "052e4346028870bd76f69a3034e6cae8defb8f7f",
+      "max_absolute_value": 5.435725067190099e-09,
+      "rho_convention": "gamma*(j+1)",
+      "shape": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "status": "completed",
+      "two_j": 1
+    },
+    {
+      "backend_source_revision": "052e4346028870bd76f69a3034e6cae8defb8f7f",
+      "max_absolute_value": 2.2813122691643596e-07,
+      "rho_convention": "gamma*(j+1)",
+      "shape": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "status": "completed",
+      "two_j": 0
+    },
+    {
+      "backend_source_revision": "052e4346028870bd76f69a3034e6cae8defb8f7f",
+      "max_absolute_value": 2.6694371849851717e-06,
+      "rho_convention": "gamma*j",
+      "shape": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "status": "completed",
+      "two_j": 1
+    },
+    {
+      "backend_source_revision": "052e4346028870bd76f69a3034e6cae8defb8f7f",
+      "reason": "dsmall with rho == 0 not implemented",
+      "rho_convention": "gamma*j",
+      "status": "unsupported",
+      "two_j": 0
+    }
+  ],
+  "source": {
+    "commit": "53af413a9ec46a5466e07f69c91d1591e2abfdd5",
+    "dirty": true
+  }
+}
