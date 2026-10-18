@@ -148,6 +148,39 @@ not validate another routing or boundary-spin sector. Higher-shell comparisons
 and the independent homogeneous shell-10/12 scan are separate follow-ups.
 
 
+## Homogeneous-boundary shell extension
+
+The original all-boundary-j=1, K=3 calculation completes at shell cutoff 10.
+The raw result is saved in
+[`2026-10-18-shell10.json`](../benchmarks/results/2026-10-18-shell10.json).
+This is a separate boundary prescription from the matched-state tests above.
+All physical internal spins and intertwiners are summed; only the auxiliary
+shell sum remains truncated.
+
+| Shell cutoff | A1/A0 | A2/A0 |
+|---:|---:|---:|
+| 6 | -1.9682335293e-6 | 6.1352365569e-7 |
+| 8 | -1.9404319812e-6 | 6.1831161322e-7 |
+| 10 | -1.9297994008e-6 | 6.2541474552e-7 |
+
+From shell 8 to 10, the magnitude of the first ratio decreases 0.54795%,
+the second increases 1.14879%, and the raw magnitude of A1 increases 11.4019%.
+The second ratio's latest fractional change is larger than its 0.78040%
+change from shell 6 to 8. There is no justified simple monotonic tail fit or
+certified sub-percent accuracy for both ratios.
+
+![Measured amplitude ratios at shell cutoffs 4 and above](figures/shell-ratios.svg)
+
+Lines connect completed finite-cutoff calculations; they are guides to the eye,
+not extrapolations. No tail-error bars are available.
+
+All 574 ordered vertices at shell 10 were computed in 2523.27 seconds of
+preparation, using one process and four requested OpenMP threads. The three
+amplitudes each agree under two exact contraction orders. This is a local
+timing with another native campaign running concurrently, not an isolated
+hardware benchmark. Shell 12 is a separate case with a 2700-second budget.
+No shell-12 amplitude is inferred from incomplete cached vertices.
+
 ## Zero-spin convention control
 
 The j=0 embeddings make the Y-map convention particularly relevant. The

@@ -106,6 +106,9 @@ SU(2) graph-subdivision embeddings, validate half-integer gluing against BF,
 and compare every coarse intertwiner coefficient in fixed j=1/2 and j=1
 sectors. The added boundary nodes are degenerate; this is a diagnostic of a
 kinematical embedding, not a dynamical vacuum or a continuum calculation.
+The same report extends the original complete K=3 shell scan through cutoff
+10: the two ratios change by 0.55% and 1.15% from cutoff 8, with the second
+remaining nonmonotonic over the scan.
 
 ## References
 

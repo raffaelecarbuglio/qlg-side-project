@@ -1,0 +1,662 @@
+{
+  "accuracy": "veryhigh",
+  "backend_source_revision": "052e4346028870bd76f69a3034e6cae8defb8f7f",
+  "blas_threads": 1,
+  "boundary_j": 1,
+  "gamma": 1.2,
+  "numpy": "2.3.5",
+  "preparation_timeout_seconds": 2700.0,
+  "processes": 1,
+  "results": [
+    {
+      "K": 3,
+      "dl": 10,
+      "elapsed_seconds": 5.88641102100155,
+      "normalized_three_state_amplitude": [
+        0.9999999999979423,
+        -1.929799400761179e-06,
+        6.254147455194657e-07
+      ],
+      "peak_rss_kb": 546160,
+      "preparation_wall_seconds": 2523.265630735,
+      "reason": null,
+      "requested_core_seconds": 10093.06252294,
+      "states": [
+        {
+          "boundary_i": 0,
+          "exact_methods": [
+            {
+              "contract_seconds": 0.08243985500121198,
+              "estimated_flops": "39610872",
+              "largest_intermediate_bytes": 16588800,
+              "method": "greedy",
+              "path": [
+                [
+                  1,
+                  2
+                ],
+                [
+                  0,
+                  2
+                ],
+                [
+                  1,
+                  2
+                ],
+                [
+                  5,
+                  6
+                ],
+                [
+                  6,
+                  7
+                ],
+                [
+                  0,
+                  11
+                ],
+                [
+                  0,
+                  11
+                ],
+                [
+                  0,
+                  10
+                ],
+                [
+                  1,
+                  9
+                ],
+                [
+                  7,
+                  8
+                ],
+                [
+                  0,
+                  2
+                ],
+                [
+                  1,
+                  9
+                ],
+                [
+                  1,
+                  8
+                ],
+                [
+                  1,
+                  7
+                ],
+                [
+                  1,
+                  6
+                ],
+                [
+                  0,
+                  5
+                ],
+                [
+                  2,
+                  4
+                ],
+                [
+                  2,
+                  3
+                ],
+                [
+                  0,
+                  2
+                ],
+                [
+                  0,
+                  1
+                ]
+              ],
+              "search_seconds": 0.00148055700083205,
+              "status": "completed",
+              "value": 0.00021199112529355333
+            },
+            {
+              "contract_seconds": 0.09715804400002526,
+              "estimated_flops": "21494700",
+              "largest_intermediate_bytes": 829440,
+              "method": "random-greedy-64",
+              "path": [
+                [
+                  11,
+                  12
+                ],
+                [
+                  15,
+                  19
+                ],
+                [
+                  8,
+                  18
+                ],
+                [
+                  5,
+                  6
+                ],
+                [
+                  12,
+                  16
+                ],
+                [
+                  14,
+                  15
+                ],
+                [
+                  1,
+                  2
+                ],
+                [
+                  10,
+                  13
+                ],
+                [
+                  3,
+                  12
+                ],
+                [
+                  10,
+                  11
+                ],
+                [
+                  6,
+                  7
+                ],
+                [
+                  6,
+                  9
+                ],
+                [
+                  5,
+                  8
+                ],
+                [
+                  4,
+                  7
+                ],
+                [
+                  3,
+                  6
+                ],
+                [
+                  4,
+                  5
+                ],
+                [
+                  0,
+                  2
+                ],
+                [
+                  1,
+                  3
+                ],
+                [
+                  0,
+                  2
+                ],
+                [
+                  0,
+                  1
+                ]
+              ],
+              "search_seconds": 0.0423499480002647,
+              "status": "completed",
+              "value": 0.00021199112529355317
+            }
+          ],
+          "log_absolute_amplitude": -326.4485181824259,
+          "preparation": {
+            "build_seconds": 1.1533952269983274,
+            "factor_bytes": 137957784,
+            "log_amplitude_scale": -317.9895520364346,
+            "native_basis_max_absolute_errors": [
+              1.6653345369377348e-16,
+              5.551115123125783e-17,
+              6.938893903907228e-17
+            ],
+            "native_seconds": 0.3987862580088404,
+            "unique_native_vertices": 574
+          },
+          "sign": 1.0,
+          "support": {
+            "removed_values": 74,
+            "zero": false
+          }
+        },
+        {
+          "boundary_i": 1,
+          "exact_methods": [
+            {
+              "contract_seconds": 0.07424558800084924,
+              "estimated_flops": "39610872",
+              "largest_intermediate_bytes": 16588800,
+              "method": "greedy",
+              "path": [
+                [
+                  1,
+                  2
+                ],
+                [
+                  0,
+                  2
+                ],
+                [
+                  1,
+                  2
+                ],
+                [
+                  5,
+                  6
+                ],
+                [
+                  6,
+                  7
+                ],
+                [
+                  0,
+                  11
+                ],
+                [
+                  0,
+                  11
+                ],
+                [
+                  0,
+                  10
+                ],
+                [
+                  1,
+                  9
+                ],
+                [
+                  7,
+                  8
+                ],
+                [
+                  0,
+                  2
+                ],
+                [
+                  1,
+                  9
+                ],
+                [
+                  1,
+                  8
+                ],
+                [
+                  1,
+                  7
+                ],
+                [
+                  1,
+                  6
+                ],
+                [
+                  0,
+                  5
+                ],
+                [
+                  2,
+                  4
+                ],
+                [
+                  2,
+                  3
+                ],
+                [
+                  0,
+                  2
+                ],
+                [
+                  0,
+                  1
+                ]
+              ],
+              "search_seconds": 0.001814066999941133,
+              "status": "completed",
+              "value": -7.90330173693108e-06
+            },
+            {
+              "contract_seconds": 0.19038769100006903,
+              "estimated_flops": "21494700",
+              "largest_intermediate_bytes": 829440,
+              "method": "random-greedy-64",
+              "path": [
+                [
+                  11,
+                  12
+                ],
+                [
+                  15,
+                  19
+                ],
+                [
+                  8,
+                  18
+                ],
+                [
+                  5,
+                  6
+                ],
+                [
+                  12,
+                  16
+                ],
+                [
+                  14,
+                  15
+                ],
+                [
+                  1,
+                  2
+                ],
+                [
+                  10,
+                  13
+                ],
+                [
+                  3,
+                  12
+                ],
+                [
+                  10,
+                  11
+                ],
+                [
+                  6,
+                  7
+                ],
+                [
+                  6,
+                  9
+                ],
+                [
+                  5,
+                  8
+                ],
+                [
+                  4,
+                  7
+                ],
+                [
+                  3,
+                  6
+                ],
+                [
+                  4,
+                  5
+                ],
+                [
+                  0,
+                  2
+                ],
+                [
+                  1,
+                  3
+                ],
+                [
+                  0,
+                  2
+                ],
+                [
+                  0,
+                  1
+                ]
+              ],
+              "search_seconds": 0.06245311599923298,
+              "status": "completed",
+              "value": -7.903301736931077e-06
+            }
+          ],
+          "log_absolute_amplitude": -339.60661268030265,
+          "preparation": {
+            "build_seconds": 1.1432758920000197,
+            "factor_bytes": 137957784,
+            "log_amplitude_scale": -327.85838273588183,
+            "native_basis_max_absolute_errors": [
+              1.6653345369377348e-16,
+              5.551115123125783e-17,
+              6.938893903907228e-17
+            ],
+            "native_seconds": 0.42359863497949846,
+            "unique_native_vertices": 574
+          },
+          "sign": -1.0,
+          "support": {
+            "removed_values": 74,
+            "zero": false
+          }
+        },
+        {
+          "boundary_i": 2,
+          "exact_methods": [
+            {
+              "contract_seconds": 0.06850195999868447,
+              "estimated_flops": "39610872",
+              "largest_intermediate_bytes": 16588800,
+              "method": "greedy",
+              "path": [
+                [
+                  1,
+                  2
+                ],
+                [
+                  0,
+                  2
+                ],
+                [
+                  1,
+                  2
+                ],
+                [
+                  5,
+                  6
+                ],
+                [
+                  6,
+                  7
+                ],
+                [
+                  0,
+                  11
+                ],
+                [
+                  0,
+                  11
+                ],
+                [
+                  0,
+                  10
+                ],
+                [
+                  1,
+                  9
+                ],
+                [
+                  7,
+                  8
+                ],
+                [
+                  0,
+                  2
+                ],
+                [
+                  1,
+                  9
+                ],
+                [
+                  1,
+                  8
+                ],
+                [
+                  1,
+                  7
+                ],
+                [
+                  1,
+                  6
+                ],
+                [
+                  0,
+                  5
+                ],
+                [
+                  2,
+                  4
+                ],
+                [
+                  2,
+                  3
+                ],
+                [
+                  0,
+                  2
+                ],
+                [
+                  0,
+                  1
+                ]
+              ],
+              "search_seconds": 0.0031826600006752415,
+              "status": "completed",
+              "value": 4.654701079721369e-06
+            },
+            {
+              "contract_seconds": 0.08887420500104781,
+              "estimated_flops": "21494700",
+              "largest_intermediate_bytes": 829440,
+              "method": "random-greedy-64",
+              "path": [
+                [
+                  11,
+                  12
+                ],
+                [
+                  15,
+                  19
+                ],
+                [
+                  8,
+                  18
+                ],
+                [
+                  5,
+                  6
+                ],
+                [
+                  12,
+                  16
+                ],
+                [
+                  14,
+                  15
+                ],
+                [
+                  1,
+                  2
+                ],
+                [
+                  10,
+                  13
+                ],
+                [
+                  3,
+                  12
+                ],
+                [
+                  10,
+                  11
+                ],
+                [
+                  6,
+                  7
+                ],
+                [
+                  6,
+                  9
+                ],
+                [
+                  5,
+                  8
+                ],
+                [
+                  4,
+                  7
+                ],
+                [
+                  3,
+                  6
+                ],
+                [
+                  4,
+                  5
+                ],
+                [
+                  0,
+                  2
+                ],
+                [
+                  1,
+                  3
+                ],
+                [
+                  0,
+                  2
+                ],
+                [
+                  0,
+                  1
+                ]
+              ],
+              "search_seconds": 0.0371271899985004,
+              "status": "completed",
+              "value": 4.654701079721368e-06
+            }
+          ],
+          "log_absolute_amplitude": -340.7333689968831,
+          "preparation": {
+            "build_seconds": 1.1579287299991847,
+            "factor_bytes": 137957784,
+            "log_amplitude_scale": -328.45573613270335,
+            "native_basis_max_absolute_errors": [
+              1.6653345369377348e-16,
+              5.551115123125783e-17,
+              6.938893903907228e-17
+            ],
+            "native_seconds": 0.4093141590292362,
+            "unique_native_vertices": 574
+          },
+          "sign": 1.0,
+          "support": {
+            "removed_values": 74,
+            "zero": false
+          }
+        }
+      ],
+      "status": "completed",
+      "workers": [
+        {
+          "computed": 574,
+          "elapsed_seconds": 2522.8360241950004,
+          "native_seconds": 2519.0697960799944,
+          "peak_rss_kb": 269460,
+          "reused": 0,
+          "selected": 574,
+          "status": "completed"
+        }
+      ]
+    }
+  ],
+  "rho_convention": "gamma*(j+1)",
+  "schema": 1,
+  "source": {
+    "commit": "53af413a9ec46a5466e07f69c91d1591e2abfdd5",
+    "dirty": false
+  },
+  "threads": 4
+}

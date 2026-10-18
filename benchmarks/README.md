@@ -160,3 +160,15 @@ normalization before EPRL interpretation. `--two-j` uses doubled spin labels;
 Unused boundary links carry j=0 and inserted nodes have zero volume. The maps
 preserve the original spin-network state as a holonomy pullback, but are not
 derived from the dynamics. See the [measurements and limitations](../docs/matched-boundary-tests.md).
+
+To reproduce the ratio figure without a tail fit:
+
+```bash
+python -m benchmarks.plot_shell_ratios \
+  benchmarks/results/2026-10-18-shell-states.json \
+  benchmarks/results/2026-10-18-shell8-resume.json \
+  benchmarks/results/2026-10-18-shell10.json --output docs/figures/shell-ratios.svg
+```
+
+Only completed K=3 cases are plotted. The default view starts at shell 4;
+`--minimum-dl 0` includes the earlier cutoffs.

@@ -260,6 +260,13 @@ def main():
         parser.error("Shell cutoffs must be in 0..12")
     if os.environ.get("OPENBLAS_NUM_THREADS") != "1":
         parser.error("Set OPENBLAS_NUM_THREADS=1")
+    threads = os.environ.get("OMP_NUM_THREADS", "")
+    if not threads.isdecimal() or int(threads) < 1:
+        parser.error("Set OMP_NUM_THREADS to a positive integer")
+    if os.environ.get("MKL_NUM_THREADS", "1") != "1":
+        parser.error("Set MKL_NUM_THREADS=1")
+    os.environ.setdefault("MKL_NUM_THREADS", "1")
+    os.environ["OMP_DYNAMIC"] = "FALSE"
     run = Path(args.run)
     run.mkdir(parents=True, exist_ok=True)
     identity = cache_spec()
