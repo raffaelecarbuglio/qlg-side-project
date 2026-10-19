@@ -208,3 +208,4 @@ Absolute signed coefficients and individual internal-spin contributions are
 saved after every evaluation; native vertices use atomic restart checkpoints.
 This is a discretization diagnostic, not a refinement sequence or a test
 requiring exact finite-complex EPRL Pachner invariance.
+See the [results and interpretation](../docs/pachner-diagnostic.md).

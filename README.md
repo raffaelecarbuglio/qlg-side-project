@@ -13,6 +13,10 @@ Julia is not required.
 limit or general coarse-graining algorithm. The `refinement-plan` command checks
 same-boundary subdivision combinatorics; it does not compute their amplitudes.
 
+The [common-boundary 3-to-3 diagnostic](docs/pachner-diagnostic.md) compares
+all 512 boundary coefficients at j=1/2, including both internal spins,
+BF validation, and EPRL shell/order checks through Delta l=12.
+
 ## First run
 
 Python >= 3.11 and a configured native backend are required. Follow
