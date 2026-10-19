@@ -1,5 +1,10 @@
 # Refinement calculations
 
+The [current protocol](continuum-protocol.md) fixes the proposed boundary
+probes, refinement histories, regulator order and failure conditions. The
+1-to-5 amplitudes below remain unimplemented. Earlier benchmark families
+are retained as diagnostics, not endorsed as optimal continuum sequences.
+
 An experimental edgewise 1->16 calculation now exists in `benchmarks/`.
 It implements explicit common-basis transformations, all admissible internal
 intertwiners and small finite internal-spin cutoffs for boundary j=1.

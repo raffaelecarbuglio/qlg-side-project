@@ -17,6 +17,11 @@ The [common-boundary 3-to-3 diagnostic](docs/pachner-diagnostic.md) compares
 all 512 boundary coefficients at j=1/2, including both internal spins,
 BF validation, and EPRL shell/order checks through Delta l=12.
 
+The [next refinement protocol](docs/continuum-protocol.md) specifies a
+same-boundary 1-to-5 effective amplitude, separate regulators, and explicit
+stopping conditions. Its combinatorics are audited; its amplitudes are not
+yet implemented.
+
 ## First run
 
 Python >= 3.11 and a configured native backend are required. Follow
