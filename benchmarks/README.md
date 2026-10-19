@@ -234,3 +234,4 @@ No unregulated BF Pachner identity is assumed for the finite sum. Missing
 face weights supply a negative control. Absolute amplitudes, physical-spin
 shell contributions, cancellation diagnostics and costs are saved. Atomic
 native tensors and a progress file allow restart; no rescaling is fitted.
+See the [five-cell results and limits](../docs/fivecell-effective-amplitude.md).

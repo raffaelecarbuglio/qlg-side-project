@@ -4,7 +4,9 @@
 boundary, retaining the complete boundary functional in each selected spin
 sector. Its first deliverable is an effective boundary amplitude and a study
 of its internal-spin dependence. It is not required to equal the bare vertex.
-No new EPRL amplitudes have been computed for this protocol yet.
+The first [regulated half-spin calculation](fivecell-effective-amplitude.md)
+now implements this step at K=1/2,1. The broader probes, regulator removal
+and later refinement levels remain research tasks.
 
 The specification below replaces an unrestricted campaign of larger meshes.
 It makes a definite next experiment possible. It does not supply a proven
@@ -209,6 +211,14 @@ not a theorem or a bound on an omitted tail. For a limit near zero, the fixed
 absolute tolerance matters: a zero candidate must be reported as such rather
 than rescaled into a nonzero answer.
 
+The [first five-cell results](fivecell-effective-amplitude.md) are strongly
+suppressed relative to S0. The coarse-reference absolute floor by itself
+therefore cannot resolve their K or L dependence. Being below that floor
+does not establish a zero result or regulator removal. For a resolved
+nonzero effective amplitude, separately report relative regulator and
+ordering changes at the amplitude's own scale; the initial 1% relative
+targets remain unmet. Retain both kinds of diagnostic without rescaling W.
+
 Only after five-cell regulator behavior is understood proceed to 9A,9B,13
 with the same convention and probe states. Look for stability on a tail of
 levels, not equality of the first two levels. One stable finite window does
@@ -225,11 +235,12 @@ this new issue.
 
 ## 7. First deliverable and INFN decision
 
-The next implementation milestone is the full **regulated five-cell effective
-tensor**, first in the 32-component half-spin sector, with exact internal sums
+The first implementation milestone is the full **regulated five-cell effective
+tensor** in the 32-component half-spin sector, with exact internal sums
 at K=1/2,1, separate shell control, and an independent smallest-K contraction
-check. Report T5, T1, their difference, internal-spin increments and measured
-cost. Then add the mixed and j=1 boundary probes before claiming robustness
+check. The [implementation and report](fivecell-effective-amplitude.md) retain
+T5, T1, their difference, internal-spin increments and measured cost.
+Then add the mixed and j=1 boundary probes before claiming robustness
 across boundary data. This is one coarse-graining step, not a full RG flow.
 
 Go to INFN when this specifies a validated calculation whose obstacle is

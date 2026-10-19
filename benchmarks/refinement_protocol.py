@@ -84,7 +84,7 @@ def audit():
     low_cutoffs = [assignments(five, k) for k in (1, 2)]
     assert [(r["admissible_spin_assignments"], r["unique_ordered_native_vertices"])
             for r in low_cutoffs] == [(16, 8), (721, 81)]
-    return dict(status="combinatorics_verified_amplitudes_unimplemented",
+    return dict(status="combinatorics_verified_no_amplitudes_evaluated",
         cases={name: dict(**counts(c), simplices=[list(s) for s in c]) for name, c in cases.items()},
         split_cells=dict(a=list(a), b=list(b)), two_orders_same_common_refinement=True,
         second_complete_relative_round=counts(second), boundary_sectors=sectors,

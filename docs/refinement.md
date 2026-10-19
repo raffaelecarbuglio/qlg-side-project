@@ -1,8 +1,10 @@
 # Refinement calculations
 
 The [current protocol](continuum-protocol.md) fixes the proposed boundary
-probes, refinement histories, regulator order and failure conditions. The
-1-to-5 amplitudes below remain unimplemented. Earlier benchmark families
+probes, refinement histories, regulator order and failure conditions. A
+[regulated five-cell evaluator](fivecell-effective-amplitude.md) now implements
+the first half-spin boundary experiment at K=1/2,1; later levels and regulator
+removal remain unimplemented. Earlier benchmark families
 are retained as diagnostics, not endorsed as optimal continuum sequences.
 
 An experimental edgewise 1->16 calculation now exists in `benchmarks/`.
@@ -23,8 +25,10 @@ explicit kinematical embeddings for a local 1->2 split and the 1->16 block,
 including half-integer gluing checks and full coarse intertwiner functionals.
 Unused boundary links carry j=0; the inserted nodes have zero volume. This
 is a controlled first comparison, not a dynamically chosen fine vacuum.
-The experimental evaluator proves finite spin bounds for these complexes and
-refuses the unbounded 1->5 case below.
+The matched-boundary evaluator proves finite spin bounds for its complexes and
+refuses an unbounded 1->5 sum. The separate five-cell evaluator instead uses
+an explicit physical-spin regulator; its finite K values are not admissibility
+endpoints.
 
 ## Separate common-boundary 1->5 calculation
 
@@ -42,7 +46,8 @@ It produces 1, 5 and 9 simplices by successively subdividing one cell. This is
 one refinement sequence, not all triangulations. The output explicitly marks
 its amplitudes as unimplemented.
 
-Before computing it, the physical amplitude needs the following specification:
+The protocol and five-cell evaluator now fix the following for its initial
+regulated half-spin experiment; extensions need the same specifications:
 
 1. An ordered frame and intertwiner basis for each shared tetrahedron. Local
    vertex bases need not agree. Derive the required permutation, recoupling and
@@ -69,6 +74,8 @@ boundary amplitudes stabilize as both numerical controls and the retained
 boundary information improve. A plateau at fixed truncation is insufficient.
 
 General-complex amplitudes and the renormalization map remain research tasks.
+The regulated five-cell calculation does not implement arbitrary levels of
+the `refinement-plan` command.
 The experimental edgewise benchmark derives its basis transformations explicitly;
 it does not turn this combinatorial 1->5 command into an amplitude evaluator.
 Reference: Asante, Dittrich & Steinhaus,

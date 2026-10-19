@@ -595,6 +595,6 @@
       5
     ]
   },
-  "status": "combinatorics_verified_amplitudes_unimplemented",
+  "status": "combinatorics_verified_no_amplitudes_evaluated",
   "two_orders_same_common_refinement": true
 }

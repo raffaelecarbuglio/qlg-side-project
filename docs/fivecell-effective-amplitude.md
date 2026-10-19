@@ -6,6 +6,62 @@ of one four-simplex, with the complete j=1/2 boundary functional retained.
 It computes finite regulated EPRL amplitudes. It does not remove the internal
 spin regulator or obtain a continuum limit.
 
+## Completed results — 19 October 2026
+
+All 16 five-cell evaluations completed: two physical spin cutoffs, four
+auxiliary cutoffs, and two local frames. Each keeps all 32 boundary
+coefficients. Four single-cell references are also recorded.
+
+| Physical cutoff K | max(abs(W5)) at L=8, across frames | Relative change L=4 to 8 | Frame difference at L=8 |
+|---|---:|---:|---:|
+| 1/2 | 2.477e-34 to 2.519e-34 | 7.11% to 8.83% | 1.67% |
+| 1 | 9.570e-34 to 9.841e-34 | 8.80% to 8.90% | 2.76% |
+
+Increasing K from 1/2 to 1 at L=8 changes the coefficient vector by
+74.12--74.43% in the symmetric maximum-coefficient metric below. Its
+Euclidean norm grows by a factor 3.878--3.923. The distance between its
+unit-norm directions is 0.06017--0.06021: the change is predominantly scale,
+with a smaller change in boundary-state dependence. Neither that factor
+nor the direction is used to redefine the amplitude.
+
+The lower-spin shell in every K=1 result reproduces the complete K=1/2
+functional exactly, confirming the nesting of the two physical cutoffs.
+The added max(j_internal)=1 shell is therefore important. Two K values
+do not establish a large-K divergence law or the convergence of any ratio.
+
+Independent BF finite sums agree within 2.50e-15. EPRL explicit-intertwiner
+checks at K=1/2 agree within 7.85e-17, and the two exact contraction paths
+agree within 5.05e-17 across all EPRL evaluations. These relative errors
+refer to the full finite coefficient vectors. They do not bound the native
+vertex integration error or the missing spin tails.
+
+The single-cell maximum at L=8 is 3.35240e-7. In the ascending frame the
+five-cell/single-cell Euclidean norm ratio is 7.48250e-28 at K=1/2 and
+2.93563e-27 at K=1. Their unit-direction distances are respectively
+0.06180 and 0.001690. This very strong absolute suppression is retained.
+It depends on the stated convention and incomplete internal-spin sums;
+it does not establish a zero continuum limit. A coarse-reference absolute
+tolerance cannot resolve the regulator dependence of these tiny amplitudes;
+the report therefore also retains the relative changes at their own scale.
+
+**Assessment:** the implementation and finite sums pass their checks.
+The 1% relative auxiliary-cutoff and frame targets are not met, and
+physical-spin convergence is not established. No nine-cell run or
+normalization fit has been performed. The data deliver a regulated
+effective amplitude and quantify the controls still required.
+
+Native vertex preparation took 589.39 seconds in total on two OpenMP
+threads, of which 526.03 seconds were at L=8. Each individual boundary
+contraction/assembly took under one second in the recorded final pass.
+These are local measurements, not an INFN benchmark. No INFN jobs were used.
+
+All 612 ordered native tensors are supplied in the
+[numerical archive](../benchmarks/results/2026-10-19-fivecell-vertices.tar.gz).
+They contain arrays, identity digests and timings. A fresh extraction and
+cache-only replay reproduced all 640 fine/coarse coefficients and 768
+spin-shell coefficients exactly, with zero new native EPRL evaluations.
+The archive checksum and code-file hashes are included in the raw report.
+
 ## Amplitude and regulators
 
 An interior vertex 5 replaces 01234 by the five four-simplices
@@ -97,3 +153,14 @@ ordered spin tuples, auxiliary cutoff and strict backend identity. A vertex
 is reusable only after its complete atomic archive has been written.
 `RUN/progress.json` is updated after every prepared tensor; each complete
 boundary functional is atomically recorded in the output report.
+
+To inspect or restore the supplied numerical archive:
+
+```bash
+mkdir -p runs/fivecell-archived
+tar -xzf benchmarks/results/2026-10-19-fivecell-vertices.tar.gz -C runs/fivecell-archived
+```
+
+Using that directory as `--run` validates the strict cache identity; a
+different native build may require its own run directory. The stored arrays
+can also be read independently with NumPy's `load(..., allow_pickle=False)`.

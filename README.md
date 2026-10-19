@@ -19,8 +19,10 @@ BF validation, and EPRL shell/order checks through Delta l=12.
 
 The [next refinement protocol](docs/continuum-protocol.md) specifies a
 same-boundary 1-to-5 effective amplitude, separate regulators, and explicit
-stopping conditions. Its combinatorics are audited; its amplitudes are not
-yet implemented.
+stopping conditions. The first [regulated five-cell calculation](docs/fivecell-effective-amplitude.md)
+now retains all 32 half-spin boundary coefficients at K=1/2,1, with exact
+finite sums and independent smallest-cutoff checks. Regulator removal and
+later refinement levels remain unimplemented.
 
 ## First run
 
