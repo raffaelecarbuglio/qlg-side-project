@@ -209,3 +209,28 @@ saved after every evaluation; native vertices use atomic restart checkpoints.
 This is a discretization diagnostic, not a refinement sequence or a test
 requiring exact finite-complex EPRL Pachner invariance.
 See the [results and interpretation](../docs/pachner-diagnostic.md).
+
+## Regulated five-cell effective amplitude
+
+```bash
+export OMP_NUM_THREADS=2 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
+python -m benchmarks.check_fivecell --run runs/fivecell-new \
+  --output benchmarks/results/fivecell-new.json --two-k 1 2 --dl 0 2 4
+```
+
+This implements the first step of the
+[fixed-boundary protocol](../docs/continuum-protocol.md): all 32 j=1/2
+boundary coefficients on a genuine 1-to-5 subdivision. `--two-k 1 2`
+means physical internal cutoffs K=1/2,1, with respectively 16 and 721
+admissible spin assignments. All internal intertwiners are summed. `--dl`
+controls the separate auxiliary vertex sums; higher values through 12 are
+accepted. Both ascending and descending local vertex frames are checked.
+
+The smallest BF sum is independently reconstructed from magnetic-index
+vertices and explicit intertwiner loops, including explicit epsilon-matrix
+orientation checks. EPRL at K=1/2 is checked by explicit intertwiner loops
+at every auxiliary cutoff. Higher-K sums use two exact contraction orders.
+No unregulated BF Pachner identity is assumed for the finite sum. Missing
+face weights supply a negative control. Absolute amplitudes, physical-spin
+shell contributions, cancellation diagnostics and costs are saved. Atomic
+native tensors and a progress file allow restart; no rescaling is fitted.
