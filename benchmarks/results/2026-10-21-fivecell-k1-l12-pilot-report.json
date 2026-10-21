@@ -153,6 +153,31 @@
         1,
         1
       ]
+    },
+    {
+      "index": 80,
+      "output_bytes": 256,
+      "reused": false,
+      "seconds": 81.63516091199995,
+      "shape": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "spins": [
+        2,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
     }
   ],
   "ordering": "ascending",
@@ -166,7 +191,7 @@
     64,
     80
   ],
-  "status": "running",
+  "status": "completed",
   "total_output_tensor_bytes": 4816,
   "two_k": 2
 }
