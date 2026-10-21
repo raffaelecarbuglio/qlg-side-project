@@ -49,7 +49,7 @@ def main():
     index = dict(status=report["status"], created_utc=datetime.now(timezone.utc).isoformat(),
                  dl=args.dl, checkpoint_cache_id=cache_id, saved_vertices=len(entries),
                  completed_amplitudes=[dict(two_k=r["two_k"], ordering=r["ordering"])
-                                       for r in report["results"] if r["dl"] == args.dl],
+                                       for r in report.get("results", []) if r["dl"] == args.dl],
                  files=entries,
                  note="Partial tensors and finite cutoff amplitudes only; no continuum limit.")
     prefix = args.prefix

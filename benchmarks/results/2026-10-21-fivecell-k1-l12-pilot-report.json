@@ -1,0 +1,172 @@
+{
+  "assignment_count": 721,
+  "cache_id": "05f86ed58605feac3f9c17ec6c8066bbb646b3b0eb90f508560d048a9138cf2d",
+  "distinct_ordered_vertices": 81,
+  "dl": 12,
+  "measurements": [
+    {
+      "index": 0,
+      "output_bytes": 32,
+      "reused": true,
+      "seconds": 78.25532096900002,
+      "shape": [
+        2,
+        2,
+        1,
+        1,
+        1
+      ],
+      "spins": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 16,
+      "output_bytes": 16,
+      "reused": false,
+      "seconds": 90.18397889000016,
+      "shape": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "spins": [
+        0,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 32,
+      "output_bytes": 32,
+      "reused": false,
+      "seconds": 39.59536049400003,
+      "shape": [
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "spins": [
+        1,
+        0,
+        2,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 40,
+      "output_bytes": 256,
+      "reused": true,
+      "seconds": 1.2565864069999861,
+      "shape": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "spins": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 48,
+      "output_bytes": 64,
+      "reused": false,
+      "seconds": 51.334000212999854,
+      "shape": [
+        2,
+        1,
+        2,
+        2,
+        1
+      ],
+      "spins": [
+        1,
+        2,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 64,
+      "output_bytes": 16,
+      "reused": false,
+      "seconds": 47.06556014800003,
+      "shape": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "spins": [
+        2,
+        1,
+        0,
+        1,
+        0,
+        1,
+        1,
+        2,
+        1,
+        1
+      ]
+    }
+  ],
+  "ordering": "ascending",
+  "samples_requested": 6,
+  "selected_indices": [
+    0,
+    16,
+    32,
+    40,
+    48,
+    64,
+    80
+  ],
+  "status": "running",
+  "total_output_tensor_bytes": 4816,
+  "two_k": 2
+}
