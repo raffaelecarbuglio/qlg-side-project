@@ -1,0 +1,147 @@
+{
+  "assignment_count": 7919,
+  "cache_id": "05f86ed58605feac3f9c17ec6c8066bbb646b3b0eb90f508560d048a9138cf2d",
+  "distinct_ordered_vertices": 367,
+  "dl": 12,
+  "measurements": [
+    {
+      "index": 0,
+      "output_bytes": 32,
+      "reused": true,
+      "seconds": 78.25532096900002,
+      "shape": [
+        2,
+        2,
+        1,
+        1,
+        1
+      ],
+      "spins": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 73,
+      "output_bytes": 32,
+      "reused": false,
+      "seconds": 108.35523682000007,
+      "shape": [
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "spins": [
+        1,
+        0,
+        0,
+        1,
+        2,
+        2,
+        1,
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 92,
+      "output_bytes": 256,
+      "reused": true,
+      "seconds": 1.2565864069999861,
+      "shape": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "spins": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 146,
+      "output_bytes": 16,
+      "reused": false,
+      "seconds": 75.20922131499992,
+      "shape": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "spins": [
+        1,
+        3,
+        1,
+        1,
+        0,
+        0,
+        1,
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 220,
+      "output_bytes": 32,
+      "reused": false,
+      "seconds": 79.33339261599986,
+      "shape": [
+        2,
+        1,
+        1,
+        1,
+        2
+      ],
+      "spins": [
+        2,
+        1,
+        2,
+        1,
+        3,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "ordering": "ascending",
+  "samples_requested": 6,
+  "selected_indices": [
+    0,
+    73,
+    92,
+    146,
+    220,
+    293,
+    366
+  ],
+  "status": "running",
+  "total_output_tensor_bytes": 27936,
+  "two_k": 3
+}

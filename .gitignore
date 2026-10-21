@@ -12,3 +12,4 @@ runs/
 *.png
 *.pdf
 slurm-*.out
+configs/*.env

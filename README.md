@@ -21,8 +21,10 @@ The [next refinement protocol](docs/continuum-protocol.md) specifies a
 same-boundary 1-to-5 effective amplitude, separate regulators, and explicit
 stopping conditions. The first [regulated five-cell calculation](docs/fivecell-effective-amplitude.md)
 now retains all 32 half-spin boundary coefficients at K=1/2,1, with exact
-finite sums and independent smallest-cutoff checks. Regulator removal and
-later refinement levels remain unimplemented.
+finite sums and independent smallest-cutoff checks. K=1/2 has now also been
+evaluated at auxiliary cutoff 12 in both frames; representative K=1 and
+K=3/2 vertices have been timed. Regulator removal and later refinement
+levels remain unimplemented.
 
 ## First run
 
@@ -52,6 +54,9 @@ Rerunning resumes completed work. A changed config, source code, backend or
 lookup table requires a new run directory.
 
 ## INFN / Slurm
+
+For the five-cell K=1, K=3/2 continuation on Magellano Levante, use the
+[dedicated sharded jobs and setup notes](docs/infn-fivecell.md).
 
 Prepare on a login node; execute numerical work on compute nodes. Paths to the
 virtual environment, backend, tables and run directory must be visible there.
