@@ -13,8 +13,18 @@ The K=1/2, L=12 scan has completed in both frames. The local K=1, L=12
 pilot measured five *new* vertex tensors at 39.6–90.2 seconds each
 (median 51.3 s) with two OpenMP threads and a reference BLAS. K=3/2 has
 7,919 admissible assignments and 367 required ordered labels per frame.
-These are workload measurements, not cluster timing predictions; the Levante
-compiler, BLAS, CPU and scheduling can change costs.
+At K=3/2 the seven new L=8 pilot tensors took 10.7–30.2 s (median 20.2 s);
+five new L=12 tensors took 75.2–117.9 s (median 79.5 s). The union of both
+frames needs 153 ordered tensors at K=1 and 718 at K=3/2. Multiplying the
+sample medians by the **remaining** tensor counts gives crude local serial
+preparation times of about 2, 4 and 15 hours for (K=1,L=12),
+(K=3/2,L=8) and (K=3/2,L=12). These exclude finite-sum assembly and have
+wide sampling uncertainty. They are workload estimates, not cluster timing
+predictions; the Levante compiler, BLAS, CPU and scheduling can change costs.
+The raw timing reports are
+[K=1,L=12](../benchmarks/results/2026-10-21-fivecell-k1-l12-pilot-report.json),
+[K=3/2,L=8](../benchmarks/results/2026-10-21-fivecell-k1p5-l8-pilot-report.json)
+and [K=3/2,L=12](../benchmarks/results/2026-10-21-fivecell-k1p5-l12-pilot-report.json).
 
 Each array has 16 independent single-process jobs with two OpenMP threads
 and an 8 GiB memory request per job. The 16 shards cover the **union** of

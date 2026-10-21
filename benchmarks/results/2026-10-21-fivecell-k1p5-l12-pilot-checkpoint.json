@@ -1,7 +1,7 @@
 {
   "checkpoint_cache_id": "05f86ed58605feac3f9c17ec6c8066bbb646b3b0eb90f508560d048a9138cf2d",
   "completed_amplitudes": [],
-  "created_utc": "2026-10-21T07:39:48.303715+00:00",
+  "created_utc": "2026-10-21T07:43:39.297474+00:00",
   "dl": 12,
   "files": [
     {
@@ -113,9 +113,19 @@
       "bytes": 1280,
       "path": "dl_012/2-2-1-1-2-1-1-1-1-1.npz",
       "sha256": "f4a3918f7fbf0b2b8c326628f0625795d8348f885022929ca171e4c00fe6e83f"
+    },
+    {
+      "bytes": 1040,
+      "path": "dl_012/3-1-1-1-1-1-1-3-1-1.npz",
+      "sha256": "5d7a15c8777fd19c1365b9dc5e04deb89dff31c9f6b39b02c240fdfb2c75063a"
+    },
+    {
+      "bytes": 1280,
+      "path": "dl_012/3-3-3-1-3-3-1-3-1-1.npz",
+      "sha256": "65c80a1026fc4c465adf05040845d4d553fd2739085c77cf85ea8743eddd713b"
     }
   ],
   "note": "Partial tensors and finite cutoff amplitudes only; no continuum limit.",
-  "saved_vertices": 22,
-  "status": "running"
+  "saved_vertices": 24,
+  "status": "completed"
 }

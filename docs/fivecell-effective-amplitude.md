@@ -207,3 +207,6 @@ The runner also accepts `--two-k 3` (K=3/2): its five-cell graph has
 frame. To measure representative native vertices without committing to the
 full sum, use `python -m benchmarks.pilot_fivecell --run RUN --output
 PILOT.json --two-k 3 --dl 12`. Pilot tensors share the full-run cache.
+The [INFN continuation notes](infn-fivecell.md) record the completed
+K=1 and K=3/2 pilots and the sharded Levante jobs. No complete K=1 or
+K=3/2 amplitude at L=12 has been calculated.
