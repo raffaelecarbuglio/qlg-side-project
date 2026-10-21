@@ -164,3 +164,46 @@ tar -xzf benchmarks/results/2026-10-19-fivecell-vertices.tar.gz -C runs/fivecell
 Using that directory as `--run` validates the strict cache identity; a
 different native build may require its own run directory. The stored arrays
 can also be read independently with NumPy's `load(..., allow_pickle=False)`.
+
+## October 21 extension: L=12 at K=1/2
+
+The [complete L=12 report](../benchmarks/results/2026-10-21-fivecell-l12-report.json)
+contains both orderings and all 32 boundary coefficients at K=1/2. The
+largest absolute coefficient is 2.544003471e-34 (ascending) and
+2.534996094e-34 (descending). Relative to L=8, the complete vectors change
+by 1.08% and 2.29%, respectively, in the symmetric maximum norm defined
+above. The two L=12 orderings differ by 0.354% in that norm. These are finite
+auxiliary-cutoff comparisons at one fixed physical cutoff.
+
+The backend source revision remains 052e4346. The rebuilt local binary uses
+the Wigner source vendored in ARTS and the system reference BLAS. Its L=0
+BF and EPRL vectors agree entry for entry with the previously published
+native calculation; the [restart audit](../benchmarks/results/2026-10-21-fivecell-l0-regression.json)
+records those values. This regression does not independently validate every
+L=12 native integration.
+
+The [L=12 checkpoint archive](../benchmarks/results/2026-10-21-fivecell-l12-checkpoint.tar.gz)
+contains 14 complete, validated native tensors, their strict cache identity,
+the build manifest and the numerical report. For a backend rebuilt with
+exactly the same binary, lookup tables, wrapper and NumPy version:
+
+```bash
+python scripts/restore_fivecell.py \
+  --archive benchmarks/results/2026-10-21-fivecell-l12-checkpoint.tar.gz \
+  --run runs/fivecell-recovered
+```
+
+An incompatible build is rejected; the archive remains readable as data.
+During a run, take further recoverable snapshots using:
+
+```bash
+python scripts/snapshot_fivecell.py --run runs/fivecell-recovered \
+  --report runs/fivecell-recovered/report.json \
+  --prefix benchmarks/results/fivecell-l12 --dl 12
+```
+
+The runner also accepts `--two-k 3` (K=3/2): its five-cell graph has
+7,919 admissible spin assignments and 367 ordered native vertex labels per
+frame. To measure representative native vertices without committing to the
+full sum, use `python -m benchmarks.pilot_fivecell --run RUN --output
+PILOT.json --two-k 3 --dl 12`. Pilot tensors share the full-run cache.

@@ -54,7 +54,8 @@ def main():
                  note="Partial tensors and finite cutoff amplitudes only; no continuum limit.")
     prefix = args.prefix
     prefix.parent.mkdir(parents=True, exist_ok=True)
-    atomic_json(prefix.with_name(prefix.name + "-checkpoint.json"), index)
+    index_file = prefix.with_name(prefix.name + "-checkpoint.json")
+    atomic_json(index_file, index)
     report_file = prefix.with_name(prefix.name + "-report.json")
     report_temp = report_file.with_name(report_file.name + ".tmp")
     report_temp.write_bytes(report_bytes)
@@ -68,7 +69,8 @@ def main():
     try:
         with tarfile.open(temporary, "w:gz") as tar:
             for source, target in [(build_info, "build-info.json"),
-                                   (report_file, "report.json")]:
+                                   (report_file, "report.json"),
+                                   (index_file, "checkpoint-index.json")]:
                 tar.add(source, arcname=target)
             # Save the cache specification exactly as used for identity checks.
             cache_file = run / "cache-spec.json"
