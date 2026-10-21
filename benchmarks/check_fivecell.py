@@ -1,4 +1,4 @@
-"""Full regulated 1->5 EPRL boundary amplitude at physical spin cutoffs K=1/2,1.
+"""Full regulated 1->5 EPRL boundary amplitude at physical spin cutoffs K=1/2,1,3/2.
 
 All 32 half-spin boundary coefficients and all admissible internal labels are
 kept. The physical cutoff K and auxiliary shell cutoff L are independent.
@@ -51,7 +51,7 @@ def spin_assignments(graph, two_k):
         if all(intertwiner_range(*(spins[f] for f in t)) for t in tetrahedra):
             rows.append(spins)
     if len(inside) == 10:
-        assert len(rows) == {1: 16, 2: 721}[two_k]
+        assert len(rows) == {1: 16, 2: 721, 3: 7919}[two_k]
     return rows
 
 
@@ -164,18 +164,21 @@ def evaluate(maps, graph, rows, raw, paths, independent=False, bf=False):
 def summarize(report):
     get = {(r["dl"], r["two_k"], r["ordering"]): r for r in report["results"]}
     report["cutoff_changes"], report["ordering_changes"], report["spin_cutoff_changes"] = [], [], []
+    cutoffs = sorted({k[1] for k in get})
     for dl in sorted({k[0] for k in get}):
-        for two_k in (1, 2):
+        for two_k in cutoffs:
             keys = [(dl, two_k, o) for o in ("ascending", "descending")]
             if all(k in get for k in keys):
                 report["ordering_changes"].append(dict(dl=dl, two_k=two_k,
                     **difference(*(get[k] for k in keys))))
         for ordering in ("ascending", "descending"):
-            keys = [(dl, k, ordering) for k in (2, 1)]
-            if all(k in get for k in keys):
-                report["spin_cutoff_changes"].append(dict(dl=dl, ordering=ordering,
-                    **difference(*(get[k] for k in keys))))
-    for two_k in (1, 2):
+            for earlier, later in zip(cutoffs, cutoffs[1:]):
+                keys = [(dl, k, ordering) for k in (later, earlier)]
+                if all(k in get for k in keys):
+                    report["spin_cutoff_changes"].append(dict(dl=dl, ordering=ordering,
+                        earlier_two_k=earlier, later_two_k=later,
+                        **difference(*(get[k] for k in keys))))
+    for two_k in cutoffs:
         for ordering in ("ascending", "descending"):
             selected = sorted((r for r in report["results"] if r["two_k"] == two_k and
                                r["ordering"] == ordering), key=lambda r: r["dl"])
@@ -189,7 +192,7 @@ def main():
     parser.add_argument("--run", required=True)
     parser.add_argument("--output", required=True)
     parser.add_argument("--dl", type=int, nargs="+", default=[0, 2, 4])
-    parser.add_argument("--two-k", type=int, nargs="+", choices=(1, 2), default=[1, 2])
+    parser.add_argument("--two-k", type=int, nargs="+", choices=(1, 2, 3), default=[1, 2])
     parser.add_argument("--orders", nargs="+", choices=("ascending", "descending"),
                         default=["ascending", "descending"])
     args = parser.parse_args()
@@ -245,7 +248,7 @@ def main():
                     rows = all_rows[two_k]
                     for ordering, graph in graphs.items():
                         needed = sorted({tuple(s[f] for f in n["faces"]) for s in rows for n in graph["nodes"]})
-                        assert len(needed) == {1: 8, 2: 81}[two_k]
+                        assert len(needed) == {1: 8, 2: 81, 3: 367}[two_k]
                         computed = reused = 0
                         seconds = 0.
                         for i, labels in enumerate(needed, 1):

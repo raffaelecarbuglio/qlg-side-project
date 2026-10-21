@@ -1,0 +1,25 @@
+{
+  "checkpoint_cache_id": "05f86ed58605feac3f9c17ec6c8066bbb646b3b0eb90f508560d048a9138cf2d",
+  "dl": 12,
+  "expected_ordered_vertices_per_frame": 8,
+  "files": [
+    {
+      "bytes": 1056,
+      "path": "dl_012/0-0-1-1-0-1-1-1-1-1.npz",
+      "sha256": "ecc9e1739eb612be13d78b9afe03336d82d33ecea9608ae2aeefda0b9dc62d03"
+    },
+    {
+      "bytes": 1040,
+      "path": "dl_012/0-0-1-1-1-0-1-0-1-1.npz",
+      "sha256": "a8852a8d1967032a33736dfcf9550117107f303c3e07a44e8fd8727336682969"
+    }
+  ],
+  "gamma": 1.2,
+  "library_sha256": "a1220d6ced67ba4c85f99719506d4c803779cbecf697a005486a7add63d577f4",
+  "note": "Partial native tensor cache; no L=12 boundary amplitude has been evaluated.",
+  "ordering": "ascending",
+  "saved_vertices": 2,
+  "status": "partial",
+  "timestamp_utc": "2026-10-21T07:21:01.713274+00:00",
+  "two_k": 1
+}
