@@ -1,0 +1,46 @@
+{
+  "checkpoint_cache_id": "05f86ed58605feac3f9c17ec6c8066bbb646b3b0eb90f508560d048a9138cf2d",
+  "completed_amplitudes": [],
+  "created_utc": "2026-10-21T07:35:13.416165+00:00",
+  "dl": 8,
+  "files": [
+    {
+      "bytes": 1056,
+      "path": "dl_008/0-0-1-1-0-1-1-1-1-1.npz",
+      "sha256": "c906a1ae3a85d2d6c042d753c48f2f368a13bca84006fbbcd4e15012e96e2c3b"
+    },
+    {
+      "bytes": 1056,
+      "path": "dl_008/1-0-0-1-2-2-1-3-1-1.npz",
+      "sha256": "43ccfa06db3053c2f396c6039b07d202282e82ba7dca7b33643322367835d80a"
+    },
+    {
+      "bytes": 1280,
+      "path": "dl_008/1-1-1-1-1-1-1-1-1-1.npz",
+      "sha256": "cf0b29001904207405ac79151119919dddbb3532ab4ed616294a621685c57dee"
+    },
+    {
+      "bytes": 1040,
+      "path": "dl_008/1-3-1-1-0-0-1-2-1-1.npz",
+      "sha256": "7f9805d134cfef136df3b7ec204703985ca8909987a27fce629af750a661787d"
+    },
+    {
+      "bytes": 1056,
+      "path": "dl_008/2-1-2-1-3-0-1-1-1-1.npz",
+      "sha256": "e9a5525fa6f95f289631f2601319f75afd47d479a0ebe7e9653e19d3259a493b"
+    },
+    {
+      "bytes": 1040,
+      "path": "dl_008/3-1-1-1-1-1-1-3-1-1.npz",
+      "sha256": "19488532375d23ffdf2cb5036ba079c9367b25efb7a92fe7e34bbe568f99df06"
+    },
+    {
+      "bytes": 1280,
+      "path": "dl_008/3-3-3-1-3-3-1-3-1-1.npz",
+      "sha256": "d0be52c33232813aeb272ddf183ee1c3292ebc12cdc065ed27db9be29867613d"
+    }
+  ],
+  "note": "Partial tensors and finite cutoff amplitudes only; no continuum limit.",
+  "saved_vertices": 7,
+  "status": "completed"
+}

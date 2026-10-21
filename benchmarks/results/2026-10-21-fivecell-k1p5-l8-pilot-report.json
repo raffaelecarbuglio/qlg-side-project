@@ -1,0 +1,197 @@
+{
+  "assignment_count": 7919,
+  "cache_id": "05f86ed58605feac3f9c17ec6c8066bbb646b3b0eb90f508560d048a9138cf2d",
+  "distinct_ordered_vertices": 367,
+  "dl": 8,
+  "measurements": [
+    {
+      "index": 0,
+      "output_bytes": 32,
+      "reused": false,
+      "seconds": 18.92831870100008,
+      "shape": [
+        2,
+        2,
+        1,
+        1,
+        1
+      ],
+      "spins": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 73,
+      "output_bytes": 32,
+      "reused": false,
+      "seconds": 20.97504399000013,
+      "shape": [
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "spins": [
+        1,
+        0,
+        0,
+        1,
+        2,
+        2,
+        1,
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 92,
+      "output_bytes": 256,
+      "reused": false,
+      "seconds": 10.673039400000107,
+      "shape": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "spins": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 146,
+      "output_bytes": 16,
+      "reused": false,
+      "seconds": 18.032340176999924,
+      "shape": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "spins": [
+        1,
+        3,
+        1,
+        1,
+        0,
+        0,
+        1,
+        2,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 220,
+      "output_bytes": 32,
+      "reused": false,
+      "seconds": 20.22199406499999,
+      "shape": [
+        2,
+        1,
+        1,
+        1,
+        2
+      ],
+      "spins": [
+        2,
+        1,
+        2,
+        1,
+        3,
+        0,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 293,
+      "output_bytes": 16,
+      "reused": false,
+      "seconds": 20.497463524000068,
+      "shape": [
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "spins": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        1,
+        1
+      ]
+    },
+    {
+      "index": 366,
+      "output_bytes": 256,
+      "reused": false,
+      "seconds": 30.21455034199994,
+      "shape": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "spins": [
+        3,
+        3,
+        3,
+        1,
+        3,
+        3,
+        1,
+        3,
+        1,
+        1
+      ]
+    }
+  ],
+  "ordering": "ascending",
+  "samples_requested": 6,
+  "selected_indices": [
+    0,
+    73,
+    92,
+    146,
+    220,
+    293,
+    366
+  ],
+  "status": "completed",
+  "total_output_tensor_bytes": 27936,
+  "two_k": 3
+}
