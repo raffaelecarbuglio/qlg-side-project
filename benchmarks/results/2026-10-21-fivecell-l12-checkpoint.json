@@ -4,9 +4,13 @@
     {
       "ordering": "ascending",
       "two_k": 1
+    },
+    {
+      "ordering": "descending",
+      "two_k": 1
     }
   ],
-  "created_utc": "2026-10-21T07:24:42.050122+00:00",
+  "created_utc": "2026-10-21T07:25:58.225946+00:00",
   "dl": 12,
   "files": [
     {
@@ -55,12 +59,32 @@
       "sha256": "23597616cef82e5c2bb1540eaec41bac36f044fc4260d73cc99bc7b8551ce64f"
     },
     {
+      "bytes": 1056,
+      "path": "dl_012/1-1-1-1-0-1-0-1-0-1.npz",
+      "sha256": "351410347b2413e2cd11c7f5755a01c5aa2f39dbee5cb19b1497695533a3a750"
+    },
+    {
+      "bytes": 1040,
+      "path": "dl_012/1-1-1-1-1-0-0-0-0-1.npz",
+      "sha256": "c15c93e40fbd561875cbb1bf2bd82ae79ba2305957c49798f7f1d95707224a2e"
+    },
+    {
+      "bytes": 1056,
+      "path": "dl_012/1-1-1-1-1-0-0-1-1-0.npz",
+      "sha256": "ddc25e29ed0ffed300a4c62dc41eec7013df8932c818d0707d2b56767f5e63b1"
+    },
+    {
+      "bytes": 1056,
+      "path": "dl_012/1-1-1-1-1-1-1-0-0-0.npz",
+      "sha256": "af312a490049661e470b78cfb1ccbcd7e079af54faf69c4d45583be5af07407f"
+    },
+    {
       "bytes": 1280,
       "path": "dl_012/1-1-1-1-1-1-1-1-1-1.npz",
       "sha256": "629636538f8dddb8642faee151663be6e08052c0679d48684c47a80e58915d3c"
     }
   ],
   "note": "Partial tensors and finite cutoff amplitudes only; no continuum limit.",
-  "saved_vertices": 10,
-  "status": "running"
+  "saved_vertices": 14,
+  "status": "completed"
 }
