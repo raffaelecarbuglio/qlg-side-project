@@ -208,5 +208,22 @@ frame. To measure representative native vertices without committing to the
 full sum, use `python -m benchmarks.pilot_fivecell --run RUN --output
 PILOT.json --two-k 3 --dl 12`. Pilot tensors share the full-run cache.
 The [INFN continuation notes](infn-fivecell.md) record the completed
-K=1 and K=3/2 pilots and the sharded Levante jobs. No complete K=1 or
-K=3/2 amplitude at L=12 has been calculated.
+K=1 and K=3/2 pilots and the sharded Levante jobs.
+
+## November 8 extension: L=12 at K=1 on Levante
+
+The [completed run](../benchmarks/results/2026-11-08-fivecell-k1-l12-levante.json) records all 32 signed
+boundary coefficients for both orderings, with 721 admissible internal spin
+assignments per ordering. The maximum absolute coefficient is
+`9.956657910e-34` (ascending) and `9.835044117e-34` (descending).
+
+Using the symmetric maximum norm defined above, the complete coefficient
+vectors change by **1.1647%** (ascending) and **2.6945%** (descending)
+relative to the archived K=1, L=8 vectors. The difference between the two
+orderings decreases from **2.7551%** at L=8 to **1.2214%** at L=12.
+
+The reports specify the same native source revision and amplitude conventions,
+but the local L=8 and Levante L=12 calculations used different native builds.
+The observed changes therefore do not isolate the effect of L or bound the
+remaining auxiliary-spin tail. This is a finite-cutoff comparison at fixed K
+and fixed triangulation.

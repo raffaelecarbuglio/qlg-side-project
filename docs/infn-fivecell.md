@@ -90,5 +90,8 @@ boundary vectors across K, L and the two frames.
 
 The local checkpoint archives can be inspected independently; they are
 reusable on Levante only if backend binary, tables, wrapper and NumPy
-version produce exactly the same cache identity. No cluster jobs have been
-submitted from this repository yet.
+version produce exactly the same cache identity.
+
+The K=1, L=12 preparation and assembly completed on Levante. See the
+[five-cell results](fivecell-effective-amplitude.md#november-8-extension-l12-at-k1-on-levante)
+for the archived report and comparison with the local L=8 run.
