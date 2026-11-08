@@ -50,7 +50,7 @@ info = {
     'rho_convention': os.environ['RHO_LABEL'], 'mpi': False, 'openmp': True, 'io': True,
     'blas': os.environ['BLAS_VENDOR'],
     'compiler': subprocess.check_output(['gcc','--version'], text=True).splitlines()[0],
-    'files_sha256': {str(p.relative_to(root)): hashlib.file_digest(p.open('rb'),'sha256').hexdigest()
+    'files_sha256': {str(p.relative_to(root)): hashlib.sha256(p.read_bytes()).hexdigest()
                      for p in files if p.exists()}
 }
 (root/'build-info.json').write_text(json.dumps(info, indent=2)+'\n')
